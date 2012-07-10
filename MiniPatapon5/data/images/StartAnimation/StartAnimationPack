@@ -1,0 +1,79 @@
+
+final1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+nuclear-Logo
+  rotate: false
+  xy: 2, 2
+  size: 238, 238
+  orig: 238, 238
+  offset: 0, 0
+  index: -1
+logo
+  rotate: false
+  xy: 2, 242
+  size: 238, 238
+  orig: 238, 238
+  offset: 0, 0
+  index: -1
+logo2
+  rotate: false
+  xy: 2, 482
+  size: 230, 230
+  orig: 230, 230
+  offset: 0, 0
+  index: -1
+pata
+  rotate: false
+  xy: 2, 714
+  size: 193, 71
+  orig: 193, 71
+  offset: 0, 0
+  index: -1
+pon
+  rotate: false
+  xy: 2, 787
+  size: 152, 62
+  orig: 152, 62
+  offset: 0, 0
+  index: -1
+mini
+  rotate: false
+  xy: 2, 851
+  size: 142, 33
+  orig: 142, 33
+  offset: 0, 0
+  index: -1
+powerdby
+  rotate: false
+  xy: 2, 886
+  size: 120, 30
+  orig: 120, 30
+  offset: 0, 0
+  index: -1
+  
+  
+splash2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+white
+  rotate: false
+  xy: 2, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+
+black.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+blackBg
+  rotate: false
+  xy: 2, 2
+  size: 32, 32
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

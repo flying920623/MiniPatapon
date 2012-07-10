@@ -1,0 +1,635 @@
+
+{
+   "allowSleep" : true,
+   "autoClearForces" : true,
+   "body" : 
+   [
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : "BBBE4E7F",
+         "angularVelocity" : "B41F814F",
+         "awake" : true,
+         "gravityScale" : "411CCCCD",
+         "linearVelocity" : 
+         {
+            "x" : "2082A89A",
+            "y" : "C2EFFFFF"
+         },
+         "massData-mass" : 1,
+         "position" : 
+         {
+            "x" : "422A72DC",
+            "y" : "C5815331"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : "C167ACED",
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "3C7BEB40",
+                     "y" : "BC52C052"
+                  },
+                  "radius" : "4021760E"
+               },
+               "density" : "3E4C5B7F",
+               "filter-groupIndex" : 1,
+               "friction" : "3ECCCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "massData-I" : "414B34D8",
+         "massData-center" : 
+         {
+            "x" : "3C7BEB40",
+            "y" : "BC52C052"
+         },
+         "massData-mass" : "407F62B7",
+         "name" : "CircleSnake_eggsnake_64_64.png",
+         "position" : 
+         {
+            "x" : "4025E6EA",
+            "y" : "4024F038"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : "C07E4210",
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "3B15BC6C",
+                     "y" : "3BDEDF48"
+                  },
+                  "radius" : "40185DB7"
+               },
+               "density" : "3DB96873",
+               "filter-groupIndex" : 1,
+               "friction" : "3ECCCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "massData-I" : "40922FF0",
+         "massData-center" : 
+         {
+            "x" : "3B15BC6C",
+            "y" : "3BDEDF48"
+         },
+         "massData-mass" : "3FCE5603",
+         "name" : "CircleMouse_mouseB_64_64.png",
+         "position" : 
+         {
+            "x" : "416B2964",
+            "y" : "408D3B47"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "BE46C280",
+                     "y" : "417C8240"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "BE434C80",
+                     "y" : "C18137AD"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "424135AE",
+            "y" : "418096CC"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "BD978300",
+                     "y" : "417C8240"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "BD909700",
+                     "y" : "C180C7DA"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "3D0CA366",
+            "y" : "418096CC"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "C1C14918",
+                     "y" : "B40113E8"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "41C16A60",
+                     "y" : "B40113E8"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "41C0EF04",
+            "y" : "41FF94C5"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : "41FB53F3",
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 
+         {
+            "x" : 0,
+            "y" : "C2EFFFFF"
+         },
+         "massData-mass" : 1,
+         "position" : 
+         {
+            "x" : "3FBD4403",
+            "y" : "C6CC8B0C"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "C1C14918",
+                     "y" : "B40113E8"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "41C16A60",
+                     "y" : "B40113E8"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "41C0EF04",
+            "y" : "3D176A00"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3F3801B4", "3F3801B4", "BF2833C7", "BF2833C7" ],
+                     "y" : [ "C10E0A52", "41104BE7", "41104BE7", "C10E0A56" ]
+                  }
+               }
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "4138BA34",
+            "y" : "412E607A"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3FD91B08", "3FD91B04", "BFD2E290", "BFD2E28A" ],
+                     "y" : [ "C04F687C", "40477F22", "40477F22", "C04F687C" ]
+                  }
+               }
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "416063C8",
+            "y" : "41722B7E"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "40751577", "40751577", "C06E52A9", "C06E52A9" ],
+                     "y" : [ "BF279464", "3F07B170", "3F07B170", "BF279468" ]
+                  }
+               }
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "SqureWood_woodType2.png",
+         "position" : 
+         {
+            "x" : "416838C8",
+            "y" : "3FBF3675"
+         },
+         "type" : 0 //static
+      },
+      
+
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3FDB8C03", "3FDB8BFF", "BFDB8BFF", "BFDB8BFD" ],
+                     "y" : [ "BFD19138", "3FD1914C", "3FD1914C", "BFD1913E" ]
+                  }
+               }
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "SqureWood_woodType3.png",
+         "position" : 
+         {
+            "x" : "41EB3064",
+            "y" : "41369ECD"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "405D7930", "405D7930", "C0571EAE", "C0571EAD" ],
+                     "y" : [ "BFD7EBC0", "3FCB36C4", "3FCB36C4", "BFD7EBC6" ]
+                  }
+               }
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "SqureWood_woodType3.png",
+         "position" : 
+         {
+            "x" : "420ECF78",
+            "y" : "41369ECD"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "42699344",
+            "y" : "40844DD2"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "40256128", "40256128", "C0285422", "C0285422" ],
+                     "y" : [ "BFDCD570", "3FD02070", "3FD02070", "BFDCD570" ]
+                  }
+               }
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "SqureWood_woodType3.png",
+         "position" : 
+         {
+            "x" : "42272200",
+            "y" : "41369AA0"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "40A0B1C0", "40A0B1C0", "C09D5059", "C09D5059" ],
+                     "y" : [ "BF279464", "3F07B170", "3F07B170", "BF279468" ]
+                  }
+               }
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "41A5878E",
+            "y" : "4149CEFF"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "3DC61A00",
+                     "y" : "35800000"
+                  },
+                  "radius" : "3FB2C734"
+               },
+               "density" : "40000000",
+               "friction" : "3E4CCCCD"
+            }
+         ],
+         "gravityScale" : "411CCCCD",
+         "linearVelocity" : 0,
+         "massData-mass" : 1,
+         "name" : "CircleWood_circleball_32_32.png",
+         "position" : 
+         {
+            "x" : "4226FD4E",
+            "y" : "41670C0C"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : "3E1BC183",
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "4171D266", "4171D266", "C173AB53", "C173AB53" ],
+                     "y" : [ "BF1DFF8D", "3EDD6456", "3EDD6456", "BF1DFF90" ]
+                  }
+               }
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "SqureWood_woodType2.png",
+         "position" : 
+         {
+            "x" : "4204D952",
+            "y" : "4071E759"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : "C07E4210",
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "3B15BC6C",
+                     "y" : "3BDEDF48"
+                  },
+                  "radius" : "40185DB7"
+               },
+               "density" : "3DB96873",
+               "filter-groupIndex" : 1,
+               "friction" : "3ECCCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "massData-I" : "40922FF0",
+         "massData-center" : 
+         {
+            "x" : "3B15BC6C",
+            "y" : "3BDEDF48"
+         },
+         "massData-mass" : "3FCE5603",
+         "name" : "CircleMouse_mouseR_64_128.png",
+         "position" : 
+         {
+            "x" : "419211B8",
+            "y" : "417881DA"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : "C07E4210",
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "3B15BC6C",
+                     "y" : "3BDEDF48"
+                  },
+                  "radius" : "40185DB7"
+               },
+               "density" : "3DB96873",
+               "filter-groupIndex" : 1,
+               "friction" : "3ECCCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "massData-I" : "40922FF0",
+         "massData-center" : 
+         {
+            "x" : "3B15BC6C",
+            "y" : "3BDEDF48"
+         },
+         "massData-mass" : "3FCE5603",
+         "name" : "CircleMouse_mouseL_64_128.png",
+         "position" : 
+         {
+            "x" : "420ECD53",
+            "y" : "41764724"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      }
+   ],
+   "continuousPhysics" : true,
+   "gravity" : 
+   {
+      "x" : 0,
+      "y" : "C1200000"
+   },
+   "subStepping" : false,
+   "warmStarting" : true
+}

@@ -1,0 +1,12 @@
+
+AboutUs.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+AboutUs
+  rotate: false
+  xy: 2, 2
+  size: 497, 339
+  orig: 497, 339
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,47 @@
+
+hero31.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+normalHero
+  rotate: false
+  xy: 2, 2
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+normal
+  rotate: false
+  xy: 352, 2
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+lowlightHero
+  rotate: false
+  xy: 2, 340
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+lowlight
+  rotate: false
+  xy: 2, 678
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+highlightHero
+  rotate: false
+  xy: 352, 340
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+highlight
+  rotate: false
+  xy: 352, 678
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1

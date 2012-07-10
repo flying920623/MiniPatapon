@@ -1,0 +1,19 @@
+
+mission.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+MissionFailed
+  rotate: false
+  xy: 2, 2
+  size: 512, 65
+  orig: 512, 65
+  offset: 0, 0
+  index: -1
+MissionCompleted
+  rotate: false
+  xy: 2, 69
+  size: 512, 65
+  orig: 512, 65
+  offset: 0, 0
+  index: -1

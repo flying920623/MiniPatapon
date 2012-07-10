@@ -1,0 +1,26 @@
+
+note1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+chake
+  rotate: false
+  xy: 2, 2
+  size: 61, 34
+  orig: 61, 34
+  offset: 0, 0
+  index: -1
+pon
+  rotate: false
+  xy: 65, 2
+  size: 51, 34
+  orig: 51, 34
+  offset: 0, 0
+  index: -1
+pata
+  rotate: false
+  xy: 2, 38
+  size: 47, 29
+  orig: 47, 29
+  offset: 0, 0
+  index: -1

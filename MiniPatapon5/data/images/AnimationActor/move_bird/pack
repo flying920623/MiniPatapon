@@ -1,0 +1,40 @@
+
+move_bird1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+people2
+  rotate: false
+  xy: 2, 2
+  size: 240, 285
+  orig: 240, 285
+  offset: 0, 0
+  index: -1
+people
+  rotate: false
+  xy: 2, 289
+  size: 240, 285
+  orig: 240, 285
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 2, 576
+  size: 88, 158
+  orig: 88, 158
+  offset: 0, 0
+  index: -1
+1
+  rotate: false
+  xy: 92, 576
+  size: 126, 87
+  orig: 126, 87
+  offset: 0, 0
+  index: -1
+wind
+  rotate: false
+  xy: 2, 736
+  size: 70, 77
+  orig: 70, 77
+  offset: 0, 0
+  index: -1
