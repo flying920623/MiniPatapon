@@ -1,0 +1,75 @@
+
+bird1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+wind
+  rotate: false
+  xy: 2, 2
+  size: 240, 285
+  orig: 240, 285
+  offset: 0, 0
+  index: -1
+people2
+  rotate: false
+  xy: 244, 2
+  size: 240, 285
+  orig: 240, 285
+  offset: 0, 0
+  index: -1
+ren2
+  rotate: false
+  xy: 2, 289
+  size: 239, 208
+  orig: 239, 208
+  offset: 0, 0
+  index: -1
+ren
+  rotate: false
+  xy: 243, 289
+  size: 239, 208
+  orig: 239, 208
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 2, 499
+  size: 88, 158
+  orig: 88, 158
+  offset: 0, 0
+  index: -1
+jian
+  rotate: false
+  xy: 2, 659
+  size: 82, 145
+  orig: 82, 145
+  offset: 0, 0
+  index: -1
+1
+  rotate: false
+  xy: 92, 499
+  size: 126, 87
+  orig: 126, 87
+  offset: 0, 0
+  index: -1
+wind2
+  rotate: false
+  xy: 2, 806
+  size: 70, 77
+  orig: 70, 77
+  offset: 0, 0
+  index: -1
+shou2
+  rotate: false
+  xy: 486, 2
+  size: 19, 42
+  orig: 19, 42
+  offset: 0, 0
+  index: -1
+shou
+  rotate: false
+  xy: 486, 46
+  size: 19, 42
+  orig: 19, 42
+  offset: 0, 0
+  index: -1

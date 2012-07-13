@@ -97,8 +97,8 @@ public class ForegroundStage extends BaseStage {
 
 		Tween.registerAccessor(Actor.class, new ActorAccessor());
 		
-		initButton();
-		initTimerDialog();
+		
+		
 		logger = DefaultLogger.getDefaultLogger();
 		spriteBatch = new SpriteBatch();
 		particle = ResourceLoader.loadParticle("default.p", "");
@@ -113,6 +113,14 @@ public class ForegroundStage extends BaseStage {
 		this.testSound = ResourceLoader.loadMusic("drum_two_rhythm.mp3");
 
 	}
+	
+	public void initTimerDialog() {
+		timerDialog = new TimerDialog("timerDialog", this);
+		//timerDialog.show(-1);
+
+		timerDialog.start(270);
+	}
+	
 
 	public void initButton() {
 
@@ -144,30 +152,51 @@ public class ForegroundStage extends BaseStage {
 		pataButton.setPosition((float)(this.width-3.6*pataButton.width), 0f);
 		ponButton.setPosition((float)(this.width-2.4*ponButton.width), 0f);
 		cakaButton.setPosition((float)(this.width-1.2*cakaButton.width), 0f);
-		cakaButton.hide();
-		ponButton.hide();
-		pataButton.hide();
+//		cakaButton.hide();
+//		ponButton.hide();
+//		pataButton.hide();
 
 	}
+	
+
+	public void removeTimerDialog(){
+		removeActor(timerDialog);
+		timerDialog = null;
+	}
+	
+	public void removeButton(){
+		removeActor(pataButton);
+		removeActor(ponButton);
+		removeActor(cakaButton);
+		
+		pataButton = null;
+		ponButton = null;
+		cakaButton = null;
+	}
+	
 	public void showActor(){
-		timerDialog.show(-1);
-		pataButton.show();
-		ponButton.show();
-		cakaButton.show();
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "showActor.. ");
+		
+//		timerDialog.show(-1);
+//		pataButton.show();
+//		ponButton.show();
+//		cakaButton.show();
+		
+		
+		initButton();
+		initTimerDialog();
 	}
 
 	public void hideActor(){
-		timerDialog.hide();
-		pataButton.hide();
-		ponButton.hide();
-		cakaButton.hide();
+//		timerDialog.hide();
+//		pataButton.hide();
+//		ponButton.hide();
+//		cakaButton.hide();
+		
+		removeTimerDialog();
+		removeButton();
 	}
-	public void initTimerDialog() {
-		timerDialog = new TimerDialog("timerDialog", this);
-		//timerDialog.show(-1);
-
-		timerDialog.start(270);
-	}
+	
 
 	@Override
 	public boolean touchDown(int x, int y, int pointer, int button) {

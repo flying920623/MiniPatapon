@@ -1,0 +1,1154 @@
+
+{
+   "allowSleep" : true,
+   "autoClearForces" : true,
+   "body" : 
+   [
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3EA824DF",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3FA066F0", "3FA066F0", "BFA9E770", "BFA9E770" ],
+                     "y" : [ "BF970A36", "3F970A3A", "3F970A3A", "BF970A3B" ]
+                  }
+               }
+            }
+         ],
+         "gravityScale" : "411CCCCD",
+         "linearVelocity" : 0,
+         "massData-I" : "40029D8C",
+         "massData-center" : 
+         {
+            "x" : "BD18080E",
+            "y" : "33BD1A8D"
+         },
+         "massData-mass" : "40000000",
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "4120268C",
+            "y" : "4185EA4F"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3DCCCCCD",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3EE9AD16", "3EE9AD10", "BEC89C10", "BEC89C10" ],
+                     "y" : [ "BF970A36", "3F970A3A", "3F970A3A", "BF970A3B" ]
+                  }
+               }
+            }
+         ],
+         "gravityScale" : "411CCCCD",
+         "linearVelocity" : 0,
+         "massData-I" : "3DD74925",
+         "massData-center" : 
+         {
+            "x" : "3D044408",
+            "y" : "3322F24D"
+         },
+         "massData-mass" : "3E4CFB96",
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "411EF316",
+            "y" : "41987001"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3DCCCCCD",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3EE9AD16", "3EE9AD10", "BEC89C10", "BEC89C10" ],
+                     "y" : [ "BF970A36", "3F970A3A", "3F970A3A", "BF970A3B" ]
+                  }
+               }
+            }
+         ],
+         "gravityScale" : "411CCCCD",
+         "linearVelocity" : 0,
+         "massData-I" : "3DD74925",
+         "massData-center" : 
+         {
+            "x" : "3D044408",
+            "y" : "3322F24D"
+         },
+         "massData-mass" : "3E4CFB96",
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "411EF316",
+            "y" : "41AB000C"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3DCCCCCD",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3EE9AD16", "3EE9AD10", "BEC89C10", "BEC89C10" ],
+                     "y" : [ "BF970A36", "3F970A3A", "3F970A3A", "BF970A3B" ]
+                  }
+               }
+            }
+         ],
+         "gravityScale" : "411CCCCD",
+         "linearVelocity" : 0,
+         "massData-I" : "3DD74925",
+         "massData-center" : 
+         {
+            "x" : "3D044408",
+            "y" : "3322F24D"
+         },
+         "massData-mass" : "3E4CFB96",
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "411EF317",
+            "y" : "41BD9016"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3DCCCCCD",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3EE9AD16", "3EE9AD10", "BEC89C10", "BEC89C10" ],
+                     "y" : [ "BF970A36", "3F970A3A", "3F970A3A", "BF970A3B" ]
+                  }
+               }
+            }
+         ],
+         "gravityScale" : "411CCCCD",
+         "linearVelocity" : 0,
+         "massData-I" : "3DD74925",
+         "massData-center" : 
+         {
+            "x" : "3D044408",
+            "y" : "3322F24D"
+         },
+         "massData-mass" : "3E4CFB96",
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "411F01B0",
+            "y" : "41CFF462"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3DCCCCCD",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3EE9AD16", "3EE9AD10", "BEC89C10", "BEC89C10" ],
+                     "y" : [ "BF970A36", "3F970A3A", "3F970A3A", "BF970A3B" ]
+                  }
+               }
+            }
+         ],
+         "gravityScale" : "411CCCCD",
+         "linearVelocity" : 0,
+         "massData-I" : "3DD74925",
+         "massData-center" : 
+         {
+            "x" : "3D044408",
+            "y" : "3322F24D"
+         },
+         "massData-mass" : "3E4CFB96",
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "411EFD78",
+            "y" : "41E2812A"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3DCCCCCD",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3EE9AD16", "3EE9AD10", "BEC89C10", "BEC89C10" ],
+                     "y" : [ "BF970A36", "3F970A3A", "3F970A3A", "BF970A3B" ]
+                  }
+               }
+            }
+         ],
+         "gravityScale" : "411CCCCD",
+         "linearVelocity" : 0,
+         "massData-I" : "3DD74925",
+         "massData-center" : 
+         {
+            "x" : "3D044408",
+            "y" : "3322F24D"
+         },
+         "massData-mass" : "3E4CFB96",
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "411EFD78",
+            "y" : "41F50390"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixedRotation" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3EE38E39",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3FC00000", "3FC00000", "BFC00000", "BFC00000" ],
+                     "y" : [ "BFC00000", "3FC00000", "3FC00000", "BFC00000" ]
+                  }
+               },
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 
+         {
+            "x" : "3C03199F",
+            "y" : "C164D870"
+         },
+         "massData-I" : "26000000",
+         "massData-center" : 
+         {
+            "x" : "B2000000",
+            "y" : "B2000000"
+         },
+         "massData-mass" : "40800000",
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "41C19F95",
+            "y" : "4189463D"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "C1BFABCE",
+                     "y" : "B4000000"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "41BFCD16",
+                     "y" : "B4000000"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "41C0C4A3",
+            "y" : "BD280600"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : "44091759",
+         "angularVelocity" : "404A2CAA",
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "40000000",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3F000000", "3F000000", "BF000000", "BF000000" ],
+                     "y" : [ "C0000000", "40000000", "40000000", "C0000000" ]
+                  }
+               },
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 
+         {
+            "x" : "3F266383",
+            "y" : "C0C91A11"
+         },
+         "massData-I" : "41355555",
+         "massData-mass" : "41000000",
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "41B0F6F3",
+            "y" : "4094AFE0"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : "BF0442CB",
+         "angularVelocity" : "3E3E6D8F",
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "40000000",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3F000000", "3F000000", "BF000000", "BF000000" ],
+                     "y" : [ "C0800000", "40800000", "40800000", "C0800000" ]
+                  }
+               },
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 
+         {
+            "x" : "3F27643C",
+            "y" : "C143E724"
+         },
+         "massData-I" : "42AD5555",
+         "massData-mass" : "41800000",
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "41B0F436",
+            "y" : "40F9F64A"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixedRotation" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3F8E38E4",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3FC00000", "3FC00000", "BFC00000", "BFC00000" ],
+                     "y" : [ "BFC00000", "3FC00000", "3FC00000", "BFC00000" ]
+                  }
+               },
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 
+         {
+            "x" : "3B819380",
+            "y" : "C13E0C3B"
+         },
+         "massData-I" : "26A00000",
+         "massData-center" : 
+         {
+            "x" : "B2000000",
+            "y" : "B2000000"
+         },
+         "massData-mass" : "41200000",
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "41C0C42F",
+            "y" : "41349BD1"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : "41FB53F3",
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 
+         {
+            "x" : 0,
+            "y" : "C2EFFFFF"
+         },
+         "massData-mass" : 1,
+         "position" : 
+         {
+            "x" : "3FBD4403",
+            "y" : "C6163E19"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "C1C14918",
+                     "y" : "B40113E8"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "41C16A60",
+                     "y" : "B40113E8"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "41C0EF04",
+            "y" : "41FF94C5"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "BD978300",
+                     "y" : "417C8240"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "BD909700",
+                     "y" : "C180C7DA"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "3D0CA366",
+            "y" : "418096CC"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "BE46C280",
+                     "y" : "417C8240"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "BE434C80",
+                     "y" : "C18137AD"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "424135AE",
+            "y" : "418096CC"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3F19999A",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3F2A4BB4", "3F2A4BB4", "BF65C3CC", "BF65C3BC" ],
+                     "y" : [ "C125BA9B", "41273227", "41273227", "C125BAA3" ]
+                  }
+               },
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "SqureWood_woodType6.png",
+         "position" : 
+         {
+            "x" : "41F6C445",
+            "y" : "4126D238"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : "BE486C60",
+         "angularVelocity" : "BBBFFD23",
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "3B15BC6C",
+                     "y" : "3BDEDF48"
+                  },
+                  "radius" : "40185DB7"
+               },
+               "density" : "3DB96873",
+               "filter-groupIndex" : 1,
+               "friction" : "3ECCCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 
+         {
+            "x" : "3C6FBBC8",
+            "y" : "B9D01072"
+         },
+         "massData-I" : "40922FF0",
+         "massData-center" : 
+         {
+            "x" : "3B15BC6C",
+            "y" : "3BDEDF48"
+         },
+         "massData-mass" : "3FCE5603",
+         "name" : "CircleMouse_mouse_64_128.png",
+         "position" : 
+         {
+            "x" : "42307FEC",
+            "y" : "4015C4B3"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : "C1C0E745",
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "3C7BEB40",
+                     "y" : "BC52C052"
+                  },
+                  "radius" : "4021760E"
+               },
+               "density" : "3E4C5B7F",
+               "filter-groupIndex" : 1,
+               "friction" : "3ECCCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "massData-I" : "414B34D8",
+         "massData-center" : 
+         {
+            "x" : "3C7BEB40",
+            "y" : "BC52C052"
+         },
+         "massData-mass" : "407F62B7",
+         "name" : "CircleSnake_eggsnake_64_64.png",
+         "position" : 
+         {
+            "x" : "401ED997",
+            "y" : "401ED997"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3F19999A",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "3F4C1F54", "3F4C1F54", "BF43F02C", "BF43F01C" ],
+                     "y" : [ "C09C04FE", "409CDCB7", "409CDCB7", "C09C0506" ]
+                  }
+               },
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "SqureWood_woodType6.png",
+         "position" : 
+         {
+            "x" : "418B790C",
+            "y" : "409E2AAC"
+         },
+         "type" : 0 //static
+      }
+   ],
+   "continuousPhysics" : true,
+   "gravity" : 
+   {
+      "x" : 0,
+      "y" : "C1200000"
+   },
+   "joint" : 
+   [
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "3D7F1000",
+            "y" : "3FA8B040"
+         },
+         "anchorB" : 
+         {
+            "x" : "C161EA4A",
+            "y" : "BB47E000"
+         },
+         "bodyA" : 6,
+         "bodyB" : 13,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "3EACA460",
+            "y" : "BF93A0F0"
+         },
+         "anchorB" : 
+         {
+            "x" : "3E84E820",
+            "y" : "3F947D20"
+         },
+         "bodyA" : 1,
+         "bodyB" : 0,
+         "collideConnected" : true,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "3EA94140",
+            "y" : "BF944B70"
+         },
+         "anchorB" : 
+         {
+            "x" : "3EAB8880",
+            "y" : "3F949C00"
+         },
+         "bodyA" : 2,
+         "bodyB" : 1,
+         "collideConnected" : true,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : "44960000",
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "3EAD2840",
+            "y" : "3F93F2E0"
+         },
+         "anchorB" : 
+         {
+            "x" : "3EAD2840",
+            "y" : "BF957A30"
+         },
+         "bodyA" : 2,
+         "bodyB" : 3,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : "44960000",
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "3EA897C0",
+            "y" : "3F9292D0"
+         },
+         "anchorB" : 
+         {
+            "x" : "3EA5C120",
+            "y" : "BF937DC0"
+         },
+         "bodyA" : 3,
+         "bodyB" : 4,
+         "collideConnected" : true,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "3E9F4F00",
+            "y" : "BF93CEE0"
+         },
+         "anchorB" : 
+         {
+            "x" : "3E9CC520",
+            "y" : "3F94A270"
+         },
+         "bodyA" : 5,
+         "bodyB" : 4,
+         "collideConnected" : true,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "3EC095A0",
+            "y" : "BF934590"
+         },
+         "anchorB" : 
+         {
+            "x" : "3EBDF640",
+            "y" : "3F941E60"
+         },
+         "bodyA" : 6,
+         "bodyB" : 5,
+         "collideConnected" : true,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : 0,
+            "y" : "40A00000"
+         },
+         "anchorB" : 
+         {
+            "x" : "3595E354",
+            "y" : "C0000004"
+         },
+         "bodyA" : 8,
+         "bodyB" : 9,
+         "enableLimit" : false,
+         "enableMotor" : true,
+         "jointSpeed" : "404A2CAA",
+         "lowerLimit" : 0,
+         "maxMotorTorque" : "461C4000",
+         "motorSpeed" : "40490FDB",
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "B5BDE315",
+            "y" : "3FFFFFF9"
+         },
+         "anchorB" : 
+         {
+            "x" : "B624B8FB",
+            "y" : "C0800000"
+         },
+         "bodyA" : 9,
+         "bodyB" : 10,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : "C03E45D1",
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : "B9C9A780",
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "B4CCD810",
+            "y" : "40800003"
+         },
+         "anchorB" : 0,
+         "bodyA" : 10,
+         "bodyB" : 11,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : "BE3E6D8F",
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : 0,
+            "y" : "41880000"
+         },
+         "anchorB" : 0,
+         "bodyA" : 8,
+         "bodyB" : 11,
+         "enableLimit" : false,
+         "enableMotor" : true,
+         "localAxis1" : 
+         {
+            "x" : 0,
+            "y" : 1
+         },
+         "lowerLimit" : 0,
+         "maxMotorForce" : "447A0000",
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "prismatic",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "BE8E9EA0",
+            "y" : "BF9422B0"
+         },
+         "anchorB" : 
+         {
+            "x" : "BE8E9E80",
+            "y" : "3F933520"
+         },
+         "bodyA" : 6,
+         "bodyB" : 5,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "BE9E0880",
+            "y" : "BF93C4D0"
+         },
+         "anchorB" : 
+         {
+            "x" : "BE9E59E0",
+            "y" : "3F95A3E0"
+         },
+         "bodyA" : 5,
+         "bodyB" : 4,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "BE931C80",
+            "y" : "BF934330"
+         },
+         "anchorB" : 
+         {
+            "x" : "BE926D80",
+            "y" : "3F934770"
+         },
+         "bodyA" : 4,
+         "bodyB" : 3,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "BE777180",
+            "y" : "BF949500"
+         },
+         "anchorB" : 
+         {
+            "x" : "BE76A880",
+            "y" : "3F945280"
+         },
+         "bodyA" : 3,
+         "bodyB" : 2,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "BEA4A840",
+            "y" : "BF955DC0"
+         },
+         "anchorB" : 
+         {
+            "x" : "BEA44EE0",
+            "y" : "3F9389C0"
+         },
+         "bodyA" : 2,
+         "bodyB" : 1,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      },
+      
+      {
+         "anchorA" : 
+         {
+            "x" : "BE86A960",
+            "y" : "BF934A30"
+         },
+         "anchorB" : 
+         {
+            "x" : "BEAE65C0",
+            "y" : "3F9526E0"
+         },
+         "bodyA" : 1,
+         "bodyB" : 0,
+         "enableLimit" : false,
+         "enableMotor" : false,
+         "jointSpeed" : 0,
+         "lowerLimit" : 0,
+         "maxMotorTorque" : 0,
+         "motorSpeed" : 0,
+         "refAngle" : 0,
+         "type" : "revolute",
+         "upperLimit" : 0
+      }
+   ],
+   "subStepping" : false,
+   "warmStarting" : true
+}

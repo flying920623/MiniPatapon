@@ -37,10 +37,10 @@ public class GameLogic implements EventListener<GameStateArg>{
 		if(arg.state==GameState.GameStart)
 		{
 		
-		  for (GameStateListener listener : listeners) {
+			for (GameStateListener listener : listeners) {
 			  listener.OnGameStart();
-		}
-		  listener.OnGameStart();
+			}
+			//listener.OnGameStart();
 		 
 		}
 		else if(arg.state==GameState.GameEnd)
@@ -48,7 +48,7 @@ public class GameLogic implements EventListener<GameStateArg>{
 			for (GameStateListener listener : listeners) {
 				  listener.OnGameEnd();
 			}
-			listener.OnGameEnd();
+			//listener.OnGameEnd();
 		}
 		
 	}

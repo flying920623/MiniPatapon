@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3686/trunk/demos/superjumper/superjumper-android/libs/armeabi
+END
+libgdx.so
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3686/trunk/demos/superjumper/superjumper-android/libs/armeabi/libgdx.so
+END
+libandroidgl20.so
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1426/trunk/demos/superjumper/superjumper-android/libs/armeabi/libandroidgl20.so
+END

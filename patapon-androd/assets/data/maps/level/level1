@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><map height="20" orientation="orthogonal" tileheight="16" tilewidth="16" version="1.0" width="90"><properties><property name="blended tiles" value=""/></properties>
+ <layer height="20" name="background" width="90">
+  <data compression="zlib" encoding="base64">
+   eJztwQEBAAAAgiD/r25IQAEAAAAAAAAvBhwgAAE=
+  </data>
+ </layer>
+ <layer height="20" name="boundary" width="90">
+  <properties>
+   <property name="Pass" value="false"/>
+  </properties>
+  <data compression="zlib" encoding="base64">
+   eJztwQEBAAAAgiD/r25IQAEAAAAAAAAvBhwgAAE=
+  </data>
+ </layer>
+ <objectgroup height="20" name="soldiers" width="90">
+  <object name="hero" x="502" y="291"/>
+  <object name="standard_bearer" x="139" y="291"/>
+  <object name="spear" x="636" y="291"/>
+  <object name="axe" x="780" y="291"/>
+  <object name="sword" x="987" y="292"/>
+ </objectgroup>
+ <objectgroup height="20" name="end_mark_tower" width="90">
+  <object name="end_mark_tower" x="1260" y="294"/>
+ </objectgroup>
+</map>

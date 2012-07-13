@@ -1,0 +1,68 @@
+
+axe1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+1
+  rotate: false
+  xy: 2, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+dun
+  rotate: false
+  xy: 132, 2
+  size: 45, 74
+  orig: 45, 74
+  offset: 0, 0
+  index: -1
+futou
+  rotate: false
+  xy: 179, 2
+  size: 35, 63
+  orig: 35, 63
+  offset: 0, 0
+  index: -1
+maozi
+  rotate: false
+  xy: 132, 78
+  size: 43, 46
+  orig: 43, 46
+  offset: 0, 0
+  index: -1
+rightfoot
+  rotate: false
+  xy: 216, 2
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+zuojiao
+  rotate: false
+  xy: 216, 29
+  size: 24, 25
+  orig: 24, 25
+  offset: 0, 0
+  index: -1
+leftfoot
+  rotate: false
+  xy: 243, 2
+  size: 10, 24
+  orig: 10, 24
+  offset: 0, 0
+  index: -1
+you
+  rotate: false
+  xy: 179, 67
+  size: 26, 21
+  orig: 26, 21
+  offset: 0, 0
+  index: -1
+zuoshou
+  rotate: false
+  xy: 132, 126
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1

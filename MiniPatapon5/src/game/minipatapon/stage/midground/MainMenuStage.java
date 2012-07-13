@@ -39,6 +39,8 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 	private float scaleX = 0.3f;
 	private float scaleY = 0.3f;
 
+	private float moveTime = 2f;
+
 	private float actorDistance = 5f;
 
 	private AnimateImage standardBearer_right_Img;
@@ -55,26 +57,25 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 
 	private FlatImage gameName1Img;
 	private FlatImage gameName2Img;
-	
-	private TextureRegion textureRegion = new TextureRegion(TextureAssets.GetTex(TextureAssets.StartMenuImg));
-	private NavigateImage startImage = new NavigateImage("start", textureRegion,1.0f,1.0f,this,ChooseHeroStage.class);
+
+	private TextureRegion textureRegion = new TextureRegion(
+			TextureAssets.GetTex(TextureAssets.StartMenuImg));
+	private NavigateImage startImage = new NavigateImage("start",
+			textureRegion, 1.0f, 1.0f, this, ChooseHeroStage.class);
 
 	private Image backImage = new Image("backgroud",
 			TextureAssets.GetTex(TextureAssets.BackgroundImg));
-	
 
-	
 	private NavigateImage helpImage;
 	private NavigateImage settingImage;
-	
+
 	@SuppressWarnings("unused")
 	private ContentScreen contentScreen;
-	
-	Music music = ResourceLoader.loadMusic(MusicAssets.mainStageMusicStr);
-	
-	
+
+	Music music = MusicAssets.GetMusic(MusicAssets.mainStageMusicStr);
+
 	private Image colorTitleImage;
-	
+
 	TweenManager tweenManager = new TweenManager();
 
 	public MainMenuStage(float width, float height, boolean stretch) {
@@ -93,13 +94,12 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		backImage.width = width;
 		backImage.height = height;
 		this.addActor(backImage);
-		
-		scaleY = Gdx.graphics.getHeight()/240*0.3f;
+
+		scaleY = Gdx.graphics.getHeight() / 240 * 0.3f;
 		scaleX = scaleY;
-		
-		
+
 		this.loadAltarImg();
-		
+
 		this.initStartMenu();
 
 		this.loadShieldSoldier3_left_Img();
@@ -112,13 +112,13 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		this.loadShieldSoldier_right_Img();
 		this.loadStandardBearer_right_Img();
 
-		//this.loadGameName1Img();
-		//this.loadGameName2Img();
+		// this.loadGameName1Img();
+		// this.loadGameName2Img();
 
-		//this.InitAction();
+		// this.InitAction();
 
 		initColorTitle();
-		
+
 		this.loadHelpImage();
 		this.loadSettingImage();
 	}
@@ -137,27 +137,25 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 	//
 	//
 	// }
-	
-	
-	void initStartMenu()
-	{
-		startImage.width = width/6;
-		startImage.height = height/10;
-		
-		startImage.x = width/2 - startImage.width/2;
-		startImage.y = height/2;
-		
-		this.addActor( startImage );
+
+	void initStartMenu() {
+		startImage.width = width / 6;
+		startImage.height = height / 10;
+
+		startImage.x = width / 2 - startImage.width / 2;
+		startImage.y = height / 2;
+
+		this.addActor(startImage);
 	}
-	
+
 	void initColorTitle() {
 		this.colorTitleImage = new Image("",
 				TextureAssets.GetTex(TextureAssets.ColorTitleImg));
 		this.addActor(colorTitleImage);
 
-		colorTitleImage.width = width/3;
-		colorTitleImage.height = height/3;
-		
+		colorTitleImage.width = width / 3.5f;
+		colorTitleImage.height = height / 3.5f;
+
 		colorTitleImage.x = width / 2 - colorTitleImage.width / 2;
 		colorTitleImage.y = height;
 
@@ -178,17 +176,15 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 												ActorAccessor.SCALE_XY, 0.15f)
 										.targetRelative(0.1f, 0.15f)
 										.ease(Quad.OUT)).repeatYoyo(-1, 0.1f)
-								
+
 								.start(tweenManager);
 					}
 
-					
 				})
 
 				.start(tweenManager);
 
 	}
-	
 
 	@Override
 	public void hide() {
@@ -197,19 +193,18 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 	}
 
 	@Override
-	public void draw()
-	{
+	public void draw() {
 		// TODO Auto-generated method stub
 		tweenManager.update(Gdx.graphics.getDeltaTime());
-		
+
 		super.draw();
-		
+
 	}
 
 	@Override
 	public void pause() {
 		// TODO Auto-generated method stub
-		MusicManage.pauseMusic(music);
+		// MusicManage.pauseMusic(music);
 	}
 
 	@Override
@@ -229,17 +224,13 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		// TODO Auto-generated method stub
 
 	}
-	
-	
-	
+
 	@Override
-	public void dispose()
-	{
+	public void dispose() {
 		// TODO Auto-generated method stub
 		super.dispose();
 		MusicManage.stopMusic(music);
 	}
-
 
 	private void loadStandardBearer_left_Img() {
 		ArrayList<String> picNames = TextureAssets.StandardBearer_left_Img;
@@ -257,7 +248,10 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 				+ this.shieldSoldier_left_Img.getScaledWidth()
 				+ this.archer_left_Img.getScaledWidth();
 
-		this.standardBearer_left_Img.action(MoveTo.$(movex, 0f, 4f));
+		// this.standardBearer_left_Img.action(MoveTo.$(movex, 0f, 4f));
+
+		Tween.to(standardBearer_left_Img, ActorAccessor.POS_XY, moveTime)
+				.target(movex, 0f).start(tweenManager);
 
 	}
 
@@ -275,7 +269,10 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 				+ this.shieldSoldier3_left_Img.getScaledWidth()
 				+ this.shieldSoldier_left_Img.getScaledWidth();
 
-		this.archer_left_Img.action(MoveTo.$(movex, 0f, 4f));
+		// this.archer_left_Img.action(MoveTo.$(movex, 0f, 4f));
+
+		Tween.to(archer_left_Img, ActorAccessor.POS_XY, moveTime)
+				.target(movex, 0f).start(tweenManager);
 
 	}
 
@@ -294,7 +291,10 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		float movex = this.actorDistance * 2
 				+ this.shieldSoldier3_left_Img.getScaledWidth();
 
-		this.shieldSoldier_left_Img.action(MoveTo.$(movex, 0f, 4f));
+		// this.shieldSoldier_left_Img.action(MoveTo.$(movex, 0f, 4f));
+		Tween.to(shieldSoldier_left_Img, ActorAccessor.POS_XY, moveTime)
+				.target(movex, 0f).start(tweenManager);
+
 	}
 
 	private void loadShieldSoldier3_left_Img() {
@@ -311,7 +311,11 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 
 		float movex = this.actorDistance;
 
-		this.shieldSoldier3_left_Img.action(MoveTo.$(movex, 0f, 4f));
+		// this.shieldSoldier3_left_Img.action(MoveTo.$(movex, 0f, 4f));
+
+		Tween.to(shieldSoldier3_left_Img, ActorAccessor.POS_XY, moveTime)
+				.target(movex, 0f).start(tweenManager);
+
 	}
 
 	private void loadStandardBearer_right_Img() {
@@ -331,9 +335,13 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 				+ this.shieldSoldier_right_Img.getScaledWidth()
 				+ this.standardBearer_right_Img.getScaledWidth();
 
-		this.standardBearer_right_Img.action(MoveTo.$(Gdx.graphics.getWidth()
-				- movex, -standardBearer_right_Img.height/35, 4f));
-		this.standardBearer_right_Img.action(ScaleTo.$(scaleX, scaleY, 0f));
+		// this.standardBearer_right_Img.action(MoveTo.$(Gdx.graphics.getWidth()
+		// - movex, -standardBearer_right_Img.height/35, 4f));
+
+		Tween.to(standardBearer_right_Img, ActorAccessor.POS_XY, moveTime)
+				.target(Gdx.graphics.getWidth() - movex, 0f)
+				.start(tweenManager);
+
 	}
 
 	private void loadShieldSoldier_right_Img() {
@@ -352,9 +360,12 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 				+ this.swordman_right_Img.getScaledWidth()
 				+ this.shieldSoldier_right_Img.getScaledWidth();
 
-		this.shieldSoldier_right_Img.action(MoveTo.$(Gdx.graphics.getWidth()
-				- movex, 0f, 4f));
-		this.shieldSoldier_right_Img.action(ScaleTo.$(scaleX, scaleY, 0f));
+		// this.shieldSoldier_right_Img.action(MoveTo.$(Gdx.graphics.getWidth()
+		// - movex, 0f, 4f));
+
+		Tween.to(shieldSoldier_right_Img, ActorAccessor.POS_XY, moveTime)
+				.target(Gdx.graphics.getWidth() - movex, 0f)
+				.start(tweenManager);
 	}
 
 	private void loadSwordman_right_Img() {
@@ -372,8 +383,12 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 				+ this.swordman2_right_Img.getScaledWidth()
 				+ this.swordman_right_Img.getScaledWidth();
 
-		this.swordman_right_Img.action(MoveTo.$(
-				Gdx.graphics.getWidth() - movex, 0f, 4f));
+		// this.swordman_right_Img.action(MoveTo.$(
+		// Gdx.graphics.getWidth() - movex, 0f, 4f));
+
+		Tween.to(swordman_right_Img, ActorAccessor.POS_XY, moveTime)
+				.target(Gdx.graphics.getWidth() - movex, 0f)
+				.start(tweenManager);
 	}
 
 	private void loadSwordman2_right_Img() {
@@ -390,8 +405,12 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		float movex = this.actorDistance
 				+ this.swordman2_right_Img.getScaledWidth();
 
-		this.swordman2_right_Img.action(MoveTo.$(Gdx.graphics.getWidth()
-				- movex, 0f, 4f));
+		// this.swordman2_right_Img.action(MoveTo.$(Gdx.graphics.getWidth()
+		// - movex, 0f, 4f));
+
+		Tween.to(swordman2_right_Img, ActorAccessor.POS_XY, moveTime)
+				.target(Gdx.graphics.getWidth() - movex, 0f)
+				.start(tweenManager);
 
 	}
 
@@ -400,41 +419,46 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		Texture maskTexture = TextureAssets.GetTex(TextureAssets.Altar_Img);
 		this.altarImg = new FlatImage(maskTexture, 0, -100f, this);
 
-		DefaultLogger.getDefaultLogger().logWithSignature(this, "%f  %f", width, height);
-		
-		altarImg.width = this.width*4/5;
-		altarImg.height = this.height*4/5;
-		
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "%f  %f",
+				width, height);
+
+		altarImg.width = this.width * 4 / 5;
+		altarImg.height = this.height * 4 / 5;
+
 		//
 		// this.altarImg.scaleX = this.scaleX;
 		// this.altarImg.scaleY = this.scaleY;
 
-		this.altarImg.action(MoveTo.$(width/2 - altarImg.width/2, 0f, 2f));
+		// this.altarImg.action(MoveTo.$(width/2 - altarImg.width/2, 0f, 2f));
+
+		Tween.to(altarImg, ActorAccessor.POS_XY, moveTime)
+				.target(width / 2 - altarImg.width / 2, 0f).start(tweenManager);
 	}
 
-	private void loadGameName1Img() {
-
-		ArrayList<TextureRegion> regions = TextureAssets
-				.GetTextureRegionsFromPacker(TextureAssets.GameName1Img);
-
-		this.gameName1Img = new FlatImage(regions.get(0),
-				Gdx.graphics.getWidth(), Gdx.graphics.getHeight() / 2, this);
-
-		this.gameName1Img.scaleX = 0.5f;
-		this.gameName1Img.scaleY = 0.5f;
-
-	}
-
-	private void loadGameName2Img() {
-
-		ArrayList<TextureRegion> regions = TextureAssets
-				.GetTextureRegionsFromPacker(TextureAssets.GameName2Img);
-		this.gameName2Img = new FlatImage(regions.get(0),
-				Gdx.graphics.getWidth(), Gdx.graphics.getHeight() / 2, this);
-
-		this.gameName2Img.scaleX = 0.5f;
-		this.gameName2Img.scaleY = 0.5f;
-	}
+	//
+	// private void loadGameName1Img() {
+	//
+	// ArrayList<TextureRegion> regions = TextureAssets
+	// .GetTextureRegionsFromPacker(TextureAssets.GameName1Img);
+	//
+	// this.gameName1Img = new FlatImage(regions.get(0),
+	// Gdx.graphics.getWidth(), Gdx.graphics.getHeight() / 2, this);
+	//
+	// this.gameName1Img.scaleX = 0.5f;
+	// this.gameName1Img.scaleY = 0.5f;
+	//
+	// }
+	//
+	// private void loadGameName2Img() {
+	//
+	// ArrayList<TextureRegion> regions = TextureAssets
+	// .GetTextureRegionsFromPacker(TextureAssets.GameName2Img);
+	// this.gameName2Img = new FlatImage(regions.get(0),
+	// Gdx.graphics.getWidth(), Gdx.graphics.getHeight() / 2, this);
+	//
+	// this.gameName2Img.scaleX = 0.5f;
+	// this.gameName2Img.scaleY = 0.5f;
+	// }
 
 	private void InitAction() {
 		float gameNameWIdth = this.gameName1Img.getScaledWidth()
@@ -455,31 +479,33 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		// gameNameWIdth/2 + this.gameName1Img.getScaledWidth(),
 		// this.gameName2Img.y, 3f) );
 	}
-	private void loadHelpImage()
-	{
+
+	private void loadHelpImage() {
 		Texture texture = ResourceLoader.loadTexture("help.png");
 		TextureRegion textureRegion = new TextureRegion(texture);
-		this.helpImage = new NavigateImage("help", textureRegion, 1.0f, 1.0f, this, HelpStage.class);
-		
-		this.helpImage.width = height/10;
-		this.helpImage.height = height/10;
-		
-		this.helpImage.x = this.width-this.helpImage.width*1.1f;
-		this.helpImage.y = this.height-this.helpImage.height*1.1f;
+		this.helpImage = new NavigateImage("help", textureRegion, 1.0f, 1.0f,
+				this, HelpStage.class);
+
+		this.helpImage.width = height / 10;
+		this.helpImage.height = height / 10;
+
+		this.helpImage.x = this.width - this.helpImage.width * 1.1f;
+		this.helpImage.y = this.height - this.helpImage.height * 1.1f;
 		this.addActor(this.helpImage);
 	}
-	private void loadSettingImage()
-	{
+
+	private void loadSettingImage() {
 		Texture texture = ResourceLoader.loadTexture("set.png");
 		TextureRegion textureRegion = new TextureRegion(texture);
-		this.settingImage = new NavigateImage("setting", textureRegion, 1.0f, 1.0f, this, SettingStage.class);
-		
-		this.settingImage.width = height/10;
-		this.settingImage.height = height/10;
-		
-		this.settingImage.x = this.width-this.settingImage.width*1.1f;
-		this.settingImage.y = this.height-this.settingImage.height*2.2f;
+		this.settingImage = new NavigateImage("setting", textureRegion, 1.0f,
+				1.0f, this, SettingStage.class);
+
+		this.settingImage.width = height / 10;
+		this.settingImage.height = height / 10;
+
+		this.settingImage.x = this.width - this.settingImage.width * 1.1f;
+		this.settingImage.y = this.height - this.settingImage.height * 2.2f;
 		this.addActor(this.settingImage);
 	}
-	
+
 }

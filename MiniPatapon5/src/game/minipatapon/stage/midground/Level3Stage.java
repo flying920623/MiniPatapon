@@ -195,22 +195,20 @@ public class Level3Stage extends GameStage {
 //		this.windSound = ResourceLoader.loadMusic(SoundAssets.windSoundStr);
 //		this.howlSound = ResourceLoader.loadMusic(SoundAssets.howlSoundStr);
 //		this.thunderSound = ResourceLoader.loadMusic(SoundAssets.thunderSoundStr);
-		this.gameCompleteSound = ResourceLoader
-				.loadMusic(SoundAssets.missionCompleteSoundStr);
-		this.gameFailedSound = ResourceLoader
-				.loadMusic(SoundAssets.missionFailedSoundStr);
+		
+		this.gameCompleteSound = MusicAssets.GetMusic(SoundAssets.missionCompleteSoundStr);
+		this.gameFailedSound = MusicAssets.GetMusic(SoundAssets.missionFailedSoundStr);
 
-		this.forwordSound1 = ResourceLoader
-				.loadMusic(SoundAssets.forwordSoundStr);
+		this.forwordSound1 = MusicAssets.GetMusic(SoundAssets.forwordSoundStr);
 //		
 //		// this.forwordSound2 = ResourceLoader
 //		// .loadMusic(SoundAssets.forwordSound2Str);
-		this.atkSound1 = ResourceLoader.loadMusic(SoundAssets.atkSoundStr);
+		this.atkSound1 = MusicAssets.GetMusic(SoundAssets.atkSoundStr);
 		// this.atkSound2 = ResourceLoader.loadMusic(SoundAssets.atkSound2Str);
-		this.defSound1 = ResourceLoader.loadMusic(SoundAssets.defSoundStr);
+		this.defSound1 = MusicAssets.GetMusic(SoundAssets.defSoundStr);
 		// this.defSound2 = ResourceLoader.loadMusic(SoundAssets.defSound2Str);
 //		this.cheerSound = ResourceLoader.loadMusic(SoundAssets.cheerSoundStr);
-		this.failSound = ResourceLoader.loadMusic(SoundAssets.failSoundStr);
+		this.failSound = MusicAssets.GetMusic(SoundAssets.failSoundStr);
 //
 //		this.startLevelSound = ResourceLoader
 //				.loadMusic(SoundAssets.startLevelSoundStr);
@@ -221,7 +219,7 @@ public class Level3Stage extends GameStage {
 	}
 
 	public void initMusic() {
-		this.tumMusic = ResourceLoader.loadMusic(MusicAssets.drumTwoRhythmStr);
+		this.tumMusic = MusicAssets.GetMusic(MusicAssets.drumTwoRhythmStr);
 //		this.backMusic = ResourceLoader.loadMusic(MusicAssets.level3MusicStr);
 	}
 

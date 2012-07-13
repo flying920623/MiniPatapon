@@ -1,0 +1,66 @@
+
+heropoint1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+8
+  rotate: false
+  xy: 2, 2
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 352, 2
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 2, 340
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 2, 678
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 352, 340
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 352, 678
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+
+heropoint2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+2
+  rotate: false
+  xy: 2, 2
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1
+1
+  rotate: false
+  xy: 2, 340
+  size: 348, 336
+  orig: 348, 336
+  offset: 0, 0
+  index: -1

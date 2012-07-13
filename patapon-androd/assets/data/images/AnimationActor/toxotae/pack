@@ -1,0 +1,75 @@
+
+toxotae1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+head
+  rotate: false
+  xy: 2, 2
+  size: 215, 174
+  orig: 215, 174
+  offset: 0, 0
+  index: -1
+1
+  rotate: false
+  xy: 2, 178
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+head2
+  rotate: false
+  xy: 132, 178
+  size: 116, 122
+  orig: 116, 122
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 2, 308
+  size: 72, 86
+  orig: 72, 86
+  offset: 0, 0
+  index: -1
+weapon2
+  rotate: false
+  xy: 2, 396
+  size: 49, 58
+  orig: 49, 58
+  offset: 0, 0
+  index: -1
+maozi
+  rotate: false
+  xy: 2, 456
+  size: 43, 46
+  orig: 43, 46
+  offset: 0, 0
+  index: -1
+lefthand
+  rotate: false
+  xy: 219, 2
+  size: 29, 30
+  orig: 29, 30
+  offset: 0, 0
+  index: -1
+rightfoot
+  rotate: false
+  xy: 219, 34
+  size: 20, 23
+  orig: 20, 23
+  offset: 0, 0
+  index: -1
+leftfoot
+  rotate: false
+  xy: 219, 59
+  size: 28, 21
+  orig: 28, 21
+  offset: 0, 0
+  index: -1
+righthand
+  rotate: false
+  xy: 76, 308
+  size: 39, 14
+  orig: 39, 14
+  offset: 0, 0
+  index: -1

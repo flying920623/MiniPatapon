@@ -1,0 +1,47 @@
+
+flag1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+flagpole
+  rotate: false
+  xy: 2, 2
+  size: 66, 260
+  orig: 66, 260
+  offset: 0, 0
+  index: -1
+flag
+  rotate: false
+  xy: 2, 264
+  size: 89, 132
+  orig: 89, 132
+  offset: 0, 0
+  index: -1
+head1
+  rotate: false
+  xy: 2, 398
+  size: 67, 97
+  orig: 67, 97
+  offset: 0, 0
+  index: -1
+leftleg
+  rotate: false
+  xy: 70, 2
+  size: 45, 34
+  orig: 45, 34
+  offset: 0, 0
+  index: -1
+rightleg
+  rotate: false
+  xy: 70, 38
+  size: 24, 29
+  orig: 24, 29
+  offset: 0, 0
+  index: -1
+leg
+  rotate: false
+  xy: 70, 69
+  size: 43, 26
+  orig: 43, 26
+  offset: 0, 0
+  index: -1

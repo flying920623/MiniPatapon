@@ -1,0 +1,110 @@
+
+knightImages1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+horsewalking1
+  rotate: false
+  xy: 2, 2
+  size: 256, 512
+  orig: 256, 512
+  offset: 0, 0
+  index: -1
+horse
+  rotate: false
+  xy: 260, 2
+  size: 220, 148
+  orig: 220, 148
+  offset: 0, 0
+  index: -1
+person2
+  rotate: false
+  xy: 260, 152
+  size: 150, 139
+  orig: 150, 139
+  offset: 0, 0
+  index: -1
+person
+  rotate: false
+  xy: 260, 293
+  size: 150, 139
+  orig: 150, 139
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 412, 152
+  size: 62, 103
+  orig: 62, 103
+  offset: 0, 0
+  index: -1
+handAndsword
+  rotate: false
+  xy: 412, 293
+  size: 62, 103
+  orig: 62, 103
+  offset: 0, 0
+  index: -1
+horsehead
+  rotate: false
+  xy: 2, 516
+  size: 110, 96
+  orig: 110, 96
+  offset: 0, 0
+  index: -1
+horsebody
+  rotate: false
+  xy: 114, 516
+  size: 119, 90
+  orig: 119, 90
+  offset: 0, 0
+  index: -1
+horseleg4
+  rotate: false
+  xy: 482, 2
+  size: 26, 39
+  orig: 26, 39
+  offset: 0, 0
+  index: -1
+horseleg2
+  rotate: false
+  xy: 476, 152
+  size: 29, 38
+  orig: 29, 38
+  offset: 0, 0
+  index: -1
+horseleg3
+  rotate: false
+  xy: 476, 192
+  size: 32, 37
+  orig: 32, 37
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 260, 434
+  size: 62, 36
+  orig: 62, 36
+  offset: 0, 0
+  index: -1
+horseleg1
+  rotate: false
+  xy: 412, 257
+  size: 35, 34
+  orig: 35, 34
+  offset: 0, 0
+  index: -1
+oneRightLeg
+  rotate: false
+  xy: 449, 257
+  size: 34, 31
+  orig: 34, 31
+  offset: 0, 0
+  index: -1
+oneLeftLeg
+  rotate: false
+  xy: 260, 472
+  size: 34, 31
+  orig: 34, 31
+  offset: 0, 0
+  index: -1

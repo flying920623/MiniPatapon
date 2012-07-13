@@ -22,11 +22,11 @@ public class InputImage extends FlatImage{
 
 	public void show()
 	{
-		this.color.a=1;
+		color.a=1;
 	}
 	
 	public void hide(){
-		this.color.a=0;
+		color.a=0;
 	}
 	@Override
 	public boolean touchDown(float x, float y, int pointer) {

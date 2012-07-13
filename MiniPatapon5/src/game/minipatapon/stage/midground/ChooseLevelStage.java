@@ -43,8 +43,7 @@ public class ChooseLevelStage extends BaseStage implements ActorLoader {
 	
 	TweenManager tweenManager = new TweenManager();
 	
-	private Image backImage = new Image("backgroud",
-			TextureAssets.GetTex(TextureAssets.BackgroundImg));
+	private Image backImage;
 
 	public ChooseLevelStage( float width, float height,
 			boolean stretch) {
@@ -93,6 +92,8 @@ public class ChooseLevelStage extends BaseStage implements ActorLoader {
 	
 	public void initImage()
 	{
+		backImage = new Image("backgroud",
+				TextureAssets.GetTex(TextureAssets.BackgroundImg));
 		backImage.width = width;
 		backImage.height = height;
 		this.addActor(backImage);

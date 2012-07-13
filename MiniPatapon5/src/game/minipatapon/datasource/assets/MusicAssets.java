@@ -30,7 +30,8 @@ public class MusicAssets {
 		while (!m_musicMap.containsKey(musicStr)) {
 			LoadMusic(musicStr);
 		}
-		return ResourceLoader.loadMusic(musicStr);
+//		return ResourceLoader.loadMusic(musicStr);
+		return m_musicMap.get(musicStr);
 	}
 
 	public static void LoadMusic(String musicStr) {

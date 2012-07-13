@@ -37,6 +37,5 @@ public class AnimateImage extends FlatImage{
         batch.setColor(color.r, color.g, color.b, color.a * parentAlpha);
         batch.draw(currentFrame, this.x * this.scaleX , this.y * this.scaleY , this.x , this.y , currentFrame.getRegionWidth(), currentFrame.getRegionHeight(), this.scaleX, this.scaleY, this.rotation);    
     }
-	
-	
+
 }

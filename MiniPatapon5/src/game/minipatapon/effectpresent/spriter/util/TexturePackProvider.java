@@ -56,6 +56,7 @@ public class TexturePackProvider implements TextureProvider {
 
 			// 去掉 data\images\
 			packPath = packPath.substring(12);
+			packPath = packPath.replaceAll("\\\\", "/");
 
 			ArrayList<String> strings = new ArrayList<String>();
 			strings.add(packPath + "pack");

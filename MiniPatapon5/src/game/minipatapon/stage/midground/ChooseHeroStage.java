@@ -28,7 +28,7 @@ public class ChooseHeroStage extends BaseStage implements ActorLoader{
 	
 	private Image blackImage;
 	
-	Music music = ResourceLoader.loadMusic(MusicAssets.chooseHeroMusicStr);
+	Music music = MusicAssets.GetMusic(MusicAssets.chooseHeroMusicStr);
 	public ChooseHeroStage(float width, float height, boolean stretch) {
 		super(width, height, stretch);
 		// TODO Auto-generated constructor stub

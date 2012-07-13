@@ -1,0 +1,284 @@
+
+{
+   "allowSleep" : true,
+   "autoClearForces" : true,
+   "body" : 
+   [
+      
+      {
+         "angle" : "3FCA255B",
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "3F19999A",
+               "friction" : "3E4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "40FA3C68", "C0FAE120", "C0FAEAFC", "40FA3294" ],
+                     "y" : [ "3F3C94F8", "3F3D5008", "BF339F9C", "BF345AAC" ]
+                  }
+               },
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "SqureWood_woodType1.png",
+         "position" : 
+         {
+            "x" : "41C0561F",
+            "y" : "40FD2E74"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : "43494294",
+         "angularVelocity" : "3BDDC1FC",
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "3D1D172F",
+                     "y" : "BD21ACCB"
+                  },
+                  "radius" : "402FA8A1"
+               },
+               "density" : 1,
+               "filter-groupIndex" : 1,
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 
+         {
+            "x" : "BC980D58",
+            "y" : "2300A950"
+         },
+         "massData-I" : "43326D05",
+         "massData-center" : 
+         {
+            "x" : "3D1D172F",
+            "y" : "BD21ACCB"
+         },
+         "massData-mass" : "423D5477",
+         "name" : "CircleSnake_eggsnake_64_64.png",
+         "position" : 
+         {
+            "x" : "407AD5C8",
+            "y" : "40320967"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 
+         {
+            "x" : 0,
+            "y" : "C2EFFFFF"
+         },
+         "massData-mass" : 1,
+         "position" : 
+         {
+            "x" : 0,
+            "y" : "C7CA7F7F"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "BD978300",
+                     "y" : "417C8240"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "BD909700",
+                     "y" : "C18137AD"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "4240C7A8",
+            "y" : "4180EACF"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "BD978300",
+                     "y" : "417C8240"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "BD909700",
+                     "y" : "C180C7DA"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "BD95BD00",
+            "y" : "4180EACF"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "C1C14918",
+                     "y" : "B40113E8"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "41C16A60",
+                     "y" : "B40113E8"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "41C012F5",
+            "y" : "41FFE8C8"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "C1BFABCE",
+                     "y" : "B4000000"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "41BFCD16",
+                     "y" : "B4000000"
+                  }
+               },
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "41C027B4",
+            "y" : 0
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : "43491063",
+         "angularVelocity" : 0,
+         "fixture" : 
+         [
+            
+            {
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "BD2EBA1D",
+                     "y" : "BCCED3FE"
+                  },
+                  "radius" : "4017F876"
+               },
+               "density" : 1,
+               "filter-groupIndex" : 2,
+               "friction" : "3E4CCCCD",
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "massData-I" : "42C7EDDC",
+         "massData-center" : 
+         {
+            "x" : "BD2EBA1D",
+            "y" : "BCCED3FE"
+         },
+         "massData-mass" : "420DB59E",
+         "name" : "CircleMouse_mouse_64_128.png",
+         "position" : 
+         {
+            "x" : "423060E2",
+            "y" : "4019E97B"
+         },
+         "type" : 2 //dynamic
+      }
+   ],
+   "continuousPhysics" : true,
+   "gravity" : 
+   {
+      "x" : 0,
+      "y" : "C1200000"
+   },
+   "subStepping" : false,
+   "warmStarting" : true
+}
