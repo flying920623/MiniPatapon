@@ -1,0 +1,159 @@
+
+MainMenu.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+flagman2
+  rotate: false
+  xy: 2, 2
+  size: 115, 348
+  orig: 115, 348
+  offset: 0, 0
+  index: -1
+flagman1
+  rotate: false
+  xy: 2, 352
+  size: 115, 348
+  orig: 115, 348
+  offset: 0, 0
+  index: -1
+holdFlag2
+  rotate: false
+  xy: 119, 2
+  size: 91, 337
+  orig: 91, 337
+  offset: 0, 0
+  index: -1
+holdFlag1
+  rotate: false
+  xy: 212, 2
+  size: 127, 330
+  orig: 127, 330
+  offset: 0, 0
+  index: -1
+holdFlag3
+  rotate: false
+  xy: 341, 2
+  size: 120, 325
+  orig: 120, 325
+  offset: 0, 0
+  index: -1
+holdFlag4
+  rotate: false
+  xy: 463, 2
+  size: 95, 324
+  orig: 95, 324
+  offset: 0, 0
+  index: -1
+holdKnife2
+  rotate: false
+  xy: 560, 2
+  size: 135, 204
+  orig: 135, 204
+  offset: 0, 0
+  index: -1
+holdKnife1
+  rotate: false
+  xy: 697, 2
+  size: 135, 204
+  orig: 135, 204
+  offset: 0, 0
+  index: -1
+swordsman2
+  rotate: false
+  xy: 834, 2
+  size: 140, 167
+  orig: 140, 167
+  offset: 0, 0
+  index: -1
+swordsman1
+  rotate: false
+  xy: 212, 334
+  size: 140, 167
+  orig: 140, 167
+  offset: 0, 0
+  index: -1
+shieldSoldiers2
+  rotate: false
+  xy: 834, 171
+  size: 135, 135
+  orig: 135, 135
+  offset: 0, 0
+  index: -1
+shieldSoldier2
+  rotate: false
+  xy: 212, 503
+  size: 135, 135
+  orig: 135, 135
+  offset: 0, 0
+  index: -1
+shieldSoldiers
+  rotate: false
+  xy: 212, 640
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+shieldSoldier1
+  rotate: false
+  xy: 212, 770
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Yaripon1
+  rotate: false
+  xy: 354, 334
+  size: 167, 123
+  orig: 167, 123
+  offset: 0, 0
+  index: -1
+archer2
+  rotate: false
+  xy: 2, 702
+  size: 113, 122
+  orig: 113, 122
+  offset: 0, 0
+  index: -1
+archer1
+  rotate: false
+  xy: 2, 826
+  size: 113, 122
+  orig: 113, 122
+  offset: 0, 0
+  index: -1
+Yaripon2
+  rotate: false
+  xy: 523, 334
+  size: 175, 121
+  orig: 175, 121
+  offset: 0, 0
+  index: -1
+Yaripon4
+  rotate: false
+  xy: 700, 334
+  size: 174, 121
+  orig: 174, 121
+  offset: 0, 0
+  index: -1
+Yaripon
+  rotate: false
+  xy: 354, 459
+  size: 174, 121
+  orig: 174, 121
+  offset: 0, 0
+  index: -1
+GameName2
+  rotate: false
+  xy: 530, 459
+  size: 283, 95
+  orig: 283, 95
+  offset: 0, 0
+  index: -1
+GameName1
+  rotate: false
+  xy: 560, 208
+  size: 121, 95
+  orig: 121, 95
+  offset: 0, 0
+  index: -1

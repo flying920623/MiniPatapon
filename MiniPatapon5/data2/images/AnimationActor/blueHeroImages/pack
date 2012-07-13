@@ -1,0 +1,68 @@
+
+blueHeroImages1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+head1
+  rotate: false
+  xy: 2, 2
+  size: 155, 168
+  orig: 155, 168
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 172
+  size: 155, 168
+  orig: 155, 168
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 159, 2
+  size: 62, 99
+  orig: 62, 99
+  offset: 0, 0
+  index: -1
+shield1
+  rotate: false
+  xy: 159, 172
+  size: 85, 83
+  orig: 85, 83
+  offset: 0, 0
+  index: -1
+shield
+  rotate: false
+  xy: 159, 257
+  size: 59, 83
+  orig: 59, 83
+  offset: 0, 0
+  index: -1
+BlueHero
+  rotate: false
+  xy: 2, 342
+  size: 100, 69
+  orig: 100, 69
+  offset: 0, 0
+  index: -1
+rightleg
+  rotate: false
+  xy: 159, 103
+  size: 85, 57
+  orig: 85, 57
+  offset: 0, 0
+  index: -1
+leftleg
+  rotate: false
+  xy: 2, 413
+  size: 62, 38
+  orig: 62, 38
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 66, 413
+  size: 36, 26
+  orig: 36, 26
+  offset: 0, 0
+  index: -1

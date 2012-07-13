@@ -1,5 +1,7 @@
 package game.minipatapon.effectpresent.audioplayer;
 
+
+
 import com.badlogic.gdx.audio.Sound;
 
 import game.minipatapon.datasource.assets.SoundAssets;
@@ -9,12 +11,13 @@ public class SoundManage
 {
 	public static void playSound(String SoundStr)
 	{
+		
 		if (SoundStr != null)
 		{
-			ResourceLoader.loadSound(SoundStr).play();
+			ResourceLoader.loadSound(SoundStr).play(1);
 		} else
 		{
-			ResourceLoader.loadSound(SoundAssets.errorSoundStr).play();
+			ResourceLoader.loadSound(SoundAssets.errorSoundStr).play(1);
 		}
 
 	}
@@ -23,10 +26,10 @@ public class SoundManage
 	{
 		if (sound != null)
 		{
-			sound.play();
+			sound.play(1);
 		} else
 		{
-			ResourceLoader.loadSound(SoundAssets.errorSoundStr).play();
+			ResourceLoader.loadSound(SoundAssets.errorSoundStr).play(1);
 		}
 
 	}

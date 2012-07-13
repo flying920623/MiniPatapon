@@ -1,0 +1,54 @@
+
+horsewalking1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+horse
+  rotate: false
+  xy: 2, 2
+  size: 220, 148
+  orig: 220, 148
+  offset: 0, 0
+  index: -1
+person
+  rotate: false
+  xy: 2, 152
+  size: 150, 139
+  orig: 150, 139
+  offset: 0, 0
+  index: -1
+handAndsword
+  rotate: false
+  xy: 154, 152
+  size: 62, 103
+  orig: 62, 103
+  offset: 0, 0
+  index: -1
+horseleg4
+  rotate: false
+  xy: 224, 2
+  size: 26, 39
+  orig: 26, 39
+  offset: 0, 0
+  index: -1
+horseleg2
+  rotate: false
+  xy: 224, 43
+  size: 29, 38
+  orig: 29, 38
+  offset: 0, 0
+  index: -1
+horseleg3
+  rotate: false
+  xy: 218, 152
+  size: 32, 37
+  orig: 32, 37
+  offset: 0, 0
+  index: -1
+horseleg1
+  rotate: false
+  xy: 154, 257
+  size: 35, 34
+  orig: 35, 34
+  offset: 0, 0
+  index: -1

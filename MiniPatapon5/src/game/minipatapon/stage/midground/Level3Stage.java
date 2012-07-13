@@ -4,10 +4,7 @@ import game.minipatapon.datasource.assets.FontAssets;
 import game.minipatapon.datasource.assets.MusicAssets;
 import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.SoundAssets;
-import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.action.tween.ActorAccessor;
-import game.minipatapon.effectpresent.actor.LevelImage;
-import game.minipatapon.effectpresent.actor.NavigateImage;
 import game.minipatapon.effectpresent.audioplayer.MusicManage;
 import game.minipatapon.effectpresent.audioplayer.SoundManage;
 import game.minipatapon.effectpresent.dialog.Dialog;
@@ -25,7 +22,6 @@ import aurelienribon.tweenengine.TweenManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g2d.tiled.TiledObject;
 import com.badlogic.gdx.graphics.g2d.tiled.TiledObjectGroup;
 import com.badlogic.gdx.math.MathUtils;
@@ -48,31 +44,31 @@ public class Level3Stage extends GameStage {
 	SpriterObject end_mark_tower;
 
 	Dialog dialog;
-//	private LevelImage quitImage;
+
 	Music tumMusic;
 	// Music backMusic;
 
-	Sound howlSound;
-	Sound windSound;
-	Sound thunderSound;
+	Music howlSound;
+	Music windSound;
+	Music thunderSound;
 	
 
-	Sound gameCompleteSound;
-	Sound gameFailedSound;
+	Music gameCompleteSound;
+	Music gameFailedSound;
 
-	Sound forwordSound1;
+	Music forwordSound1;
 	// Sound forwordSound2;
-	Sound atkSound1;
+	Music atkSound1;
 	// Sound atkSound2;
-	Sound defSound1;
+	Music defSound1;
 	// Sound defSound2;
-	Sound cheerSound;
-	Sound failSound;
+	Music cheerSound;
+	Music failSound;
 
-	Sound startLevelSound;
-	Sound arriveDestSound;
+	Music startLevelSound;
+	Music arriveDestSound;
 
-	Sound deathSound;
+	Music deathSound;
 	
 	boolean meetEnemy = false;
 	
@@ -97,12 +93,7 @@ public class Level3Stage extends GameStage {
 	public void init() {
 		Tween.registerAccessor(Actor.class, new ActorAccessor());
 		
-		
-//		quitImage = new NavigateImage("quit", new TextureRegion(TextureAssets.GetTex("Level/quitButton.png")), 0, 0, this,ChooseLevelStage.class);
-  //       quitImage.setPosition(width-quitImage.width,height-quitImage.height);
-		
-		
-		//		knight = SpriterObject.initSpriterObject("knight",
+//		knight = SpriterObject.initSpriterObject("knight",
 //				"axeSCML", "move", width/4, 0, 1, 1, this,
 //				SpriterObject.moveAttack);
 //		
@@ -185,8 +176,6 @@ public class Level3Stage extends GameStage {
 					enemy = SpriterObject.initSpriterObject("monster",
 							"monsterSCML", "attack", object.x, 0, 2, 2,
 							this, SpriterObject.moveAttack);
-					
-					
 					enemy.speed = 50;
 				} else if ("end_mark_tower".equals(object.name)) {
 //					end_mark_tower = SpriterObject.initSpriterObject("tower",
@@ -203,31 +192,32 @@ public class Level3Stage extends GameStage {
 	}
 
 	public void initSound() {
-		this.windSound = ResourceLoader.loadSound(SoundAssets.windSoundStr);
-		this.howlSound = ResourceLoader.loadSound(SoundAssets.howlSoundStr);
-		this.thunderSound = ResourceLoader.loadSound(SoundAssets.thunderSoundStr);
+//		this.windSound = ResourceLoader.loadMusic(SoundAssets.windSoundStr);
+//		this.howlSound = ResourceLoader.loadMusic(SoundAssets.howlSoundStr);
+//		this.thunderSound = ResourceLoader.loadMusic(SoundAssets.thunderSoundStr);
 		this.gameCompleteSound = ResourceLoader
-				.loadSound(SoundAssets.missionCompleteSoundStr);
+				.loadMusic(SoundAssets.missionCompleteSoundStr);
 		this.gameFailedSound = ResourceLoader
-				.loadSound(SoundAssets.missionFailedSoundStr);
+				.loadMusic(SoundAssets.missionFailedSoundStr);
 
 		this.forwordSound1 = ResourceLoader
-				.loadSound(SoundAssets.forwordSoundStr);
-		// this.forwordSound2 = ResourceLoader
-		// .loadSound(SoundAssets.forwordSound2Str);
-		this.atkSound1 = ResourceLoader.loadSound(SoundAssets.atkSoundStr);
-		// this.atkSound2 = ResourceLoader.loadSound(SoundAssets.atkSound2Str);
-		this.defSound1 = ResourceLoader.loadSound(SoundAssets.defSoundStr);
-		// this.defSound2 = ResourceLoader.loadSound(SoundAssets.defSound2Str);
-		this.cheerSound = ResourceLoader.loadSound(SoundAssets.cheerSoundStr);
-		this.failSound = ResourceLoader.loadSound(SoundAssets.failSoundStr);
-
-		this.startLevelSound = ResourceLoader
-				.loadSound(SoundAssets.startLevelSoundStr);
-		this.arriveDestSound = ResourceLoader
-				.loadSound(SoundAssets.arriveDestSoundStr);
-
-		this.deathSound = ResourceLoader.loadSound(SoundAssets.deathSoundStr);
+				.loadMusic(SoundAssets.forwordSoundStr);
+//		
+//		// this.forwordSound2 = ResourceLoader
+//		// .loadMusic(SoundAssets.forwordSound2Str);
+		this.atkSound1 = ResourceLoader.loadMusic(SoundAssets.atkSoundStr);
+		// this.atkSound2 = ResourceLoader.loadMusic(SoundAssets.atkSound2Str);
+		this.defSound1 = ResourceLoader.loadMusic(SoundAssets.defSoundStr);
+		// this.defSound2 = ResourceLoader.loadMusic(SoundAssets.defSound2Str);
+//		this.cheerSound = ResourceLoader.loadMusic(SoundAssets.cheerSoundStr);
+		this.failSound = ResourceLoader.loadMusic(SoundAssets.failSoundStr);
+//
+//		this.startLevelSound = ResourceLoader
+//				.loadMusic(SoundAssets.startLevelSoundStr);
+//		this.arriveDestSound = ResourceLoader
+//				.loadMusic(SoundAssets.arriveDestSoundStr);
+//
+//		this.deathSound = ResourceLoader.loadMusic(SoundAssets.deathSoundStr);
 	}
 
 	public void initMusic() {
@@ -240,9 +230,8 @@ public class Level3Stage extends GameStage {
 	public void OnDefenseCommand() {
 		// TODO Auto-generated method stub
 		
-		SoundManage.playSound(defSound1);
+		MusicManage.playMusic(defSound1);
 		//DefaultLogger.getDefaultLogger().log(0, "  command for","");
-		
 		
 
 		
@@ -294,7 +283,7 @@ public class Level3Stage extends GameStage {
 		}
 		
 		
-		SoundManage.playSound(this.forwordSound1);
+		MusicManage.playMusic(this.forwordSound1);
 	}
 
 	@Override
@@ -311,7 +300,7 @@ public class Level3Stage extends GameStage {
 			new SlideDialog("'PON' 'PON' 'PATA' 'PON' will Atack enemy!, Just do it!", hero, this, 2);
 		}
 		hero.jump("move", height/20);
-		SoundManage.playSound(failSound);
+		MusicManage.playMusic(failSound);
 
 //		standard_bearer.simpleMove("", distance);
 //        spear.simpleMove("", distance);
@@ -326,7 +315,6 @@ public class Level3Stage extends GameStage {
 	public void OnAttackCommand() {
 		// TODO Auto-generated method stub
 		
-		SoundManage.playSound(atkSound1);
 		if( !meetEnemy )
 		{
 			new SlideDialog("There is no enemy,Go Go Go!!", hero, this, 2);
@@ -360,6 +348,8 @@ public class Level3Stage extends GameStage {
 			}
 		}
 
+		MusicManage.playMusic(atkSound1);
+		
 		super.OnAttackCommand();
 	}
 	
@@ -378,7 +368,7 @@ public class Level3Stage extends GameStage {
 				// TODO Auto-generated method stub
 				setLockSpriter(enemy);
 				missionComplete();
-				SoundManage.playSound(gameCompleteSound);
+				MusicManage.playMusic(gameCompleteSound);
 				
 				for( int i=0; i<root.getActors().size();i++ )
 				{					 
@@ -408,13 +398,13 @@ public class Level3Stage extends GameStage {
 		
 //		float random = MathUtils.random(0, 100);
 //		if(random>75f)
-//			SoundManage.playSound(rainSound);
+//			MusicManage.playMusic(rainSound);
 //		else if(random>50f&&random<=75f)
-//			SoundManage.playSound(howlSound);
+//			MusicManage.playMusic(howlSound);
 //		else if(random>25f&&random<=50f)
-//			SoundManage.playSound(windSound);
+//			MusicManage.playMusic(windSound);
 //		else if (random<=25f) {
-//			SoundManage.playSound(thunderSound);
+//			MusicManage.playMusic(thunderSound);
 //		}
 	}
 
@@ -432,11 +422,9 @@ public class Level3Stage extends GameStage {
 	{
 		elapseTime += Gdx.graphics.getDeltaTime();
 		
-		enemy.setCurrentState(MoveAction.simpleMove(enemy, 20), "attack");
-		
 //		if( elapseTime%dragonChangeTime == 0)
 //		{
-//			int i = MathUtils.random(2);
+//			int i = MathUtils.random(4);
 //			if( i==0 )
 //			{
 //				enemy.setCurrentState(MoveAction.simpleMove(enemy, 20), "move");

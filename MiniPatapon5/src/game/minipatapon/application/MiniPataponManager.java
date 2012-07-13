@@ -6,11 +6,16 @@ package game.minipatapon.application;
  * @created		: 2012-1-2
  */
 
+import aurelienribon.tweenengine.Tween;
+
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL10;
 
 import game.minipatapon.dataprocess.datafactory.MusicHandle;
+import game.minipatapon.dataprocess.resourcemanage.LoadManage;
+import game.minipatapon.dataprocess.resourcemanage.TextureManage;
+import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.localization.Language;
 import game.minipatapon.logger.DefaultLogger;
 import game.minipatapon.logger.Loggable;
@@ -63,8 +68,12 @@ public class MiniPataponManager implements ApplicationListener,
 	@Override
 	public void dispose() {
 		logger.logWithSignature(this, "dispose");
+		
 		if (screen != null)
 			this.screen.dispose();
+		
+		LoadManage.dispose();
+		
 		
 	}
 

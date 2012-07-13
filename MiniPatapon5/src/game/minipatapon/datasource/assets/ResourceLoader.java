@@ -70,7 +70,7 @@ public class ResourceLoader {
 		ArrayList<TextureRegion> regions = new ArrayList<TextureRegion>();
 		//DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s ", picNames.toString());
 		
-		TextureAtlas atlas=new TextureAtlas(Gdx.files.internal("data/images/" + picNames.get(0))); 
+		TextureAtlas atlas =  ResourceLoader.textureLoader.loadTextureAtlas(picNames.get(0));
 
 		for( int i=1; i<picNames.size(); i++ )
 		{
@@ -81,9 +81,18 @@ public class ResourceLoader {
 			DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s 不存在", picNames.toString());
 			return regions;
 		}
-		//TextureHandle.TextureFilterLinear(regions);
+		TextureHandle.TextureFilterLinear(regions);
 		
 		return regions;
+	}
+	
+	public static TextureAtlas loadTextureAtlas(String relativePath)
+	{
+		if (ResourceLoader.textureLoader == null) {
+			ResourceLoader.textureLoader = new TextureLoader(TEXTURE_DIR,
+					DEFAULT_TEXTURE_NAME);
+		}
+		return ResourceLoader.textureLoader.loadTextureAtlas(relativePath);
 	}
 	
 	public static Texture loadTexture(String relativePath) {

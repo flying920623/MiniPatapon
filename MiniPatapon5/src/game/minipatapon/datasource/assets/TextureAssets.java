@@ -1,5 +1,6 @@
 package game.minipatapon.datasource.assets;
 
+import game.minipatapon.effectpresent.texurefliter.TextureHandle;
 import game.minipatapon.logger.DefaultLogger;
 
 import java.util.ArrayList;
@@ -9,67 +10,64 @@ import java.util.Map;
 
 import com.badlogic.gdx.graphics.Texture;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class TextureAssets {
 	// public static ArrayList<String> ;
 
-	// private static Map<String, Texture> m_texMap = new HashMap<String,
-	// Texture>();
-	// private static Map<ArrayList<String>, ArrayList<TextureRegion>>
-	// m_texregionMap = new HashMap<ArrayList<String>,
-	// ArrayList<TextureRegion>>();
+	private static Map<String, Texture> m_texMap = new HashMap<String, Texture>();
+	private static Map<ArrayList<String>, ArrayList<TextureRegion>> m_texregionMap = new HashMap<ArrayList<String>, ArrayList<TextureRegion>>();
+	private static Map<String, TextureAtlas> m_textureAtlasMap = new HashMap<String, TextureAtlas>();
+	
+	// mission
 
-	
-	
-	//mission 
-	
-		public final static ArrayList<String> MissionCompleted = new ArrayList<String>() {
-			/**
+	public final static ArrayList<String> MissionCompleted = new ArrayList<String>() {
+		/**
 			 * 
 			 */
-			private static final long serialVersionUID = 1L;
+		private static final long serialVersionUID = 1L;
 
-			{
-				add("MissionPack");
-				add("MissionCompleted");
-			}
-		};
-		
-		public final static ArrayList<String> MissionFailed = new ArrayList<String>() {
-			/**
+		{
+			add("missionPack");
+			add("MissionCompleted");
+		}
+	};
+
+	public final static ArrayList<String> MissionFailed = new ArrayList<String>() {
+		/**
 			 * 
 			 */
-			private static final long serialVersionUID = 1L;
+		private static final long serialVersionUID = 1L;
 
-			{
-				add("MissionPack");
-				add("MissionFailed");
-			}
-		};
-	
-	//note
-		public final static ArrayList<String> PataNote = new ArrayList<String>() {
-			{
-				add("notePack");
-				add("pata");
-			}
-		};
-		
-		public final static ArrayList<String> PonNote = new ArrayList<String>() {
-			{
-				add("notePack");
-				add("pon");
-			}
-		};
-		
-		public final static ArrayList<String> ChakeNote = new ArrayList<String>() {
-			{
-				add("notePack");
-				add("chake");
-			}
-		};
-	
+		{
+			add("MissionPack");
+			add("MissionFailed");
+		}
+	};
+
+	// note
+	public final static ArrayList<String> PataNote = new ArrayList<String>() {
+		{
+			add("notePack");
+			add("pata");
+		}
+	};
+
+	public final static ArrayList<String> PonNote = new ArrayList<String>() {
+		{
+			add("notePack");
+			add("pon");
+		}
+	};
+
+	public final static ArrayList<String> ChakeNote = new ArrayList<String>() {
+		{
+			add("notePack");
+			add("chake");
+		}
+	};
+
 	// StatAnimationStage
 	public final static ArrayList<String> MiniImg = new ArrayList<String>() {
 		/**
@@ -198,7 +196,7 @@ public class TextureAssets {
 	// ArrayList<TextureRegion>>();
 
 	// MainMenuStage
-	
+
 	public final static String ColorTitleImg = "MainMenu/colorTitle.png";
 
 	public final static String StartMenuImg = "MainMenu/StartMenu.png";
@@ -484,8 +482,8 @@ public class TextureAssets {
 			add("layer3");
 		}
 	};
-	
-	public final static ArrayList<String> Level3Layer4Img = new ArrayList<String>(){
+
+	public final static ArrayList<String> Level3Layer4Img = new ArrayList<String>() {
 		/**
 		 * 
 		 */
@@ -495,7 +493,6 @@ public class TextureAssets {
 			add("layer4");
 		}
 	};
-
 
 	// controlButton
 	public final static ArrayList<String> PataButton = new ArrayList<String>() {
@@ -511,7 +508,7 @@ public class TextureAssets {
 			add("ponButton");
 		}
 	};
-	
+
 	public final static ArrayList<String> AboutUs = new ArrayList<String>() {
 		{
 			add("AboutUsPack");
@@ -526,7 +523,7 @@ public class TextureAssets {
 		}
 	};
 
-	public final static ArrayList<String> HeroPoint = new ArrayList<String>(){
+	public final static ArrayList<String> HeroPoint = new ArrayList<String>() {
 		{
 			add("heroChoose/heropointPack");
 			add("1");
@@ -537,82 +534,128 @@ public class TextureAssets {
 			add("6");
 			add("7");
 			add("8");
-			
-						
-			
 		}
 	};
-	public final static ArrayList<String> Hero1 = new ArrayList<String>(){
+	public final static ArrayList<String> Hero1 = new ArrayList<String>() {
 		{
 			add("heroChoose/hero1Pack");
 			add("normalHero");
 			add("lowlightHero");
-			add("highlightHero");			
-			
+			add("highlightHero");
+
 		}
 	};
-	public final static ArrayList<String> HeroCircle1 = new ArrayList<String>(){
+	public final static ArrayList<String> HeroCircle1 = new ArrayList<String>() {
 		{
 			add("heroChoose/hero1Pack");
 			add("normal");
 			add("lowlight");
-			add("highlight");			
-			
+			add("highlight");
+
 		}
 	};
-	public final static ArrayList<String> Hero2 = new ArrayList<String>(){
+	public final static ArrayList<String> Hero2 = new ArrayList<String>() {
 		{
 			add("heroChoose/hero2Pack");
 			add("normalHero");
-			add("lowlightHero");;
-			add("highlightHero");			
-			
+			add("lowlightHero");
+			;
+			add("highlightHero");
+
 		}
 	};
-	public final static ArrayList<String> HeroCircle2 = new ArrayList<String>(){
+	public final static ArrayList<String> HeroCircle2 = new ArrayList<String>() {
 		{
 			add("heroChoose/hero2Pack");
 			add("normal");
 			add("lowlight");
-			add("highlight");			
-			
+			add("highlight");
+
 		}
 	};
-	public final static ArrayList<String> Hero3 = new ArrayList<String>(){
+	public final static ArrayList<String> Hero3 = new ArrayList<String>() {
 		{
 			add("heroChoose/hero3Pack");
 			add("normalHero");
 			add("lowlightHero");
-			add("highlightHero");			
-			
+			add("highlightHero");
+
 		}
 	};
-	public final static ArrayList<String> HeroCircle3 = new ArrayList<String>(){
+	public final static ArrayList<String> HeroCircle3 = new ArrayList<String>() {
 		{
 			add("heroChoose/hero3Pack");
-			add("normal");		
+			add("normal");
 			add("lowlight");
-			add("highlight");			
-			
+			add("highlight");
+
 		}
 	};
-	
-	public final static String SliderImage ="slider3.png";
-	public final static String Slider2Image ="slider4.png";
-	
+
+	public final static String SliderImage = "slider3.png";
+	public final static String Slider2Image = "slider4.png";
+
 	public final static String MainVolume = "mainvolume.png";
 	public final static String MusicVolume = "musicvolume.png";
 	public final static String SoundVolume = "soundvolume.png";
-	
+
 	public final static String SettingImage = "set.png";
 	public final static String HelpImage = "help.png";
 
+//	public static ArrayList<TextureRegion> GetTextureRegionsFromPacker(
+//			ArrayList<String> str) {
+//		 while (!m_texregionMap.containsKey(str)) {
+//			 LoadTextureRegion(str);
+//		 }
+////		return ResourceLoader.loadTextureRegionFromPacker(str);
+//		return m_texregionMap.get(str);
+//	}
+//
+//	public static TextureRegion GetTextureRegionFromPacker(ArrayList<String> str) {
+//		// DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class,
+//		// "加载资源： %s", str.toString());
+//		if (GetTextureRegionsFromPacker(str).size() <= 0) {
+//			DefaultLogger.getDefaultLogger().logWithSignature(
+//					TextureAssets.class, "资源未加载：%s", str.toString());
+//			return null;
+//		}
+//
+//		return GetTextureRegionsFromPacker(str).get(0);
+//	}
+	
+	
+	public static ArrayList<TextureRegion> GetRegionsFromAtlas(TextureAtlas atlas,  ArrayList<String> str)
+	{
+
+		
+		ArrayList<TextureRegion> regions = new ArrayList<TextureRegion>();
+		//DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s ", picNames.toString());
+
+		for( int i=1; i<str.size(); i++ )
+		{
+			TextureRegion region = atlas.findRegion( str.get(i) );
+			if( region==null )
+			{
+				DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "不能从  %s 中 读取: %s ", atlas.toString(), str.get(i));
+			}
+			
+			regions.add( region );
+		}
+		if( regions.size()==0 )
+		{
+			DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s 不存在", str.toString());
+			return regions;
+		}
+		TextureHandle.TextureFilterLinear(regions);
+		
+		return regions;
+	}
+	
 	public static ArrayList<TextureRegion> GetTextureRegionsFromPacker(
 			ArrayList<String> str) {
-		// while (!m_texregionMap.containsKey(str)) {
-		// LoadTextureRegion(str);
-		// }
-		return ResourceLoader.loadTextureRegionFromPacker(str);
+		TextureAtlas atlas = GetTextureAtlas(str.get(0));
+//		return ResourceLoader.loadTextureRegionFromPacker(str);
+		return GetRegionsFromAtlas(atlas, str);
 	}
 
 	public static TextureRegion GetTextureRegionFromPacker(ArrayList<String> str) {
@@ -626,26 +669,42 @@ public class TextureAssets {
 
 		return GetTextureRegionsFromPacker(str).get(0);
 	}
+	
 
 	public static Texture GetTex(String texStr) {
-		// MusicAssets.GetMusic(MusicAssets.exampleMusicStr);
-		// while(!m_texMap.containsKey(texStr))
-		// {
-		// LoadTexture(texStr);
-		// }
-		// return m_texMap.get(texStr);
-		return ResourceLoader.loadTexture(texStr);
+		 while(!m_texMap.containsKey(texStr)){
+			 LoadTexture(texStr);
+		 }
+		 return m_texMap.get(texStr);
+		
+	}
+	
+	public static TextureAtlas GetTextureAtlas(String atlasStr)
+	{
+		while (!m_textureAtlasMap.containsKey(atlasStr)) {
+			 LoadTextureAtlas(atlasStr);
+		}		
+		
+		return m_textureAtlasMap.get(atlasStr);
+	}
+	
+	public static void LoadTextureAtlas(String str){
+		TextureAtlas atlas = ResourceLoader.loadTextureAtlas(str);
+		
+		DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "加载 TextureAtlas:  %s", str);
+		
+		m_textureAtlasMap.put(str, atlas);
 	}
 
 	public static void LoadTextureRegion(ArrayList<String> str) {
 		ArrayList<TextureRegion> temp = ResourceLoader
 				.loadTextureRegionFromPacker(str);
-		// m_texregionMap.put(str, temp);
+		m_texregionMap.put(str, temp);
 	}
 
 	public static void LoadTexture(String texStr) {
 		Texture temp = ResourceLoader.loadTexture(texStr);
-		// m_texMap.put(texStr, temp);
+		m_texMap.put(texStr, temp);
 
 	}
 
@@ -660,6 +719,13 @@ public class TextureAssets {
 			// m_texMap.put(texStr, temp);
 
 		}
-
+	}
+	
+	public static void dispose()
+	{
+		DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "dispose all texture!");
+		m_texMap.clear();
+		m_texregionMap.clear();
+		m_textureAtlasMap.clear();
 	}
 }

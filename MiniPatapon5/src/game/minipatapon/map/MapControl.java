@@ -1,5 +1,6 @@
 package game.minipatapon.map;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.tiled.TileAtlas;
 import com.badlogic.gdx.graphics.g2d.tiled.TileMapRenderer;
@@ -14,7 +15,9 @@ public class MapControl {
 		TileAtlas atlas;
 		TileMapRenderer tileMapRenderer;
 		
-		FileHandle fileHandle = new FileHandle(mapPath + mapName);
+		FileHandle fileHandle = Gdx.files.internal(mapPath + mapName);
+		
+		//FileHandle fileHandle = new FileHandle(mapPath + mapName);
 	
 		map = TiledLoader.createMap(fileHandle);
 		atlas = new TileAtlas(map, new FileHandle(mapPath));

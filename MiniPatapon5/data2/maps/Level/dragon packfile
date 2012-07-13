@@ -1,0 +1,12 @@
+
+dragon1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+dragon
+  rotate: false
+  xy: 2, 2
+  size: 250, 143
+  orig: 250, 143
+  offset: 0, 0
+  index: 0

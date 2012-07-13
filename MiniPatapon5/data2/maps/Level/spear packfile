@@ -1,0 +1,12 @@
+
+spear1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+spear
+  rotate: false
+  xy: 2, 2
+  size: 37, 42
+  orig: 37, 42
+  offset: 0, 0
+  index: 0

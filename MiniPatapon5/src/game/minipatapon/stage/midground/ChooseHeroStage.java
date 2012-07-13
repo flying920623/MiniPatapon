@@ -23,8 +23,8 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
 public class ChooseHeroStage extends BaseStage implements ActorLoader{
-	@SuppressWarnings("unused")
-	private ContentScreen contentScreen;
+	//@SuppressWarnings("unused")
+//	private ContentScreen contentScreen;
 	
 	private Image blackImage;
 	
@@ -74,26 +74,26 @@ public class ChooseHeroStage extends BaseStage implements ActorLoader{
  //       AnimateImage animateImage = new AnimateImage(ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroPoint), width/2, height/2, this, 3f);
 		HeroAnimateImage hero1 = new HeroAnimateImage(ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroPoint), 
 				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.Hero1),
-				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroCircle1),0f, height/2 - 100/2, this, 3f,ChooseLevelStage.class);
+				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroCircle1),0f, 0, this, 3f,ChooseLevelStage.class);
 		HeroAnimateImage hero2 = new HeroAnimateImage(ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroPoint), 
 				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.Hero2),
-				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroCircle2),100f, height/2 - 100/2, this, 3f,ChooseLevelStage.class);
+				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroCircle2),0f, 0, this, 3f,ChooseLevelStage.class);
 		HeroAnimateImage hero3 = new HeroAnimateImage(ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroPoint), 
 				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.Hero3),
-				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroCircle3),200f, height/2 - 100/2, this, 3f,ChooseLevelStage.class);
+				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroCircle3),0f, 0, this, 3f,ChooseLevelStage.class);
 		
 		RotateGroup group = new RotateGroup("",this, hero1, hero2, hero3);
 
 		//this.addActor(animateImage);
 		this.addActor( group );
-		this.root.keyboardFocus(group);
+		//this.root.keyboardFocus(group);
 		
 		group.setCurrentItemChangeListener( new HighlightItemChangeListener(){
 
 			@Override
 			public void onItemChange(Actor actor) {
 				// TODO Auto-generated method stub
-				DefaultLogger.getDefaultLogger().logWithSignature(this, "curent level name:%s", actor.name );
+				DefaultLogger.getDefaultLogger().logWithSignature(this, "curent hero name:%s", actor.name );
 			}
 			
 		});
@@ -132,12 +132,10 @@ public class ChooseHeroStage extends BaseStage implements ActorLoader{
 	}
 
 	@Override
-	public void dispose()
-	{
+	public void dispose() {
 		// TODO Auto-generated method stub
 		MusicManage.stopMusic(music);
 		super.dispose();
 	}
-	
 	
 }

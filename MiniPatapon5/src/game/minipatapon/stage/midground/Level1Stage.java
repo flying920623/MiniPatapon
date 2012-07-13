@@ -14,7 +14,6 @@ import game.minipatapon.datasource.assets.SoundAssets;
 import game.minipatapon.effectpresent.audioplayer.MusicManage;
 import game.minipatapon.effectpresent.audioplayer.SoundManage;
 import game.minipatapon.effectpresent.background.ParaBackgroundLevel1;
-import game.minipatapon.effectpresent.dialog.Dialog;
 import game.minipatapon.effectpresent.dialog.SlideDialog;
 import game.minipatapon.effectpresent.spriter.SpriterObject;
 import game.minipatapon.effectpresent.spriter.action.MoveAction;

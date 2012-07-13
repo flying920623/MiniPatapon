@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><map height="32" orientation="orthogonal" tileheight="16" tilewidth="16" version="1.0" width="128"><properties><property name="blended tiles" value=""/></properties>
+ <layer height="32" name="background" width="128">
+  <data compression="zlib" encoding="base64">
+   eJztwTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAAAAAACAtwFAAAAB
+  </data>
+ </layer>
+ <layer height="32" name="boundary" width="128">
+  <properties>
+   <property name="Pass" value="false"/>
+  </properties>
+  <data compression="zlib" encoding="base64">
+   eJztwTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAAAAAACAtwFAAAAB
+  </data>
+ </layer>
+ <objectgroup height="32" name="soldiers" width="128">
+  <object name="standard_bearer" x="268" y="469"/>
+  <object name="infantry_a" x="316" y="469"/>
+  <object name="toxotae" x="364" y="468"/>
+  <object name="hero" x="429" y="467"/>
+  <object name="sword" x="506" y="468"/>
+  <object name="axe" x="640" y="467"/>
+  <object name="bird" x="455" y="420"/>
+  <object name="infantry_b" x="575" y="468"/>
+ </objectgroup>
+ <objectgroup height="32" name="enemy" width="128">
+  <object name="enemy" x="1292" y="469"/>
+ </objectgroup>
+ <objectgroup height="32" name="end_mark_tower" width="128">
+  <object name="end_mark_tower" x="1785" y="467"/>
+ </objectgroup>
+</map>

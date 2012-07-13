@@ -1,0 +1,19 @@
+
+StartMenu1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+StartMenuFont
+  rotate: false
+  xy: 2, 2
+  size: 158, 38
+  orig: 158, 38
+  offset: 0, 0
+  index: -1
+StartMenuBg
+  rotate: false
+  xy: 2, 42
+  size: 158, 38
+  orig: 158, 38
+  offset: 0, 0
+  index: -1

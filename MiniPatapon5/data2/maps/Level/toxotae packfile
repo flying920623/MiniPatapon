@@ -1,0 +1,12 @@
+
+toxotae1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+toxotae
+  rotate: false
+  xy: 2, 2
+  size: 39, 42
+  orig: 39, 42
+  offset: 0, 0
+  index: 0

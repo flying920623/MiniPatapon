@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><configuration>
+    <volumes>
+        <volume>
+            <name>MainVolume</name>
+            <data>100</data>
+        </volume>
+      	<volume>
+            <name>MusicVolume</name>
+            <data>100</data>
+        </volume>
+        <volume>
+            <name>SoundVolume</name>
+            <data>100</data>
+        </volume>
+    </volumes>
+</configuration>

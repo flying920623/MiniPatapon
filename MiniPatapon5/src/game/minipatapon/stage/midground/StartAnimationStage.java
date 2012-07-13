@@ -14,6 +14,7 @@ import aurelienribon.tweenengine.equations.Quad;
 import aurelienribon.tweenengine.equations.Quart;
 import aurelienribon.tweenengine.equations.Quint;
 
+import game.minipatapon.dataprocess.resourcemanage.LoadManage;
 import game.minipatapon.datasource.assets.MusicAssets;
 import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.TextureAssets;
@@ -73,12 +74,22 @@ public class StartAnimationStage extends BaseStage implements ActorLoader {
 
 		Tween.registerAccessor(FlatImage.class, new ActorAccessor());
 
+		initALL();
+		
 		//MusicManage.playMusic(music);
 		
 		initImgSize();
 		
 		initTimeLine();
 
+	}
+	
+	public void initALL()
+	{
+		LoadManage.loadStartAnimationStage();
+		LoadManage.loadMainMenuStage();
+		LoadManage.loadChooseHeroStage();
+		LoadManage.loadLevel3Stage();
 	}
 	
 	public void initImgSize()
@@ -158,7 +169,7 @@ public class StartAnimationStage extends BaseStage implements ActorLoader {
 				.push(Tween.set(nuclearLogoImg, ActorAccessor.OPACITY).target(0))
 
 				// 开始 需要暂停一下，因为紫云加载的时候 deltatime 很长，前面的动画会直接从 开始值 跳到 结束值
-				.pushPause(2f)
+				.pushPause(6f)
 				
 				.push(Tween.to(stripImg, ActorAccessor.SCALE_XY, 0.8f)
 						.target(1, 0.6f).ease(Quart.OUT))

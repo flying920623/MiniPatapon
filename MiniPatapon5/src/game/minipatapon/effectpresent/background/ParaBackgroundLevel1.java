@@ -59,7 +59,7 @@ public class ParaBackgroundLevel1 extends ParaBackground{
        Vector2 bg2Scale = new Vector2(0.85f*width/bg2.getRegionWidth(), 0.85f*height/bg2.getRegionHeight());
        Vector2 bg3Scale = new Vector2(0.75f*width/bg3.getRegionWidth(), 0.75f*height/bg3.getRegionHeight());
 		rbg = new PLParallaxBackground(new PLParallaxLayer[]{
-				new PLParallaxLayer(bg1,new Vector2(0.5f,0f),new Vector2(0,0),new Vector2(bg1.getRegionWidth()-10f,height),bg1Scale),
+				new PLParallaxLayer(bg1,new Vector2(0.5f,0f),new Vector2(0,0),new Vector2(-10f,height),bg1Scale),
 	            new PLParallaxLayer(bg5,new Vector2(5f,0f),new Vector2(0,height-bg5.getRegionHeight()),new Vector2(0, 0)),
 	            new PLParallaxLayer(bg4,new Vector2(5f,0f),new Vector2(0,height-bg5.getRegionHeight()),new Vector2(0, 800)),            
 	            new PLParallaxLayer(bg3,new Vector2(3f,1f),new Vector2(0,height-bg5.getRegionHeight()),new Vector2(0,800),bg3Scale),

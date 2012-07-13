@@ -1,0 +1,12 @@
+
+axe1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+axe
+  rotate: false
+  xy: 2, 2
+  size: 55, 42
+  orig: 55, 42
+  offset: 0, 0
+  index: 0

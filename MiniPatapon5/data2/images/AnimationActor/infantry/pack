@@ -1,0 +1,75 @@
+
+infantry1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+weapon
+  rotate: false
+  xy: 2, 2
+  size: 55, 168
+  orig: 55, 168
+  offset: 0, 0
+  index: -1
+righthand
+  rotate: false
+  xy: 59, 2
+  size: 54, 86
+  orig: 54, 86
+  offset: 0, 0
+  index: -1
+head2
+  rotate: false
+  xy: 2, 172
+  size: 71, 71
+  orig: 71, 71
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 245
+  size: 71, 71
+  orig: 71, 71
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 59, 90
+  size: 43, 48
+  orig: 43, 48
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 2, 318
+  size: 53, 34
+  orig: 53, 34
+  offset: 0, 0
+  index: -1
+oneRightLeg
+  rotate: false
+  xy: 75, 172
+  size: 34, 31
+  orig: 34, 31
+  offset: 0, 0
+  index: -1
+oneLeftLeg
+  rotate: false
+  xy: 75, 205
+  size: 34, 31
+  orig: 34, 31
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 59, 140
+  size: 24, 27
+  orig: 24, 27
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 104, 90
+  size: 22, 27
+  orig: 22, 27
+  offset: 0, 0
+  index: -1

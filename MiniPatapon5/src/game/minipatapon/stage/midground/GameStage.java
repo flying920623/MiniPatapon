@@ -7,11 +7,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import game.minipatapon.application.MiniPataponManager;
 import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.action.tween.ActorAccessor;
 import game.minipatapon.effectpresent.actor.Image;
-import game.minipatapon.effectpresent.actor.LevelImage;
 import game.minipatapon.effectpresent.actor.NavigateImage;
 import game.minipatapon.effectpresent.spriter.SpriterObject;
 import game.minipatapon.effectpresent.spriter.SpriterObjectIniArg;
@@ -59,7 +57,7 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 	protected HashMap<String, Actor> enemyActors;
 	protected HashMap<String, Actor> justiceActors;
 	
-	private LevelImage quitImage;
+	
 	Image blackGround ;
 	Image missionImg ;
 	
@@ -84,16 +82,14 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 		
 		blackGroundHeight = height/9;
 		initBlackGround();
-//		MiniPataponManager.getInstance().GetLayeredScreen().getMidScreen().isGameScreen=false;
-		quitImage = new NavigateImage("quit", new TextureRegion(TextureAssets.GetTex("Level/quitButton.png")), 0, 0, this,ChooseLevelStage.class);
-        quitImage.setPosition(width-quitImage.width,height-quitImage.height);
+		
 	}
 
 	public GameStage(float width, float height, boolean stretch, int level) {
 		this(width, height, stretch);
 
-		String mapPath = "data/maps/Level/";
-		String mapName = "level_" + String.valueOf(level);
+		String mapPath = "data/maps/level/";
+		String mapName = "level" + String.valueOf(level);
 		mapRender = MapControl.importMap(mapPath, mapName);
 		map = mapRender.getMap();
 
@@ -289,8 +285,6 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 			{
 				gameCamera.position.set(lockObject.x + width/4, pos.y, pos.z);
 				blackGround.x = gameCamera.position.x - width/2;
-				
-				quitImage.setPosition(gameCamera.position.x+ width*2/5, quitImage.y);
 			}
 			
 		}

@@ -1,0 +1,12 @@
+
+barrier_tower1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+barrier
+  rotate: false
+  xy: 2, 2
+  size: 204, 280
+  orig: 204, 280
+  offset: 0, 0
+  index: 0

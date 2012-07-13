@@ -1,0 +1,78 @@
+
+StartAnimation1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+mini
+  rotate: false
+  xy: 2, 2
+  size: 171, 75
+  orig: 171, 75
+  offset: 0, 0
+  index: -1
+nuclear-Logo
+  rotate: false
+  xy: 175, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+logo2
+  rotate: false
+  xy: 241, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+logo
+  rotate: false
+  xy: 307, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+pata
+  rotate: false
+  xy: 2, 79
+  size: 130, 35
+  orig: 130, 35
+  offset: 0, 0
+  index: -1
+pon
+  rotate: false
+  xy: 373, 2
+  size: 78, 35
+  orig: 78, 35
+  offset: 0, 0
+  index: -1
+powerdby
+  rotate: false
+  xy: 373, 39
+  size: 113, 19
+  orig: 113, 19
+  offset: 0, 0
+  index: -1
+
+splash2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+white
+  rotate: false
+  xy: 2, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+
+black.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+blackBg
+  rotate: false
+  xy: 2, 2
+  size: 32, 32
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

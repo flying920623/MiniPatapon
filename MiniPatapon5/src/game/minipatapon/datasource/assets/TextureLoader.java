@@ -3,7 +3,9 @@ package game.minipatapon.datasource.assets;
 //import java.util.HashMap;
 
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 //import com.maple.eggsnake.logger.DefaultLogger;
 import game.minipatapon.logger.DefaultLogger;
 import game.minipatapon.logger.Loggable;
@@ -29,6 +31,7 @@ class TextureLoader {
 		// this.defaultTexture = new Texture(this.dirPath + defaultTexture);
 	}
 
+
 	public Texture loadTexture(String texturePath) {
 		// Texture texture = null;
 		// try {
@@ -49,6 +52,7 @@ class TextureLoader {
 		// return texture;
 		try {
 			String absPath = PathHelper.combine(this.dirPath, texturePath);
+			
 			return new Texture(absPath);
 		} catch (Exception e) {
 			logger.logWithSignature(this, "加载资源%1$s失败:%2$s,使用默认图像", texturePath,
@@ -56,6 +60,20 @@ class TextureLoader {
 			return new Texture(PathHelper.combine(this.dirPath,
 					this.defaultTexture));
 		}
+	}
+	
+	public TextureAtlas loadTextureAtlas(String atlasPath)
+	{
+		try {
+			String absPath = PathHelper.combine(this.dirPath, atlasPath);
+			
+			return new TextureAtlas(Gdx.files.internal(absPath));
+		} catch (Exception e) {
+			logger.logWithSignature(this, "加载资源%1$s失败:%2$s", atlasPath,
+					e.getMessage());
+			return null;
+		}
+		
 	}
 
 }

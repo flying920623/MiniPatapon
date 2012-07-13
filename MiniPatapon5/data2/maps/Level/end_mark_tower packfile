@@ -1,0 +1,12 @@
+
+end_mark_tower1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+end
+  rotate: false
+  xy: 2, 2
+  size: 58, 152
+  orig: 58, 152
+  offset: 0, 0
+  index: 0

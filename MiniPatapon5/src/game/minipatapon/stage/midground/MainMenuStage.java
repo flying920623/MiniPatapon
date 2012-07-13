@@ -30,13 +30,14 @@ import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Action;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.actions.MoveTo;
 import com.badlogic.gdx.scenes.scene2d.actions.ScaleTo;
 
 public class MainMenuStage extends BaseStage implements ActorLoader {
 
-	private float scaleX = 0.5f;
-	private float scaleY = 0.5f;
+	private float scaleX = 0.3f;
+	private float scaleY = 0.3f;
 
 	private float actorDistance = 5f;
 
@@ -79,6 +80,7 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 	public MainMenuStage(float width, float height, boolean stretch) {
 		super(width, height, stretch);
 		// TODO Auto-generated constructor stub
+		Tween.registerAccessor(Actor.class, new ActorAccessor());
 		MusicManage.setLoopingMusic(music, true);
 		MusicManage.playMusic(music);
 		this.init();
@@ -92,15 +94,13 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		backImage.height = height;
 		this.addActor(backImage);
 		
+		scaleY = Gdx.graphics.getHeight()/240*0.3f;
+		scaleX = scaleY;
+		
+		
 		this.loadAltarImg();
 		
-		startImage.width = width/6;
-		startImage.height = height/10;
-		
-		startImage.x = width/2 - startImage.width/2;
-		startImage.y = height/2;
-		
-		this.addActor( startImage );
+		this.initStartMenu();
 
 		this.loadShieldSoldier3_left_Img();
 		this.loadShieldSoldier_left_Img();
@@ -121,8 +121,6 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		
 		this.loadHelpImage();
 		this.loadSettingImage();
-	//	image = new FlatImage(TextureAssets.GetTextureRegionFromPacker(TextureAssets.PonImg), 200, 200, this);
-	//	 this.addActor(image);
 	}
 
 	//
@@ -141,11 +139,25 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 	// }
 	
 	
+	void initStartMenu()
+	{
+		startImage.width = width/6;
+		startImage.height = height/10;
+		
+		startImage.x = width/2 - startImage.width/2;
+		startImage.y = height/2;
+		
+		this.addActor( startImage );
+	}
+	
 	void initColorTitle() {
 		this.colorTitleImage = new Image("",
 				TextureAssets.GetTex(TextureAssets.ColorTitleImg));
 		this.addActor(colorTitleImage);
 
+		colorTitleImage.width = width/3;
+		colorTitleImage.height = height/3;
+		
 		colorTitleImage.x = width / 2 - colorTitleImage.width / 2;
 		colorTitleImage.y = height;
 
@@ -228,10 +240,6 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		MusicManage.stopMusic(music);
 	}
 
-	private void loadStartMenuImg()
-	{
-		
-	}
 
 	private void loadStandardBearer_left_Img() {
 		ArrayList<String> picNames = TextureAssets.StandardBearer_left_Img;
@@ -324,7 +332,7 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 				+ this.standardBearer_right_Img.getScaledWidth();
 
 		this.standardBearer_right_Img.action(MoveTo.$(Gdx.graphics.getWidth()
-				- movex, 0f, 4f));
+				- movex, -standardBearer_right_Img.height/35, 4f));
 		this.standardBearer_right_Img.action(ScaleTo.$(scaleX, scaleY, 0f));
 	}
 
@@ -452,8 +460,12 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		Texture texture = ResourceLoader.loadTexture("help.png");
 		TextureRegion textureRegion = new TextureRegion(texture);
 		this.helpImage = new NavigateImage("help", textureRegion, 1.0f, 1.0f, this, HelpStage.class);
-		this.helpImage.x = this.width-70;
-		this.helpImage.y = this.height-70;
+		
+		this.helpImage.width = height/10;
+		this.helpImage.height = height/10;
+		
+		this.helpImage.x = this.width-this.helpImage.width*1.1f;
+		this.helpImage.y = this.height-this.helpImage.height*1.1f;
 		this.addActor(this.helpImage);
 	}
 	private void loadSettingImage()
@@ -461,8 +473,12 @@ public class MainMenuStage extends BaseStage implements ActorLoader {
 		Texture texture = ResourceLoader.loadTexture("set.png");
 		TextureRegion textureRegion = new TextureRegion(texture);
 		this.settingImage = new NavigateImage("setting", textureRegion, 1.0f, 1.0f, this, SettingStage.class);
-		this.settingImage.x = this.width-70;
-		this.settingImage.y = this.height-140;
+		
+		this.settingImage.width = height/10;
+		this.settingImage.height = height/10;
+		
+		this.settingImage.x = this.width-this.settingImage.width*1.1f;
+		this.settingImage.y = this.height-this.settingImage.height*2.2f;
 		this.addActor(this.settingImage);
 	}
 	

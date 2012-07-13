@@ -1,6 +1,7 @@
 package game.minipatapon.stage.midground;
 
 import game.minipatapon.application.MiniPataponManager;
+import game.minipatapon.dataprocess.resourcemanage.TextureManage;
 import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.action.tween.ActorAccessor;
@@ -20,6 +21,8 @@ import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenManager;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -82,9 +85,7 @@ public class ChooseLevelStage extends BaseStage implements ActorLoader {
 
 	}
 
-	@Override
 	public void init() {
-		// TODO Auto-generated method stub
 
 		initImage();
 		initAction();
@@ -104,9 +105,7 @@ public class ChooseLevelStage extends BaseStage implements ActorLoader {
 		level4 = new LevelImage("level4", TextureAssets.GetTex("Level/level4_locked.png"), -1000, 0, this);
 		level5 = new LevelImage("level5", TextureAssets.GetTex("Level/level5.png"), -1000, 0, this);
 		level6 = new LevelImage("level6", TextureAssets.GetTex("Level/level6.png"), -1000, 0, this);
-		
-    	quitImage = new NavigateImage("quit", new TextureRegion(TextureAssets.GetTex("Level/quitButton.png")), 0, 0, this,MainMenuStage.class);
-		
+				
 		
 		level1.setSize(height/3, height/3);
 		level2.setSize(height/3, height/3);
@@ -114,6 +113,11 @@ public class ChooseLevelStage extends BaseStage implements ActorLoader {
 		level4.setSize(height/3, height/3);
 		level5.setSize(height/3, height/3);
 		level6.setSize(height/3, height/3);
+		
+		
+    	quitImage = new NavigateImage("quit", new TextureRegion(TextureAssets.GetTex("Level/quitButton.png")), 0, 0, this,MainMenuStage.class);
+    	quitImage.setSize(height/10, height/10);
+
 	}
 	
 	public void initAction()
@@ -156,9 +160,9 @@ public class ChooseLevelStage extends BaseStage implements ActorLoader {
 		.start(tweenManager);
 		
 		quitImage.setPosition(width-quitImage.width*2, height/20);
-		
+		quitImage.setOrigin(quitImage.width/2, quitImage.height/2);
 		Tween.to(quitImage, ActorAccessor.ROTATION, 1f).target(360).repeat(-1, 0).start(tweenManager);
-		
+	
 	}
 
 	public void draw()

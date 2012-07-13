@@ -22,7 +22,7 @@ public class ActionListener implements OnActionCompleted
 		//m_img.
 		if(m_group.stateMap.get(m_img)==0)
 		{
-			m_img.indexTexture =0;
+			m_img.indexTexture =2;
 		}
 		else 
 			m_img.indexTexture =1;

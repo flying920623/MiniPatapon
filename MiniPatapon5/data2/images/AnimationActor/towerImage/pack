@@ -1,0 +1,110 @@
+
+towerImage1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+flag
+  rotate: false
+  xy: 2, 2
+  size: 126, 123
+  orig: 126, 123
+  offset: 0, 0
+  index: -1
+towerbody_norcomplete
+  rotate: false
+  xy: 130, 2
+  size: 109, 71
+  orig: 109, 71
+  offset: 0, 0
+  index: -1
+towerbody
+  rotate: false
+  xy: 241, 2
+  size: 109, 71
+  orig: 109, 71
+  offset: 0, 0
+  index: -1
+tower3
+  rotate: false
+  xy: 352, 2
+  size: 204, 54
+  orig: 204, 54
+  offset: 0, 0
+  index: -1
+tower1
+  rotate: false
+  xy: 352, 58
+  size: 204, 53
+  orig: 204, 53
+  offset: 0, 0
+  index: -1
+tower2
+  rotate: false
+  xy: 558, 2
+  size: 122, 18
+  orig: 122, 18
+  offset: 0, 0
+  index: -1
+tower15
+  rotate: false
+  xy: 130, 75
+  size: 26, 18
+  orig: 26, 18
+  offset: 0, 0
+  index: -1
+tower13
+  rotate: false
+  xy: 130, 95
+  size: 20, 18
+  orig: 20, 18
+  offset: 0, 0
+  index: -1
+tower12
+  rotate: false
+  xy: 158, 75
+  size: 27, 16
+  orig: 27, 16
+  offset: 0, 0
+  index: -1
+tower14
+  rotate: false
+  xy: 158, 93
+  size: 21, 16
+  orig: 21, 16
+  offset: 0, 0
+  index: -1
+tower17
+  rotate: false
+  xy: 158, 111
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+tower16
+  rotate: false
+  xy: 187, 75
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+tower18
+  rotate: false
+  xy: 206, 75
+  size: 14, 12
+  orig: 14, 12
+  offset: 0, 0
+  index: -1
+tower19
+  rotate: false
+  xy: 222, 75
+  size: 9, 12
+  orig: 9, 12
+  offset: 0, 0
+  index: -1
+tower11
+  rotate: false
+  xy: 130, 115
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1

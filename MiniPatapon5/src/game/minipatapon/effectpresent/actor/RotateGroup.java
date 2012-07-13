@@ -1,6 +1,8 @@
 package game.minipatapon.effectpresent.actor;
 
 import java.util.HashMap;
+
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -25,13 +27,18 @@ public class RotateGroup extends Group {
 	float[] originScales = new float[3];
 
 	float highScale = 1.4f;
-	float lowScale = 0.7f;
+	float lowScale = 1f;
 
 	Actor highLightActor = null;
 
 	HighlightItemChangeListener itemChangeListener = null;
 
 	HashMap<Actor, Integer> stateMap = new HashMap<Actor, Integer>();
+	
+	float downX = 0;
+	float upX = 0;
+	
+	public Actor[] focusedActor = new Actor[20];
 
 	public RotateGroup(Stage stage, Actor... actors) {
 		super();
@@ -69,47 +76,114 @@ public class RotateGroup extends Group {
 		highLightActor = children.get(0);
 	}
 	
+	
+	public boolean touchDown (float x, float y, int pointer) {
+		
+		downX = x;
+		DefaultLogger.getDefaultLogger().log(0, "%f, %f ", x, y);
+		
 
-	public boolean keyDown(int keycode) {
 
-//		DefaultLogger.getDefaultLogger().logWithSignature(this, "keycode: %d",
-//				keycode);
-		//DefaultLogger.getDefaultLogger().log(0, "test0 ");
+		int len = children.size() - 1;
+		for (int i = len; i >= 0; i--) {
+			Actor child = children.get(i);
+			if (!child.touchable) continue;
+
+			toChildCoordinates(child, x, y, point);
+			if (child.hit(point.x, point.y) == null) continue;
+			if (child.touchDown(point.x, point.y, pointer)) {
+
+				if (focusedActor[pointer] == null) {
+					focus(child, pointer);
+				}
+				lastTouchedChild = child;
+				return true;
+			}
+		}
+
+		return this.touchable;
+	}
+	
+	public void touchUp (float x, float y, int pointer) {
+		
+		upX = x;
+		
+		DefaultLogger.getDefaultLogger().log(0, "%f, %f ", x, y);
+		
 		for (int i = 0; i < children.size(); i++) {
 			FlatImage actor = (FlatImage) children.get(i);
 			if (!actor.actionDone()) {
 				//DefaultLogger.getDefaultLogger().log(0, "test1 ");
-				return false;
+				return;
 			}
 		}
 
+		if (downX > upX) {
+			rotateRight();
+		} else if (downX < upX) {
+			rotateLeft();
+		}
+		else{
+			if (!touchable) return;
+			point.x = x;
+			point.y = y;
+			Actor actor = focusedActor[pointer];
+			if (actor != this) {
+				actor.toLocalCoordinates(point);
+				actor.touchUp(point.x, point.y, pointer);
+			}
+			// If the focused actor hasn't changed and hasn't already lost focus, remove its focus.
+			if (focusedActor[pointer] == actor && actor != null) focus(null, pointer);
+		}
+
+		itemChangeListener.onItemChange(highLightActor);
+		
+	}
+	
+	public void focus (Actor actor, int pointer) {
+		Actor existingActor = focusedActor[pointer];
+		if (existingActor != null) {
+			// An actor already has focus. Remove the focus if it is not a child of this group, because the focused actor could be
+			// further down in the hiearchy.
+			focusedActor[pointer] = null;
+			if (existingActor.parent != this) existingActor.parent.focus(null, pointer);
+		}
+		if (debug) Gdx.app.log("Group", "focus: " + (actor == null ? "null" : actor.name));
+		focusedActor[pointer] = actor;
+	}
+	
+//	
+//	public boolean keyDown(int keycode) {
+//
+////		DefaultLogger.getDefaultLogger().logWithSignature(this, "keycode: %d",
+////				keycode);
+//		//DefaultLogger.getDefaultLogger().log(0, "test0 ");
+//		for (int i = 0; i < children.size(); i++) {
+//			FlatImage actor = (FlatImage) children.get(i);
+//			if (!actor.actionDone()) {
+//				//DefaultLogger.getDefaultLogger().log(0, "test1 ");
+//				return false;
+//			}
+//		}
+//
+//		if (keycode == 21) {
+//			rotateLeft();
+//		} else if (keycode == 22) {
+//			rotateRight();
+//		}
+//
+//		itemChangeListener.onItemChange(highLightActor);
+//
+//		return super.keyDown(keycode);
+//	}
+	
+	protected void rotateLeft()
+	{
 		for (int i = 0; i < children.size(); i++) {
 			Actor actor = children.get(i);
 			int index = stateMap.get(actor);
 
-			// if (keycode == 22) {
-			// if (index == 0) {
-			// setState(actor, false, children.size() - 1);
-			// stateMap.put(actor, children.size() - 1);
-			// } else {
-			// setState(actor, false, index - 1);
-			// stateMap.put(actor, index - 1);
-			// }
-			// } else if (keycode == 21) {
-			// if (index == children.size() - 1) {
-			// setState(actor, true, 0);
-			// stateMap.put(actor, 0);
-			// } else {
-			// setState(actor, true, index + 1);
-			// stateMap.put(actor, index + 1);
-			// }
-			// }
-
-			if (keycode == 21) {
-				setState(actor, true, index);
-			} else if (keycode == 22) {
-				setState(actor, false, index);
-			}
+			setState(actor, true, index);
 
 			if (stateMap.get(actor) == 0) {
 				highLightActor = actor;
@@ -117,20 +191,33 @@ public class RotateGroup extends Group {
 			}
 
 		}
-
-		itemChangeListener.onItemChange(highLightActor);
-
-		return true;
 	}
+	
+	protected void rotateRight()
+	{
+		for (int i = 0; i < children.size(); i++) {
+			Actor actor = children.get(i);
+			int index = stateMap.get(actor);
+
+			setState(actor, false, index);
+
+			if (stateMap.get(actor) == 0) {
+				highLightActor = actor;
+				//DefaultLogger.getDefaultLogger().log(0, "test2 ");
+			}
+
+		}
+	}
+	
 
 	@SuppressWarnings("unused")
 	public void setPoint() {
 
-		FlatImage image = (FlatImage) children.get(0);
+		HeroAnimateImage image = (HeroAnimateImage) children.get(0);
 		float highScaleWidth = image.getScaledWidth();
 		float highScaleHeight = image.getScaledHeight();
 
-		image = (FlatImage) children.get(1);
+		image = (HeroAnimateImage) children.get(1);
 		float loewScaleWidth = image.getScaledWidth();
 		float loewScaleHeight = image.getScaledHeight();
 
@@ -161,6 +248,18 @@ public class RotateGroup extends Group {
 
 	public void setScale() {
 
+		
+		if( children.get(0) instanceof HeroAnimateImage )
+		{
+			HeroAnimateImage image = null;
+			image = (HeroAnimateImage)children.get(0);
+			
+			highScale = Gdx.graphics.getHeight()/1.1f/image.getHeight();
+			lowScale = Gdx.graphics.getHeight()/2/image.getHeight();
+		}
+		
+		
+		
 		for (int i = 0; i < children.size(); i++) {
 			if (i == 0) {
 				children.get(i).scaleX = highScale;
@@ -180,7 +279,11 @@ public class RotateGroup extends Group {
 	public void addActors(Actor[] actors) {
 		for (int i = 0; i < actors.length; i++) {
 			this.addActor(actors[i]);
+//			actors[i].width=Gdx.graphics.getHeight()/3;
+//			actors[i].height=Gdx.graphics.getHeight()/3;
 		}
+		
+		
 	}
 
 	public void setState(Actor actor, boolean left, int i) {

@@ -1,0 +1,26 @@
+
+controlButton1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+ponButton
+  rotate: false
+  xy: 2, 2
+  size: 40, 39
+  orig: 40, 39
+  offset: 0, 0
+  index: -1
+pataButton
+  rotate: false
+  xy: 44, 2
+  size: 40, 39
+  orig: 40, 39
+  offset: 0, 0
+  index: -1
+cakaButton
+  rotate: false
+  xy: 86, 2
+  size: 40, 39
+  orig: 40, 39
+  offset: 0, 0
+  index: -1

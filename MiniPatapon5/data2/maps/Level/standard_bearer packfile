@@ -1,0 +1,12 @@
+
+standard_bearer1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+standard
+  rotate: false
+  xy: 2, 2
+  size: 26, 100
+  orig: 26, 100
+  offset: 0, 0
+  index: 0

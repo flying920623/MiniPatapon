@@ -1,0 +1,40 @@
+
+Level1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+layer1
+  rotate: false
+  xy: 2, 2
+  size: 480, 385
+  orig: 480, 385
+  offset: 0, 0
+  index: -1
+layer5
+  rotate: false
+  xy: 484, 2
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+layer4
+  rotate: false
+  xy: 2, 389
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+layer3
+  rotate: false
+  xy: 2, 711
+  size: 480, 295
+  orig: 480, 295
+  offset: 0, 0
+  index: -1
+layer2
+  rotate: false
+  xy: 484, 389
+  size: 480, 294
+  orig: 480, 294
+  offset: 0, 0
+  index: -1

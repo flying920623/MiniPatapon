@@ -9,6 +9,7 @@ package game.minipatapon.desktop;
 import com.badlogic.gdx.backends.jogl.JoglApplication;
 //import game.minipatapon.application.EggSnakeManager;
 import game.minipatapon.application.MiniPataponManager;
+import game.minipatapon.dataprocess.resourcemanage.LoadManage;
 
 import game.minipatapon.logger.DefaultLogger;
 import game.minipatapon.logger.Loggable;
@@ -42,6 +43,7 @@ public class DesktopGameStarter {
 
 			// 启动管理�?
 			new JoglApplication(manager, "MiniPatapon", initWidth, initHeight, true);
+			
 			
 			
 		} catch (Exception e) {
