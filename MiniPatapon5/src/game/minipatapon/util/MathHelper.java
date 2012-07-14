@@ -103,4 +103,9 @@ public class MathHelper {
 
 		return false;
 	}
+
+	public static float angleOfPoints(float startX, float startY, float endX,
+			float endY) {
+		return (endY - startY) / (endX - startX);
+	}
 }

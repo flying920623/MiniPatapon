@@ -5,6 +5,7 @@ import game.minipatapon.datasource.assets.MusicAssets;
 import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.SoundAssets;
 import game.minipatapon.effectpresent.action.tween.ActorAccessor;
+import game.minipatapon.effectpresent.actor.LineImage;
 import game.minipatapon.effectpresent.audioplayer.MusicManage;
 import game.minipatapon.effectpresent.audioplayer.SoundManage;
 import game.minipatapon.effectpresent.dialog.Dialog;
@@ -124,6 +125,8 @@ public class Level3Stage extends GameStage {
 		initMusic();
 		initSound();
 		initActor();
+		
+		new LineImage(this);
 		
 		DefaultLogger.getDefaultLogger().logWithSignature(this, "x, y :  %f, %f", enemy.x, enemy.y);
 	}

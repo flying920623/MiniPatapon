@@ -34,6 +34,7 @@ public class TextureManage {
 		TextureAssets.LoadTextureAtlas("AnimationActor/knightImages/pack");
 		TextureAssets.LoadTextureAtlas("AnimationActor/infantry/pack");
 		TextureAssets.LoadTextureAtlas("AnimationActor/move_bird/pack");
+		TextureAssets.LoadTextureAtlas("AnimationActor/bird/pack");
 		TextureAssets.LoadTextureAtlas("AnimationActor/axe/pack");
 		TextureAssets.LoadTextureAtlas("AnimationActor/toxotae/pack");
 		TextureAssets.LoadTextureAtlas("AnimationActor/monster/pack");

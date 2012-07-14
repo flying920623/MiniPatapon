@@ -148,6 +148,11 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 		super.addActor(actor);
 	}
 	
+	public OrthographicCamera getGameCamera()
+	{
+		return gameCamera;
+	}
+	
 	public void draw() {
 
 		camera.update();

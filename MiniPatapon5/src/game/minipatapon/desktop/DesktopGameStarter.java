@@ -24,8 +24,8 @@ public class DesktopGameStarter {
 	 */
 	
 	
-	static final int initWidth = 1024;//500;
-	static final int initHeight = 552;//270;
+	static final int initWidth = 800;//500;
+	static final int initHeight = 480;//270;
 	
 	public static void main(String args[]) {
 		// 设置日志方式

@@ -80,7 +80,7 @@ public class NoteImage extends Actor {
 	}
 
 	public void initSize() {
-		this.width = Gdx.graphics.getWidth() / 20;
+		this.width = Gdx.graphics.getWidth() / 14;
 		this.height = width / region.getRegionWidth()
 				* region.getRegionHeight();
 	}

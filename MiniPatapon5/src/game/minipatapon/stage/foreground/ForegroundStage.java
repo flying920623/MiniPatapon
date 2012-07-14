@@ -97,7 +97,8 @@ public class ForegroundStage extends BaseStage {
 
 		Tween.registerAccessor(Actor.class, new ActorAccessor());
 		
-		
+		initButton();
+		initTimerDialog();
 		
 		logger = DefaultLogger.getDefaultLogger();
 		spriteBatch = new SpriteBatch();
@@ -152,9 +153,9 @@ public class ForegroundStage extends BaseStage {
 		pataButton.setPosition((float)(this.width-3.6*pataButton.width), 0f);
 		ponButton.setPosition((float)(this.width-2.4*ponButton.width), 0f);
 		cakaButton.setPosition((float)(this.width-1.2*cakaButton.width), 0f);
-//		cakaButton.hide();
-//		ponButton.hide();
-//		pataButton.hide();
+		cakaButton.hide();
+		ponButton.hide();
+		pataButton.hide();
 
 	}
 	
@@ -177,24 +178,24 @@ public class ForegroundStage extends BaseStage {
 	public void showActor(){
 		DefaultLogger.getDefaultLogger().logWithSignature(this, "showActor.. ");
 		
-//		timerDialog.show(-1);
-//		pataButton.show();
-//		ponButton.show();
-//		cakaButton.show();
+		timerDialog.show(-1);
+		pataButton.show();
+		ponButton.show();
+		cakaButton.show();
 		
 		
-		initButton();
-		initTimerDialog();
+//		initButton();
+//		initTimerDialog();
 	}
 
 	public void hideActor(){
-//		timerDialog.hide();
-//		pataButton.hide();
-//		ponButton.hide();
-//		cakaButton.hide();
+		timerDialog.hide();
+		pataButton.hide();
+		ponButton.hide();
+		cakaButton.hide();
 		
-		removeTimerDialog();
-		removeButton();
+//		removeTimerDialog();
+//		removeButton();
 	}
 	
 
