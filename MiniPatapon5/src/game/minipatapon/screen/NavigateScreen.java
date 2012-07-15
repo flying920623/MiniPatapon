@@ -11,7 +11,6 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 
-import game.minipatapon.event.EventArg;
 import game.minipatapon.event.gamecmd.GameState;
 import game.minipatapon.event.gamecmd.GameStateArg;
 import game.minipatapon.logger.DefaultLogger;
@@ -95,14 +94,13 @@ public class NavigateScreen extends SimpleScreen implements ProcessableScreen,
 
 	@Override
 	public void dispose() {
-		if (stage != null)
-		{
+		if (stage != null) {
 			stage.dispose();
-			GameStateArg arg =new GameStateArg(GameState.GameEnd);
-			arg.EventArgSent();
+//			GameStateArg arg = new GameStateArg(GameState.GameEnd);
+//			arg.EventArgSent();
+			stage = null;
 		}
-		
-		
+
 	}
 
 	@Override
@@ -110,7 +108,9 @@ public class NavigateScreen extends SimpleScreen implements ProcessableScreen,
 		if (stage != null) {
 			stage.act(dt);
 			stage.draw();
+
 		}
+
 	}
 
 	@Override

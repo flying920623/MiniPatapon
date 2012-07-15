@@ -28,7 +28,7 @@ public class HelpStage extends BaseStage implements ActorLoader
 	@SuppressWarnings("unused")
 	private ContentScreen contentScreen;
 	
-	Music music = ResourceLoader.loadMusic(MusicAssets.helpMusicStr);
+	Music music = ResourceLoader.getMusic(MusicAssets.helpMusicStr);
 
 	public HelpStage(float width, float height, boolean stretch)
 	{
@@ -98,7 +98,7 @@ public class HelpStage extends BaseStage implements ActorLoader
 
 	private void loadAboutUsImage()
 	{
-		TextureRegion regions = TextureAssets.GetTextureRegionFromPacker(TextureAssets.AboutUs);
+		TextureRegion regions = ResourceLoader.getRegionFromPacker(TextureAssets.AboutUs);
 //		Texture aboutUsTexture = ResourceLoader.loadTexture("about us.png");
 		this.aboutUsImage = new FlatImage(regions, 0f, 0f, this);
 		this.aboutUsImage.width = this.width;
@@ -107,7 +107,7 @@ public class HelpStage extends BaseStage implements ActorLoader
 
 	private void loadQuitImage()
 	{
-		Texture quitTexture = ResourceLoader.loadTexture("Level/quitbutton.png");
+		Texture quitTexture = ResourceLoader.getTexture("Level/quitbutton.png");
 		TextureRegion textureRegion = new TextureRegion(quitTexture);
 		this.quitImage = new NavigateImage("quit", textureRegion, 1.0f, 1.0f, this, MainMenuStage.class);
 		this.quitImage.x = centerX + 5 * centerX / 6;

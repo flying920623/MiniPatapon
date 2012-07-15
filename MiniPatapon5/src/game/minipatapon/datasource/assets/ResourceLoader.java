@@ -65,20 +65,51 @@ public class ResourceLoader {
 //	}
 	
 	
-	public static ArrayList<TextureRegion> loadTextureRegionFromPacker( ArrayList<String> picNames)
+//	public static ArrayList<TextureRegion> getTextureRegionFromPacker( ArrayList<String> picNames)
+//	{
+//		ArrayList<TextureRegion> regions = new ArrayList<TextureRegion>();
+//		//DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s ", picNames.toString());
+//		
+//		TextureAtlas atlas =  ResourceLoader.textureLoader.getTextureAtlas(picNames.get(0));
+//
+//		for( int i=1; i<picNames.size(); i++ )
+//		{
+//			regions.add( atlas.findRegion( picNames.get(i) ) );
+//		}
+//		if( regions.size()==0 )
+//		{
+//			DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s 不存在", picNames.toString());
+//			return regions;
+//		}
+//		TextureHandle.TextureFilterLinear(regions);
+//		
+//		return regions;
+//	}
+	
+	
+	//Texture
+	
+	
+	public static ArrayList<TextureRegion> getRegionsFromAtlas(TextureAtlas atlas,  ArrayList<String> str)
 	{
+
+		
 		ArrayList<TextureRegion> regions = new ArrayList<TextureRegion>();
 		//DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s ", picNames.toString());
-		
-		TextureAtlas atlas =  ResourceLoader.textureLoader.loadTextureAtlas(picNames.get(0));
 
-		for( int i=1; i<picNames.size(); i++ )
+		for( int i=1; i<str.size(); i++ )
 		{
-			regions.add( atlas.findRegion( picNames.get(i) ) );
+			TextureRegion region = atlas.findRegion( str.get(i) );
+			if( region==null )
+			{
+				DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "不能从  %s 中 读取: %s ", atlas.toString(), str.get(i));
+			}
+			
+			regions.add( region );
 		}
 		if( regions.size()==0 )
 		{
-			DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s 不存在", picNames.toString());
+			DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s 不存在", str.toString());
 			return regions;
 		}
 		TextureHandle.TextureFilterLinear(regions);
@@ -86,41 +117,102 @@ public class ResourceLoader {
 		return regions;
 	}
 	
-	public static TextureAtlas loadTextureAtlas(String relativePath)
+	public static TextureRegion getRegionFromPacker(ArrayList<String> str) {
+	
+		if (getRegionsFromPacker(str).size() <= 0) {
+			DefaultLogger.getDefaultLogger().logWithSignature(
+				TextureAssets.class, "资源未加载：%s", str.toString());
+			return null;
+		}
+		return getRegionsFromPacker(str).get(0);
+	}
+	
+	public static ArrayList<TextureRegion> getRegionsFromPacker(
+			ArrayList<String> str) {
+		TextureAtlas atlas = getTextureAtlas(str.get(0));
+		if( atlas==null )
+		{
+			DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class.getName(), "资源：%s 未能正确加载", str.get(0));
+		}
+//		return ResourceLoader.loadTextureRegionFromPacker(str);
+		return getRegionsFromAtlas(atlas, str);
+	}
+	
+	public static TextureAtlas getTextureAtlas(String relativePath)
 	{
 		if (ResourceLoader.textureLoader == null) {
 			ResourceLoader.textureLoader = new TextureLoader(TEXTURE_DIR,
 					DEFAULT_TEXTURE_NAME);
 		}
-		return ResourceLoader.textureLoader.loadTextureAtlas(relativePath);
+		return ResourceLoader.textureLoader.getTextureAtlas(relativePath);
 	}
 	
-	public static Texture loadTexture(String relativePath) {
+	public static Texture getTexture(String relativePath) {
 		if (ResourceLoader.textureLoader == null) {
 			ResourceLoader.textureLoader = new TextureLoader(TEXTURE_DIR,
 					DEFAULT_TEXTURE_NAME);
 		}
-		Texture Tex = ResourceLoader.textureLoader.loadTexture(relativePath);
+		Texture Tex = ResourceLoader.textureLoader.getTexture(relativePath);
 		TextureHandle.TextureFilterLinear(Tex);
 		return Tex;
 	}
 	
+	public static void loadTextureAtlas(String relativePath)
+	{
+		if (ResourceLoader.textureLoader == null) {
+			ResourceLoader.textureLoader = new TextureLoader(TEXTURE_DIR,
+					DEFAULT_TEXTURE_NAME);
+		}
+		ResourceLoader.textureLoader.loadTextureAtlas(relativePath);
+	}
+	
+	public static void loadTexture(String relativePath) {
+		if (ResourceLoader.textureLoader == null) {
+			ResourceLoader.textureLoader = new TextureLoader(TEXTURE_DIR,
+					DEFAULT_TEXTURE_NAME);
+		}
+		ResourceLoader.textureLoader.loadTexture(relativePath);
+	}
+	
 
-	public static Sound loadSound(String relativePath) {
+	
+	//Sound
+	public static Sound getSound(String relativePath) {
 		if (ResourceLoader.soundLoader == null) {
 			ResourceLoader.soundLoader = new SoundLoader(SOUND_DIR,
 					DEFAULT_SOUND_NAME);
 		}
-		return ResourceLoader.soundLoader.loadSound(relativePath);
+		return ResourceLoader.soundLoader.getSound(relativePath);
 	}
-
-	public static Music loadMusic(String relativePath) {
+	
+	public static void loadSound(String relativePath) {
+		if (ResourceLoader.soundLoader == null) {
+			ResourceLoader.soundLoader = new SoundLoader(SOUND_DIR,
+					DEFAULT_SOUND_NAME);
+		}
+		ResourceLoader.soundLoader.loadSound(relativePath);
+	}
+	
+	
+	
+	//music
+	public static Music getMusic(String relativePath) {
 		if (ResourceLoader.musicLoader == null) {
 			ResourceLoader.musicLoader = new MusicLoader(MUSIC_DIR,
 					DEFAULT_MUSIC_NAME);
 		}
-		return ResourceLoader.musicLoader.loadMusic(relativePath);
+		return ResourceLoader.musicLoader.getMusic(relativePath);
 	}
+	
+	public static void loadMusic(String relativePath) {
+		if (ResourceLoader.musicLoader == null) {
+			ResourceLoader.musicLoader = new MusicLoader(MUSIC_DIR,
+					DEFAULT_MUSIC_NAME);
+		}
+		ResourceLoader.musicLoader.loadMusic(relativePath);
+	}
+	
+	//font
 
 	public static BitmapFont loadFont(String fileName, String bitmapName) {
 		if (ResourceLoader.fontLoader == null)

@@ -32,30 +32,29 @@ public class StartAnimationStage extends BaseStage implements ActorLoader {
 	private boolean finished = false;
 	
 	private final FlatImage miniImg = new FlatImage("miniImg",
-			TextureAssets
-					.GetTextureRegionFromPacker(TextureAssets.MiniImg));
+			ResourceLoader.getRegionFromPacker(TextureAssets.MiniImg));
 	private final FlatImage pataImg = new FlatImage("pataImg",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.PataImg));
+			ResourceLoader.getRegionFromPacker(TextureAssets.PataImg));
 	private final FlatImage ponImg = new FlatImage("ponImg",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.PonImg));
+			ResourceLoader.getRegionFromPacker(TextureAssets.PonImg));
 	private final FlatImage stripImg = new FlatImage("stripImg",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.StripImg));
+			ResourceLoader.getRegionFromPacker(TextureAssets.StripImg));
 	private final FlatImage logo2Img = new FlatImage("logo2Img",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.Logo2Img));
+			ResourceLoader.getRegionFromPacker(TextureAssets.Logo2Img));
 	private final FlatImage poweredImg = new FlatImage("poweredImg",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.PoweredImg));
+			ResourceLoader.getRegionFromPacker(TextureAssets.PoweredImg));
 	private final FlatImage nuclearLogoImg = new FlatImage("gdxImg",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.NuclearLogoImg));
+			ResourceLoader.getRegionFromPacker(TextureAssets.NuclearLogoImg));
 	private final FlatImage veilImg = new FlatImage("veilImg",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.VeilImg));
+			ResourceLoader.getRegionFromPacker(TextureAssets.VeilImg));
 	private final FlatImage logoImg = new FlatImage("logoImg",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.LogoImg));
+			ResourceLoader.getRegionFromPacker(TextureAssets.LogoImg));
 	private final FlatImage blackBgImg = new FlatImage("blackBgImg",
-			TextureAssets.GetTextureRegionFromPacker(TextureAssets.BlackBgImg));
+			ResourceLoader.getRegionFromPacker(TextureAssets.BlackBgImg));
 	
 	private final TweenManager tweenManager = new TweenManager();
 
-	Music music = ResourceLoader.loadMusic(MusicAssets.startMusicStr);
+	//Music music = ResourceLoader.getMusic(MusicAssets.startMusicStr);
 	
 	public StartAnimationStage(float width, float height,
 			boolean stretch) {
@@ -74,7 +73,6 @@ public class StartAnimationStage extends BaseStage implements ActorLoader {
 
 		Tween.registerAccessor(FlatImage.class, new ActorAccessor());
 
-		initALL();
 		
 		//MusicManage.playMusic(music);
 		
@@ -84,13 +82,7 @@ public class StartAnimationStage extends BaseStage implements ActorLoader {
 
 	}
 	
-	public void initALL()
-	{
-		LoadManage.loadStartAnimationStage();
-		LoadManage.loadMainMenuStage();
-		LoadManage.loadChooseHeroStage();
-		LoadManage.loadLevel3Stage();
-	}
+
 	
 	public void initImgSize()
 	{
@@ -169,7 +161,7 @@ public class StartAnimationStage extends BaseStage implements ActorLoader {
 				.push(Tween.set(nuclearLogoImg, ActorAccessor.OPACITY).target(0))
 
 				// 开始 需要暂停一下，因为紫云加载的时候 deltatime 很长，前面的动画会直接从 开始值 跳到 结束值
-				.pushPause(6f)
+				.pushPause(1f)
 				
 				.push(Tween.to(stripImg, ActorAccessor.SCALE_XY, 0.8f)
 						.target(1, 0.6f).ease(Quart.OUT))

@@ -204,32 +204,6 @@ public class FlatImage extends Image implements
 		sortActor();
 	}
 	
-	@Override
-	public boolean touchDown(float x, float y, int pointer) {
-
-	//	DefaultLogger.getDefaultLogger().logWithSignature(this, "touch down");
-		return touchable;
-	}
-
-	@Override
-	public void touchUp(float x, float y, int pointer) {
-		//action( RotateTo.$(360, 1f) );
-	}
-
-	@Override
-	public void touchDragged(float x, float y, int pointer) {
-		
-	}
-	
-	public void draw(SpriteBatch batch, float parentAlpha) {
-        
-		//DefaultLogger.getDefaultLogger().logWithSignature(this, "%s:  w:%f, h:%f, rw:%d, rh:%d", this.name, width, height, region.getRegionWidth(), region.getRegionHeight());
-		
-//        batch.setColor(color.r, color.g, color.b, color.a * parentAlpha);
-//        batch.draw(region, this.x * this.scaleX , this.y * this.scaleY , this.x , this.y , width, height, this.scaleX, this.scaleY, this.rotation);    
-//    
-        super.draw(batch, parentAlpha);
-	}
 
 	public boolean actionDone()
 	{
@@ -258,5 +232,15 @@ public class FlatImage extends Image implements
 		}
 		
 		return as;
+	}
+	
+	public void show()
+	{
+		super.color.a=1;
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "show image: %s, a:%f", this.name, super.color.a);
+	}
+	
+	public void hide(){
+		super.color.a=0;
 	}
 }

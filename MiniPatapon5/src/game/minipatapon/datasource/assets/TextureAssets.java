@@ -1,6 +1,5 @@
 package game.minipatapon.datasource.assets;
 
-import game.minipatapon.effectpresent.texurefliter.TextureHandle;
 import game.minipatapon.logger.DefaultLogger;
 
 import java.util.ArrayList;
@@ -15,13 +14,46 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class TextureAssets {
 	// public static ArrayList<String> ;
+//
+//	private static Map<String, Texture> m_texMap = new HashMap<String, Texture>();
+//	private static Map<ArrayList<String>, ArrayList<TextureRegion>> m_texregionMap = new HashMap<ArrayList<String>, ArrayList<TextureRegion>>();
+//	private static Map<String, TextureAtlas> m_textureAtlasMap = new HashMap<String, TextureAtlas>();
+//	
+	
+	//loading
+	public final static ArrayList<String> LoadingBarImg = new ArrayList<String>() {
+		/**
+			 * 
+			 */
+		private static final long serialVersionUID = 1L;
 
-	private static Map<String, Texture> m_texMap = new HashMap<String, Texture>();
-	private static Map<ArrayList<String>, ArrayList<TextureRegion>> m_texregionMap = new HashMap<ArrayList<String>, ArrayList<TextureRegion>>();
-	private static Map<String, TextureAtlas> m_textureAtlasMap = new HashMap<String, TextureAtlas>();
+		{
+			add("Loading/loadingPack");
+			add("bar");
+		}
+	};
+	
+	public final static ArrayList<String> LoadingProcessBarImg = new ArrayList<String>() {
+		/**
+			 * 
+			 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			add("Loading/loadingPack");
+			add("processBar");
+		}
+	};
+	
+	//ChooseLevel
+	public final static String Level1Img = "Level/level1.png";
+	public final static String Level2Img = "Level/level2.png";
+	public final static String Level3Img = "Level/level3.png";
+	public final static String Level4LockedImg = "Level/level4_locked.png";
+	public final static String Level5Img = "Level/level5.png";
+	public final static String Level6Img = "Level/level6.png";
 	
 	// mission
-
 	public final static ArrayList<String> MissionCompleted = new ArrayList<String>() {
 		/**
 			 * 
@@ -210,6 +242,8 @@ public class TextureAssets {
 		}
 	};
 
+	public final static String MainMenuPack = "MainMenuPack";
+	
 	public final static ArrayList<String> StandardBearer_right_Img = new ArrayList<String>() {
 		/**
 		 * 
@@ -217,7 +251,7 @@ public class TextureAssets {
 		private static final long serialVersionUID = 1L;
 
 		{
-			add("MainMenuPack");
+			add(MainMenuPack);
 			add("flagman1");
 			add("flagman2");
 		}
@@ -229,7 +263,7 @@ public class TextureAssets {
 		private static final long serialVersionUID = 1L;
 
 		{
-			add("MainMenuPack");
+			add(MainMenuPack);
 			add("shieldSoldiers");
 			add("shieldSoldiers2");
 		}
@@ -241,7 +275,7 @@ public class TextureAssets {
 		private static final long serialVersionUID = 1L;
 
 		{
-			add("MainMenuPack");
+			add(MainMenuPack);
 			add("swordsman1");
 			add("swordsman2");
 		}
@@ -253,7 +287,7 @@ public class TextureAssets {
 		private static final long serialVersionUID = 1L;
 
 		{
-			add("MainMenuPack");
+			add(MainMenuPack);
 			add("holdKnife2");
 			add("holdKnife1");
 		}
@@ -265,7 +299,7 @@ public class TextureAssets {
 		private static final long serialVersionUID = 1L;
 
 		{
-			add("MainMenuPack");
+			add(MainMenuPack);
 			add("holdFlag1");
 			add("holdFlag2");
 			add("holdFlag3");
@@ -276,7 +310,7 @@ public class TextureAssets {
 		private static final long serialVersionUID = 1L;
 
 		{
-			add("MainMenuPack");
+			add(MainMenuPack);
 			add("archer1");
 			add("archer2");
 		}
@@ -285,7 +319,7 @@ public class TextureAssets {
 		private static final long serialVersionUID = 5626720953104329290L;
 
 		{
-			add("MainMenuPack");
+			add(MainMenuPack);
 			add("shieldSoldier1");
 			add("shieldSoldier2");
 		}
@@ -298,7 +332,7 @@ public class TextureAssets {
 		private static final long serialVersionUID = 1L;
 
 		{
-			add("MainMenuPack");
+			add(MainMenuPack);
 			add("Yaripon");
 			add("Yaripon1");
 			add("Yaripon2");
@@ -315,7 +349,7 @@ public class TextureAssets {
 	// Note
 	public final static ArrayList<String> Note = new ArrayList<String>() {
 		{
-			add("MainMenuPack");
+			add(MainMenuPack);
 			add("note");
 		}
 	};
@@ -327,7 +361,7 @@ public class TextureAssets {
 		private static final long serialVersionUID = 1L;
 
 		{
-			add("MainMenuPack");
+			add(MainMenuPack);
 			add("GameName1");
 		}
 	};
@@ -338,7 +372,7 @@ public class TextureAssets {
 		private static final long serialVersionUID = 1L;
 
 		{
-			add("MainMenuPack");
+			add(MainMenuPack);
 			add("GameName2");
 		}
 	};
@@ -346,7 +380,7 @@ public class TextureAssets {
 
 	// HelpStage
 	public final static String AboutUsImage = "about us.png";
-	public final static String QuitImage = "quitbutton.png";
+	public final static String QuitImage = "quitButton.png";
 
 	// Level1
 	public final static ArrayList<String> Level1Layer1Img = new ArrayList<String>() {
@@ -601,6 +635,8 @@ public class TextureAssets {
 
 	public final static String SettingImage = "set.png";
 	public final static String HelpImage = "help.png";
+	
+	public final static String WindLineImg = "line.png";
 
 //	public static ArrayList<TextureRegion> GetTextureRegionsFromPacker(
 //			ArrayList<String> str) {
@@ -623,109 +659,127 @@ public class TextureAssets {
 //		return GetTextureRegionsFromPacker(str).get(0);
 //	}
 	
+//	
+//	
+//	
+//	public static ArrayList<TextureRegion> GetRegionsFromAtlas(TextureAtlas atlas,  ArrayList<String> str)
+//	{
+//
+//		
+//		ArrayList<TextureRegion> regions = new ArrayList<TextureRegion>();
+//		//DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s ", picNames.toString());
+//
+//		for( int i=1; i<str.size(); i++ )
+//		{
+//			TextureRegion region = atlas.findRegion( str.get(i) );
+//			if( region==null )
+//			{
+//				DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "不能从  %s 中 读取: %s ", atlas.toString(), str.get(i));
+//			}
+//			
+//			regions.add( region );
+//		}
+//		if( regions.size()==0 )
+//		{
+//			DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s 不存在", str.toString());
+//			return regions;
+//		}
+//		TextureHandle.TextureFilterLinear(regions);
+//		
+//		return regions;
+//	}
+//	
+//	public static ArrayList<TextureRegion> GetTextureRegionsFromPacker(
+//			ArrayList<String> str) {
+//		TextureAtlas atlas = GetTextureAtlas(str.get(0));
+////		return ResourceLoader.loadTextureRegionFromPacker(str);
+//		return GetRegionsFromAtlas(atlas, str);
+//	}
+//
+//	public static TextureRegion GetTextureRegionFromPacker(ArrayList<String> str) {
+//		// DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class,
+//		// "加载资源： %s", str.toString());
+//		if (GetTextureRegionsFromPacker(str).size() <= 0) {
+//			DefaultLogger.getDefaultLogger().logWithSignature(
+//					TextureAssets.class, "资源未加载：%s", str.toString());
+//			return null;
+//		}
+//
+//		return GetTextureRegionsFromPacker(str).get(0);
+//	}
+//	
+//
+//	public static Texture GetTex(String texStr) {
+////		 while(!m_texMap.containsKey(texStr)){
+////			 LoadTexture(texStr);
+////		 }
+////		 return m_texMap.get(texStr);
+//		
+//
+//		if( ResourceLoader.getTexture(texStr)==null )
+//		{
+//			LoadTextureAtlas(texStr);
+//		}
+//		
+//		return ResourceLoader.getTexture(texStr);
+//	}
+//	
+//	public static TextureAtlas GetTextureAtlas(String atlasStr)
+//	{
+////		while (!m_textureAtlasMap.containsKey(atlasStr)) {
+////			 LoadTextureAtlas(atlasStr);
+////		}		
+////		
+////		return m_textureAtlasMap.get(atlasStr);
+//		
+//		if( ResourceLoader.getTextureAtlas(atlasStr)==null )
+//		{
+//			LoadTextureAtlas(atlasStr);
+//		}
+//		
+//		return ResourceLoader.getTextureAtlas(atlasStr);
+//	}
+//	
+//	public static void LoadTextureAtlas(String str){
+////		TextureAtlas atlas = ResourceLoader.getTextureAtlas(str);
+////		
+////		DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "加载 TextureAtlas:  %s", str);
+////		
+////		m_textureAtlasMap.put(str, atlas);
+//		ResourceLoader.loadTextureAtlas(str);
+//	}
+//
+////	public static void LoadTextureRegion(ArrayList<String> str) {
+////		ArrayList<TextureRegion> temp = ResourceLoader
+////				.getTextureRegionFromPacker(str);
+////		m_texregionMap.put(str, temp);
+////	}
+//
+//	public static void LoadTexture(String texStr) {
+////		Texture temp = ResourceLoader.getTexture(texStr);
+////		m_texMap.put(texStr, temp);
+//		ResourceLoader.loadTexture(texStr);
+//
+//	}
+//
+//	public static void LoadTexture(ArrayList<String> texStrs) {
+//
+//		for (String texStr : texStrs) {
+//
+//			// Texture temp = ResourceLoader.loadTexture(texStr);
+//			// m_texMap.put(texStr, temp);
+//
+//			Texture temp = ResourceLoader.getTexture(texStr);
+//			// m_texMap.put(texStr, temp);
+//
+//		}
+//	}
 	
-	public static ArrayList<TextureRegion> GetRegionsFromAtlas(TextureAtlas atlas,  ArrayList<String> str)
-	{
-
-		
-		ArrayList<TextureRegion> regions = new ArrayList<TextureRegion>();
-		//DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s ", picNames.toString());
-
-		for( int i=1; i<str.size(); i++ )
-		{
-			TextureRegion region = atlas.findRegion( str.get(i) );
-			if( region==null )
-			{
-				DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "不能从  %s 中 读取: %s ", atlas.toString(), str.get(i));
-			}
-			
-			regions.add( region );
-		}
-		if( regions.size()==0 )
-		{
-			DefaultLogger.getDefaultLogger().logWithSignature(ResourceLoader.class, "资源：%s 不存在", str.toString());
-			return regions;
-		}
-		TextureHandle.TextureFilterLinear(regions);
-		
-		return regions;
-	}
-	
-	public static ArrayList<TextureRegion> GetTextureRegionsFromPacker(
-			ArrayList<String> str) {
-		TextureAtlas atlas = GetTextureAtlas(str.get(0));
-//		return ResourceLoader.loadTextureRegionFromPacker(str);
-		return GetRegionsFromAtlas(atlas, str);
-	}
-
-	public static TextureRegion GetTextureRegionFromPacker(ArrayList<String> str) {
-		// DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class,
-		// "加载资源： %s", str.toString());
-		if (GetTextureRegionsFromPacker(str).size() <= 0) {
-			DefaultLogger.getDefaultLogger().logWithSignature(
-					TextureAssets.class, "资源未加载：%s", str.toString());
-			return null;
-		}
-
-		return GetTextureRegionsFromPacker(str).get(0);
-	}
-	
-
-	public static Texture GetTex(String texStr) {
-		 while(!m_texMap.containsKey(texStr)){
-			 LoadTexture(texStr);
-		 }
-		 return m_texMap.get(texStr);
-		
-	}
-	
-	public static TextureAtlas GetTextureAtlas(String atlasStr)
-	{
-		while (!m_textureAtlasMap.containsKey(atlasStr)) {
-			 LoadTextureAtlas(atlasStr);
-		}		
-		
-		return m_textureAtlasMap.get(atlasStr);
-	}
-	
-	public static void LoadTextureAtlas(String str){
-		TextureAtlas atlas = ResourceLoader.loadTextureAtlas(str);
-		
-		DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "加载 TextureAtlas:  %s", str);
-		
-		m_textureAtlasMap.put(str, atlas);
-	}
-
-	public static void LoadTextureRegion(ArrayList<String> str) {
-		ArrayList<TextureRegion> temp = ResourceLoader
-				.loadTextureRegionFromPacker(str);
-		m_texregionMap.put(str, temp);
-	}
-
-	public static void LoadTexture(String texStr) {
-		Texture temp = ResourceLoader.loadTexture(texStr);
-		m_texMap.put(texStr, temp);
-
-	}
-
-	public static void LoadTexture(ArrayList<String> texStrs) {
-
-		for (String texStr : texStrs) {
-
-			// Texture temp = ResourceLoader.loadTexture(texStr);
-			// m_texMap.put(texStr, temp);
-
-			Texture temp = ResourceLoader.loadTexture(texStr);
-			// m_texMap.put(texStr, temp);
-
-		}
-	}
-	
-	public static void dispose()
-	{
-		DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "dispose all texture!");
-		m_texMap.clear();
-		m_texregionMap.clear();
-		m_textureAtlasMap.clear();
-	}
+//	public static void dispose()
+//	{
+//		DefaultLogger.getDefaultLogger().logWithSignature(TextureAssets.class, "dispose all texture!");
+//		m_texMap.clear();
+//		m_texregionMap.clear();
+//		m_textureAtlasMap.clear();
+//	}
 }

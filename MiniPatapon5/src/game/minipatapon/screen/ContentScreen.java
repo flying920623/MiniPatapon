@@ -40,11 +40,11 @@ public class ContentScreen extends NavigateScreen {
 				"enter ContentScreen.show()");
 
 		super.show();
-//		 this.navigate(new StartMenuStage(this, getWidth(), getHeight(),
+		// this.navigate(new StartMenuStage(this, getWidth(), getHeight(),
 		// truer));
 //		 this.navigate(new MainMenuStage( getWidth(), getHeight(), true));
-		 this.navigate(new ChooseLevelStage( getWidth(), getHeight(), true));
-// 		this.navigate(new StartAnimationStage(getWidth(), getHeight(), true));
+//		 this.navigate(new ChooseLevelStage( getWidth(), getHeight(), true));
+ 		this.navigate(new StartAnimationStage(getWidth(), getHeight(), true));
 //		this.navigate(new TestSpriterImport(getWidth(), getHeight(), true));
 //		this.navigate(new Level3Stage(getWidth(), getHeight(), true, 3));
 //		 this.navigate(new ChooseHeroStage(getWidth(), getHeight(), true));

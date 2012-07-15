@@ -25,30 +25,30 @@ public class MusicAssets {
 
 	public static String startMusicStr = "start_music.mp3";
 
-	public static Music GetMusic(String musicStr) {
-		// MusicAssets.GetMusic(MusicAssets.exampleMusicStr);
-		while (!m_musicMap.containsKey(musicStr)) {
-			LoadMusic(musicStr);
-		}
-//		return ResourceLoader.loadMusic(musicStr);
-		return m_musicMap.get(musicStr);
-	}
-
-	public static void LoadMusic(String musicStr) {
-		Music temp = ResourceLoader.loadMusic(musicStr);
-		m_musicMap.put(musicStr, temp);
-	}
-
-	public static void LoadMusic(ArrayList<String> musicStrs) {
-
-		for (String musicStr : musicStrs) {
-			Music temp = ResourceLoader.loadMusic(musicStr);
-			m_musicMap.put(musicStr, temp);
-		}
-
-	}
-
-	public static void dispose() {
-		m_musicMap.clear();
-	}
+//	public static Music GetMusic(String musicStr) {
+//		// MusicAssets.GetMusic(MusicAssets.exampleMusicStr);
+//		while (!m_musicMap.containsKey(musicStr)) {
+//			LoadMusic(musicStr);
+//		}
+////		return ResourceLoader.loadMusic(musicStr);
+//		return m_musicMap.get(musicStr);
+//	}
+//
+//	public static void LoadMusic(String musicStr) {
+//		Music temp = ResourceLoader.getMusic(musicStr);
+//		m_musicMap.put(musicStr, temp);
+//	}
+//
+//	public static void LoadMusic(ArrayList<String> musicStrs) {
+//
+//		for (String musicStr : musicStrs) {
+//			Music temp = ResourceLoader.getMusic(musicStr);
+//			m_musicMap.put(musicStr, temp);
+//		}
+//
+//	}
+//
+//	public static void dispose() {
+//		m_musicMap.clear();
+//	}
 }

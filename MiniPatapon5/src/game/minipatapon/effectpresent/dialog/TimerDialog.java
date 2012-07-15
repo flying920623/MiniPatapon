@@ -1,5 +1,6 @@
 package game.minipatapon.effectpresent.dialog;
 
+import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.TextureAssets;
 
 import com.badlogic.gdx.Gdx;
@@ -13,7 +14,7 @@ public class TimerDialog extends Dialog{
 
 	public TimerDialog(String name, float x, float y, Stage stage) {
 		
-		super(name, "asdfasdf", TextureAssets.GetTextureRegionFromPacker(TextureAssets.StartMenuBg), 
+		super(name, "asdfasdf", ResourceLoader.getRegionFromPacker(TextureAssets.StartMenuBg), 
 				x, y, stage, 10, Gdx.graphics.getWidth()/7);
 		
 		// TODO Auto-generated constructor stub

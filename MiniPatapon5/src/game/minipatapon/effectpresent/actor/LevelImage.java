@@ -48,8 +48,6 @@ public class LevelImage extends FlatImage{
 	}
 	@Override
 	public boolean touchDown(float x, float y, int pointer) {
-	
-		
 		return touchable;
 	}
 

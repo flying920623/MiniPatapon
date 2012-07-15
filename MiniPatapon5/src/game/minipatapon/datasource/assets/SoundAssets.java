@@ -43,12 +43,12 @@ public class SoundAssets
 		// {
 		// LoadMusic(musicStr);
 		// }
-		return ResourceLoader.loadSound(soundStr);
+		return ResourceLoader.getSound(soundStr);
 	}
 
 	public static void LoadSound(String soundStr)
 	{
-		Sound temp = ResourceLoader.loadSound(soundStr);
+		Sound temp = ResourceLoader.getSound(soundStr);
 		// m_musicMap.put(musicStr, temp);
 	}
 
@@ -57,7 +57,7 @@ public class SoundAssets
 
 		for (String soundStr : soundStrs)
 		{
-			Sound temp = ResourceLoader.loadSound(soundStr);
+			Sound temp = ResourceLoader.getSound(soundStr);
 			// m_musicMap.put(musicStr, temp);
 		}
 

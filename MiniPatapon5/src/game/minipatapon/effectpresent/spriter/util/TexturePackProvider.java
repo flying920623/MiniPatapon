@@ -12,6 +12,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
+import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.spriter.TextureProvider;
 import game.minipatapon.logger.DefaultLogger;
@@ -62,8 +63,7 @@ public class TexturePackProvider implements TextureProvider {
 			strings.add(packPath + "pack");
 			strings.add(picName.replaceAll(".png", ""));
 
-			TextureRegion region = TextureAssets
-					.GetTextureRegionFromPacker(strings);
+			TextureRegion region = ResourceLoader.getRegionFromPacker(strings);
 
 			if (region == null) {
 				DefaultLogger.getDefaultLogger().logWithSignature(this, strings.toString()

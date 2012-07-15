@@ -4,11 +4,13 @@ package game.minipatapon.stage.background;
 
 import java.lang.reflect.InvocationTargetException;
 
+import game.minipatapon.effectpresent.actor.LineImage;
 import game.minipatapon.effectpresent.background.ParaBackground;
-import game.minipatapon.effectpresent.background.ParaBackgroundLevel1;
-import game.minipatapon.effectpresent.background.ParaBackgroundLevel2;
 import game.minipatapon.effectpresent.background.ParaBackgroundLevel3;
+import game.minipatapon.effectpresent.background.ParaBackgroundLevel2;
+import game.minipatapon.effectpresent.background.ParaBackgroundLevel1;
 import game.minipatapon.effectpresent.background.ParaBackgroundMainMenu;
+import game.minipatapon.logger.DefaultLogger;
 
 import game.minipatapon.screen.NavigateScreen;
 //import game.minipatapon.service.ResourceLoader;
@@ -19,7 +21,9 @@ public class BackgroundStage extends BaseStage  {
 	public BackgroundStage(float width, float height, boolean stretch) {
 		super(width, height, stretch);
 		// TODO Auto-generated constructor stub
-		paraBackgroundMainMenu = new ParaBackgroundLevel1();
+		paraBackgroundMainMenu = new ParaBackgroundLevel3();
+		
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "enter BackgroundStage");
 	}
 
 	@Override
@@ -64,18 +68,24 @@ public class BackgroundStage extends BaseStage  {
 		paraBackgroundMainMenu = new ParaBackgroundMainMenu();
 		
 	}
+
 	public BackgroundStage(NavigateScreen _screen, float width, float height,
 			boolean stretch,Class<? extends ParaBackground> cls) {
 				// TODO: handle exception
 		super(width, height, stretch);
 		init(cls);
-			} 
+		
+		
+	} 
 		
 		//ParaBackgroundMainMenu.GetInstance();
 		
 	
     public  void init(Class<? extends ParaBackground> cls )
     {
+    	
+    	new LineImage(this);
+    	new LineImage(this);
     	
     	try {
 			paraBackgroundMainMenu = (ParaBackground)cls.getConstructors()[0].newInstance();
@@ -108,7 +118,9 @@ public class BackgroundStage extends BaseStage  {
 //	ParaBackgroundLevel3 paraBackgroundMainMenu = new ParaBackgroundLevel3();
 	public void draw()
 	{
+		
 		paraBackgroundMainMenu.render();
+		super.draw();
 	}
 /*
 	private void loadBackground(String name) {

@@ -2,6 +2,7 @@ package game.minipatapon.stage.foreground;
 
 import org.w3c.dom.css.Counter;
 
+import aurelienribon.tweenengine.Timeline;
 import aurelienribon.tweenengine.Tween;
 
 import com.badlogic.gdx.Gdx;
@@ -42,15 +43,15 @@ public class ForegroundStage extends BaseStage {
 	InputImage pataButton;
 	InputImage ponButton;
 	InputImage cakaButton;
-	
 
-	
+	NavigateImage quitImage;
+
 	TimerDialog timerDialog;
 	SpriteBatch spriteBatch;
 	ParticleEffect particle;
-	Loggable logger;
-	Sound slipSound;
-	Sound clickSound;
+//	Loggable logger;
+//	Sound slipSound;
+//	Sound clickSound;
 	float soundDelta;
 	float w;
 	float h;
@@ -63,7 +64,7 @@ public class ForegroundStage extends BaseStage {
 	// TextureRegion texClickNormal;
 	// TextureRegion texDrag;
 
-	Music testSound;
+	//Music testSound;
 
 	private Vector2 coursePos = new Vector2(50, 50);
 
@@ -76,128 +77,129 @@ public class ForegroundStage extends BaseStage {
 		initialize();
 	}
 
-	private void playTestSound() {
-
-		testSound.setLooping(true);
-		testSound.play();
-	}
-
-	private void playSlipSound() {
-		if (this.soundDelta > this.minSoundDelta) {
-			// this.slipSound.play();
-			this.soundDelta = 0;
-		}
-	}
-
-	private void playClickSound() {
-		// this.clickSound.play();
-	}
+//	private void playTestSound() {
+//
+//		testSound.setLooping(true);
+//		testSound.play();
+//	}
+//
+//	private void playSlipSound() {
+//		if (this.soundDelta > this.minSoundDelta) {
+//			// this.slipSound.play();
+//			this.soundDelta = 0;
+//		}
+//	}
+//
+//	private void playClickSound() {
+//		// this.clickSound.play();
+//	}
 
 	private void initialize() {
 
 		Tween.registerAccessor(Actor.class, new ActorAccessor());
-		
+
 		initButton();
 		initTimerDialog();
-		
-		logger = DefaultLogger.getDefaultLogger();
+
+//		logger = DefaultLogger.getDefaultLogger();
 		spriteBatch = new SpriteBatch();
 		particle = ResourceLoader.loadParticle("default.p", "");
 		particle.setPosition(-100, -100);
-		this.slipSound = ResourceLoader.loadSound("slip.ogg");
+		// this.slipSound = ResourceLoader.getSound("slip.ogg");
 		// Texture course = ResourceLoader.loadTexture("hand_256_64.png");
 		// this.texClickNormal = new TextureRegion(course, 0, 0, 41, 56);
 		// this.texClickDown = new TextureRegion(course, 82, 0, 41, 56);
 		// this.texDrag = new TextureRegion(course, 126, 0, 41, 56);
 		// this.texCourse = this.texClickNormal;
-		this.clickSound = ResourceLoader.loadSound("click_sound.ogg");
-		this.testSound = ResourceLoader.loadMusic("drum_two_rhythm.mp3");
+		// this.clickSound = ResourceLoader.getSound("click_sound.ogg");
+		// this.testSound = ResourceLoader.getMusic("drum_two_rhythm.mp3");
 
 	}
-	
+
 	public void initTimerDialog() {
 		timerDialog = new TimerDialog("timerDialog", this);
-		//timerDialog.show(-1);
+		// timerDialog.show(-1);
 
 		timerDialog.start(270);
 	}
-	
 
 	public void initButton() {
 
 		pataButton = new InputImage(
-				TextureAssets
-						.GetTextureRegionFromPacker(TextureAssets.PataButton),
+				ResourceLoader.getRegionFromPacker(TextureAssets.PataButton),
 				0, 0, this, MatchMusicType.Pata);
-		
+
 		ponButton = new InputImage(
-				TextureAssets
-						.GetTextureRegionFromPacker(TextureAssets.PonButton),
-				0, 0, this, MatchMusicType.Pon);
+				ResourceLoader.getRegionFromPacker(TextureAssets.PonButton), 0,
+				0, this, MatchMusicType.Pon);
 		cakaButton = new InputImage(
-				TextureAssets
-						.GetTextureRegionFromPacker(TextureAssets.CakaButton),
+				ResourceLoader.getRegionFromPacker(TextureAssets.CakaButton),
 				0, 0, this, MatchMusicType.Chaka);
 
-		
-		pataButton.height = ponButton.height = cakaButton.height = height / 10;
+		pataButton.height = ponButton.height = cakaButton.height = GameStage.blackGroundHeight;
 		pataButton.width = ponButton.width = cakaButton.width = pataButton.height;
 
-//		pataButton.setPosition(pataButton.width / 2, height - pataButton.height
-//				* 2f);
-//		ponButton.setPosition(ponButton.width / 2, pataButton.y
-//				- pataButton.height * 5 / 4);
-//		cakaButton.setPosition(cakaButton.width / 2, ponButton.y
-//				- pataButton.height * 5 / 4);
-//		
-		pataButton.setPosition((float)(this.width-3.6*pataButton.width), 0f);
-		ponButton.setPosition((float)(this.width-2.4*ponButton.width), 0f);
-		cakaButton.setPosition((float)(this.width-1.2*cakaButton.width), 0f);
+		pataButton.setPosition((float) (this.width - 3.6 * pataButton.width),
+				0f);
+		ponButton.setPosition((float) (this.width - 2.4 * ponButton.width), 0f);
+		cakaButton.setPosition((float) (this.width - 1.2 * cakaButton.width),
+				0f);
+
+		quitImage = new NavigateImage("quit", new TextureRegion(
+				ResourceLoader.getTexture(TextureAssets.QuitImage)), 0, 0,
+				this, ChooseLevelStage.class);
+		quitImage.height = GameStage.blackGroundHeight;
+		quitImage.width = quitImage.height;
+		quitImage.setPosition(quitImage.width / 5, 0);
+
 		cakaButton.hide();
 		ponButton.hide();
 		pataButton.hide();
 
-	}
-	
+		quitImage.hide();
 
-	public void removeTimerDialog(){
+	}
+
+	public void removeTimerDialog() {
 		removeActor(timerDialog);
 		timerDialog = null;
 	}
-	
-	public void removeButton(){
+
+	public void removeButton() {
 		removeActor(pataButton);
 		removeActor(ponButton);
 		removeActor(cakaButton);
-		
+
 		pataButton = null;
 		ponButton = null;
 		cakaButton = null;
 	}
-	
-	public void showActor(){
+
+	public synchronized void showActor() {
 		DefaultLogger.getDefaultLogger().logWithSignature(this, "showActor.. ");
-		
-		timerDialog.show(-1);
+
 		pataButton.show();
 		ponButton.show();
 		cakaButton.show();
+		quitImage.show();
+		timerDialog.show(-1);
 		
-		
-//		initButton();
-//		initTimerDialog();
+
+		// initButton();
+		// initTimerDialog();
 	}
 
-	public void hideActor(){
+	public synchronized void hideActor() {
+		DefaultLogger.getDefaultLogger().logWithSignature(this, "hideActor.. ");
+		
 		timerDialog.hide();
 		pataButton.hide();
 		ponButton.hide();
 		cakaButton.hide();
-		
-//		removeTimerDialog();
-//		removeButton();
+		quitImage.hide();
+		// removeTimerDialog();
+		// removeButton();
 	}
-	
 
 	@Override
 	public boolean touchDown(int x, int y, int pointer, int button) {
@@ -210,18 +212,18 @@ public class ForegroundStage extends BaseStage {
 		this.particle.start();
 		this.coursePos.set(screen_x, screen_y);
 		// this.texCourse = this.texClickDown;
-	//	this.playClickSound();
-	//	this.playTestSound();
+		// this.playClickSound();
+		// this.playTestSound();
 
 		super.touchDown(x, y, pointer, button);
-		
-//		if(cakaButton.touchDown(x, y, pointer))
-//			return false;
-//		if(pataButton.touchDown(x, y, pointer))
-//			return false;
-//		if(ponButton.touchDown(x, y, pointer))
-//			return false;
-		//new NoteImage(1, 1, this);
+
+		// if(cakaButton.touchDown(x, y, pointer))
+		// return false;
+		// if(pataButton.touchDown(x, y, pointer))
+		// return false;
+		// if(ponButton.touchDown(x, y, pointer))
+		// return false;
+		// new NoteImage(1, 1, this);
 		return false;
 	}
 
@@ -231,7 +233,7 @@ public class ForegroundStage extends BaseStage {
 		this.particle.start();
 		// this.texCourse = this.texClickNormal;
 		super.touchUp(x, y, pointer, button);
-		
+
 		return false;
 	}
 
@@ -243,13 +245,13 @@ public class ForegroundStage extends BaseStage {
 		this.particle.start();
 		this.coursePos.set(screen_x, screen_y);
 		if (isMoved(x, y)) {
-			this.playSlipSound();
+			//this.playSlipSound();
 			this.startX = x;
 			this.startY = y;
 		}
-		
+
 		super.touchDragged(x, y, keyType);
-		
+
 		// this.texCourse = this.texDrag;
 		return false;
 	}
@@ -304,14 +306,13 @@ public class ForegroundStage extends BaseStage {
 	public void show() {
 		// TODO Auto-generated method stub
 		this.coursePos.set(this.width() * 2 / 3, this.height() / 2);
-
+		
 	}
-
 	
-	
-	
-
-
-
+	public void dispose()
+	{
+		particle.dispose();
+		super.dispose();
+	}
 
 }

@@ -43,4 +43,13 @@ public class PataponActivity extends AndroidApplication  {
 		}
         
     }
+    
+    
+    public void onDestroy()
+    {
+    	super.onDestroy();
+    	DefaultLogger.getDefaultLogger().logWithSignature(this, "onDestroy");
+    	int nPid = android.os.Process.myPid();
+    	android.os.Process.killProcess(nPid);
+    }
 }

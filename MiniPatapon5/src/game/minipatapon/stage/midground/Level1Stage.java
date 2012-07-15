@@ -128,31 +128,31 @@ public class Level1Stage extends GameStage {
 	}
 
 	public void initSound() {
-		this.howlSound = ResourceLoader.loadSound(SoundAssets.howlSoundStr);
-		this.windSound = ResourceLoader.loadSound(SoundAssets.windSoundStr);
+		this.howlSound = ResourceLoader.getSound(SoundAssets.howlSoundStr);
+		this.windSound = ResourceLoader.getSound(SoundAssets.windSoundStr);
 //		this.rainSound = ResourceLoader.loadSound(SoundAssets.rainSoundStr);
 //		this.thunderSound = ResourceLoader.loadSound(SoundAssets.thunderSoundStr);
 		this.gameCompleteSound = ResourceLoader
-				.loadSound(SoundAssets.missionCompleteSoundStr);
+				.getSound(SoundAssets.missionCompleteSoundStr);
 		this.gameFailedSound = ResourceLoader
-				.loadSound(SoundAssets.missionFailedSoundStr);
+				.getSound(SoundAssets.missionFailedSoundStr);
 
 		this.forwordSound1 = ResourceLoader
-				.loadSound(SoundAssets.forwordSoundStr);
+				.getSound(SoundAssets.forwordSoundStr);
 		this.forwordSound2 = ResourceLoader
-				.loadSound(SoundAssets.forwordSound2Str);
-		this.cheerSound = ResourceLoader.loadSound(SoundAssets.cheerSoundStr);
+				.getSound(SoundAssets.forwordSound2Str);
+		this.cheerSound = ResourceLoader.getSound(SoundAssets.cheerSoundStr);
 
 		this.startLevelSound = ResourceLoader
-				.loadSound(SoundAssets.startLevelSoundStr);
+				.getSound(SoundAssets.startLevelSoundStr);
 		this.arriveDestSound = ResourceLoader
-				.loadSound(SoundAssets.arriveDestSoundStr);
+				.getSound(SoundAssets.arriveDestSoundStr);
 	}
 
 	public void initMusic() {
 
-		this.tumMusic = ResourceLoader.loadMusic(MusicAssets.drumTwoRhythmStr);
-		this.backMusic = ResourceLoader.loadMusic(MusicAssets.level1MusicStr);
+		this.tumMusic = ResourceLoader.getMusic(MusicAssets.drumTwoRhythmStr);
+		this.backMusic = ResourceLoader.getMusic(MusicAssets.level1MusicStr);
 		
 	}
 	

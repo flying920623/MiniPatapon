@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.action.tween.ActorAccessor;
 import game.minipatapon.effectpresent.actor.Image;
@@ -19,6 +20,8 @@ import game.minipatapon.effectpresent.spriter.util.SpriterGroup;
 import game.minipatapon.effectpresent.spriter.util.SpriterImporter;
 import game.minipatapon.event.EventListener;
 import game.minipatapon.event.gamecmd.GameCommandArg;
+import game.minipatapon.event.gamecmd.GameState;
+import game.minipatapon.event.gamecmd.GameStateArg;
 import game.minipatapon.logger.DefaultLogger;
 import game.minipatapon.logical.GameRule.GameStateListener;
 import game.minipatapon.logical.playControl.PlayerCommand;
@@ -61,11 +64,13 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 	Image blackGround ;
 	Image missionImg ;
 	
-	public static float blackGroundHeight = 0;
+	public static float blackGroundHeight = Gdx.graphics.getHeight()/10;
 	
 	TweenManager tweenManager = new TweenManager();
 
 	boolean gameOver  = false ;
+	
+	
 
 	
 	public GameStage(float width, float height, boolean stretch) {
@@ -80,7 +85,7 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 		enemyActors = new HashMap<String, Actor>();
 		justiceActors = new HashMap<String, Actor>();
 		
-		blackGroundHeight = height/9;
+
 		initBlackGround();
 		
 	}
@@ -98,7 +103,7 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 
 	protected void initBlackGround()
 	{
-		blackGround = new Image("blackGround", TextureAssets.GetTextureRegionFromPacker(TextureAssets.BlackBgImg));
+		blackGround = new Image("blackGround", ResourceLoader.getRegionFromPacker(TextureAssets.BlackBgImg));
 
 		blackGround.width = width*4;
 		blackGround.height = blackGroundHeight;
@@ -119,7 +124,6 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 		.pushPause(0.2f)
 		.push(Tween.to(missionImg, ActorAccessor.POS_XY, 1f)
 				.targetRelative(missionImg.width, 0))
-		
 		.start(tweenManager);
 		
 		
@@ -130,15 +134,16 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 	{
 
 		gameCamera.position.set(lockObject.x+lockObject.width, gameCamera.position.y, gameCamera.position.z);
-		OverSlideShow( TextureAssets.GetTextureRegionFromPacker(TextureAssets.MissionCompleted) );
+		OverSlideShow( ResourceLoader.getRegionFromPacker(TextureAssets.MissionCompleted) );
 		gameOver = true;
 		
 		
 	}
 	
+	
 	public void missionFailed()
 	{
-		OverSlideShow( TextureAssets.GetTextureRegionFromPacker(TextureAssets.MissionFailed) );
+		OverSlideShow( ResourceLoader.getRegionFromPacker(TextureAssets.MissionFailed) );
 	}
 	
 	
@@ -326,32 +331,32 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 
 	}
 
-	public boolean keyDown(int keycode) {
-
-//		SpriterObject object = (SpriterObject) root.findActor("knight");
-//		if (object != null)
-//			object.attack("attack", (SpriterObject) root.findActor("monster"));
+//	public boolean keyDown(int keycode) {
+//
+////		SpriterObject object = (SpriterObject) root.findActor("knight");
+////		if (object != null)
+////			object.attack("attack", (SpriterObject) root.findActor("monster"));
+////		
+////		SpriterObject object2 = (SpriterObject) root.findActor("toxotae");
+////		if (object2 != null)
+////			object2.attack("attack", (SpriterObject) root.findActor("monster"));
+////		
+////		SpriterObject object3 = (SpriterObject) root.findActor("bird_a");
+////		if (object3 != null)
+////			object3.setCurrentState(MoveAction.repeatMove(object3, 100, 1), "attack");
 //		
-//		SpriterObject object2 = (SpriterObject) root.findActor("toxotae");
-//		if (object2 != null)
-//			object2.attack("attack", (SpriterObject) root.findActor("monster"));
-//		
-//		SpriterObject object3 = (SpriterObject) root.findActor("bird_a");
-//		if (object3 != null)
-//			object3.setCurrentState(MoveAction.repeatMove(object3, 100, 1), "attack");
-		
-		for( int i=0; i<root.getActors().size();i++ )
-		{
-			 
-			if( root.getActors().get(i) instanceof SpriterObject )
-			{
-				SpriterObject object = (SpriterObject)root.getActors().get(i);
-				object.simpleMove("move", width/4);
-			}
-		}
-
-		return root.keyDown(keycode);
-	}
+//		for( int i=0; i<root.getActors().size();i++ )
+//		{
+//			 
+//			if( root.getActors().get(i) instanceof SpriterObject )
+//			{
+//				SpriterObject object = (SpriterObject)root.getActors().get(i);
+//				object.simpleMove("move", width/4);
+//			}
+//		}
+//
+//		return root.keyDown(keycode);
+//	}
 
 	/**
 	 * Called when a key was released
@@ -360,10 +365,10 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 	 *            one of the constants in {@link Keys}
 	 * @return whether the input was processed
 	 */
-	@Override
-	public boolean keyUp(int keycode) {
-		return root.keyUp(keycode);// && spriterRoot.keyUp(keycode);
-	}
+//	@Override
+//	public boolean keyUp(int keycode) {
+//		return root.keyUp(keycode);// && spriterRoot.keyUp(keycode);
+//	}
 
 	/**
 	 * Called when a key was typed
@@ -372,10 +377,10 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 	 *            The character
 	 * @return whether the input was processed
 	 */
-	@Override
-	public boolean keyTyped(char character) {
-		return root.keyTyped(character);// && spriterRoot.keyTyped(character);
-	}
+//	@Override
+//	public boolean keyTyped(char character) {
+//		return root.keyTyped(character);// && spriterRoot.keyTyped(character);
+//	}
 
 	public static SpriterObjectIniArg readObjectFromGson() throws Exception {
 		SpriterObjectIniArg arg = null;
@@ -452,4 +457,9 @@ public class GameStage extends BaseStage implements PlayerCommand,GameStateListe
 
 	}
 
+	public void dispose()
+	{
+		
+		super.dispose();
+	}
 }

@@ -20,14 +20,7 @@ public class InputImage extends FlatImage{
 	}
 	
 
-	public void show()
-	{
-		color.a=1;
-	}
 	
-	public void hide(){
-		color.a=0;
-	}
 	@Override
 	public boolean touchDown(float x, float y, int pointer) {
 		// TODO Auto-generated method stub

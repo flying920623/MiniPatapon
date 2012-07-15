@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import game.minipatapon.datasource.assets.FontAssets;
+import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.actor.FlatImage;
 import game.minipatapon.effectpresent.actor.Image;
@@ -106,7 +107,7 @@ public class Dialog extends FlatImage {
 
 	public Dialog(String name, String text, float x, float y, Stage stage) {
 		this(name, text, new TextureRegion(
-				TextureAssets.GetTex(TextureAssets.DialogBg)), x, y, stage);
+				ResourceLoader.getTexture(TextureAssets.DialogBg)), x, y, stage);
 
 	}
 
@@ -166,6 +167,11 @@ public class Dialog extends FlatImage {
 
 		}
 
+//		if( this instanceof TimerDialog)
+//		{
+//			DefaultLogger.getDefaultLogger().logWithSignature(this, "show");
+//		}
+		
 		super.draw(batch, parentAlpha);
 		//
 		// if (target instanceof SpriterObject) {

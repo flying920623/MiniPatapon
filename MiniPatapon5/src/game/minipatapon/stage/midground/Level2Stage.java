@@ -1,13 +1,16 @@
 package game.minipatapon.stage.midground;
 
+import game.minipatapon.application.MiniPataponManager;
 import game.minipatapon.datasource.assets.MusicAssets;
 import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.SoundAssets;
 import game.minipatapon.effectpresent.audioplayer.MusicManage;
 import game.minipatapon.effectpresent.audioplayer.SoundManage;
+import game.minipatapon.effectpresent.background.ParaBackgroundLevel2;
 import game.minipatapon.effectpresent.dialog.Dialog;
 import game.minipatapon.effectpresent.dialog.SlideDialog;
 import game.minipatapon.effectpresent.spriter.SpriterObject;
+import game.minipatapon.stage.background.BackgroundStage;
 
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
@@ -71,6 +74,10 @@ public class Level2Stage extends GameStage {
 		initMusic();
 		initSound();
 		initActor();
+		
+		MiniPataponManager.getInstance().GetLayeredScreen().getBackScreen().navigate(
+				new BackgroundStage(MiniPataponManager.getInstance().GetLayeredScreen().getBackScreen(),
+						width, height, stretch, ParaBackgroundLevel2.class));
 	}
 	public void initActor(){
 		
@@ -123,31 +130,31 @@ public class Level2Stage extends GameStage {
 	}
 
 	public void initSound() {
-		this.windSound = ResourceLoader.loadSound(SoundAssets.windSoundStr);
-		this.howlSound = ResourceLoader.loadSound(SoundAssets.howlSoundStr);
+		this.windSound = ResourceLoader.getSound(SoundAssets.windSoundStr);
+		this.howlSound = ResourceLoader.getSound(SoundAssets.howlSoundStr);
 		this.gameCompleteSound = ResourceLoader
-				.loadSound(SoundAssets.missionCompleteSoundStr);
+				.getSound(SoundAssets.missionCompleteSoundStr);
 		this.gameFailedSound = ResourceLoader
-				.loadSound(SoundAssets.missionFailedSoundStr);
+				.getSound(SoundAssets.missionFailedSoundStr);
 
 		this.forwordSound1 = ResourceLoader
-				.loadSound(SoundAssets.forwordSoundStr);
+				.getSound(SoundAssets.forwordSoundStr);
 		this.forwordSound2 = ResourceLoader
-				.loadSound(SoundAssets.forwordSound2Str);
-		this.atkSound1 = ResourceLoader.loadSound(SoundAssets.atkSoundStr);
-		this.atkSound2 = ResourceLoader.loadSound(SoundAssets.atkSound2Str);
-		this.cheerSound = ResourceLoader.loadSound(SoundAssets.cheerSoundStr);
-		this.failSound = ResourceLoader.loadSound(SoundAssets.failSoundStr);
+				.getSound(SoundAssets.forwordSound2Str);
+		this.atkSound1 = ResourceLoader.getSound(SoundAssets.atkSoundStr);
+		this.atkSound2 = ResourceLoader.getSound(SoundAssets.atkSound2Str);
+		this.cheerSound = ResourceLoader.getSound(SoundAssets.cheerSoundStr);
+		this.failSound = ResourceLoader.getSound(SoundAssets.failSoundStr);
 
 		this.startLevelSound = ResourceLoader
-				.loadSound(SoundAssets.startLevelSoundStr);
+				.getSound(SoundAssets.startLevelSoundStr);
 		this.arriveDestSound = ResourceLoader
-				.loadSound(SoundAssets.arriveDestSoundStr);
+				.getSound(SoundAssets.arriveDestSoundStr);
 	}
 
 	public void initMusic() {
-		this.tumMusic = ResourceLoader.loadMusic(MusicAssets.drumTwoRhythmStr);
-		this.backMusic = ResourceLoader.loadMusic(MusicAssets.level2MusicStr);
+		this.tumMusic = ResourceLoader.getMusic(MusicAssets.drumTwoRhythmStr);
+		this.backMusic = ResourceLoader.getMusic(MusicAssets.level2MusicStr);
 	}
 
 	@Override

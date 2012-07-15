@@ -29,14 +29,14 @@ import game.minipatapon.stage.base.BaseStage;
  */
 public class SettingStage extends BaseStage implements ActorLoader
 {
-	private Image backImage = new Image("backgroud", TextureAssets.GetTex(TextureAssets.BackgroundImg));
+	private Image backImage = new Image("backgroud", ResourceLoader.getTexture(TextureAssets.BackgroundImg));
 	private Slider mainSlider, musicSlider, soundSlider;
 
 	@SuppressWarnings("unused")
 	private Image mainImage, musicImage, soundImage;
 	private NavigateImage quitImage;
 
-	Music music = ResourceLoader.loadMusic(MusicAssets.settingMusicStr);
+	Music music = ResourceLoader.getMusic(MusicAssets.settingMusicStr);
 	
 	public SettingStage(float width, float height, boolean stretch)
 	{
@@ -114,9 +114,9 @@ public class SettingStage extends BaseStage implements ActorLoader
 	private void initMainVolumeSlider()
 	{
 		Configuration.mainVolume = 50;
-		Texture texture01 = ResourceLoader.loadTexture(TextureAssets.SliderImage);
-		Texture texture02 = ResourceLoader.loadTexture(TextureAssets.Slider2Image);
-		Texture texture03 = ResourceLoader.loadTexture(TextureAssets.MainVolume);
+		Texture texture01 = ResourceLoader.getTexture(TextureAssets.SliderImage);
+		Texture texture02 = ResourceLoader.getTexture(TextureAssets.Slider2Image);
+		Texture texture03 = ResourceLoader.getTexture(TextureAssets.MainVolume);
 		TextureRegion textureRegion = new TextureRegion(texture02, 0, 0, texture02.getWidth(), texture02.getHeight());
 		NinePatch ninePatch = new NinePatch(texture01, 2 * texture01.getWidth() / 3, 2 * texture01.getWidth() / 3, texture01.getHeight(), texture01.getHeight());
 		SliderStyle style = new SliderStyle(ninePatch, textureRegion);
@@ -145,9 +145,9 @@ public class SettingStage extends BaseStage implements ActorLoader
 	private void initMusicVolumeSlider()
 	{
 		Configuration.musicVolume = 80;
-		Texture texture01 = ResourceLoader.loadTexture(TextureAssets.SliderImage);
-		Texture texture02 = ResourceLoader.loadTexture(TextureAssets.Slider2Image);
-		Texture texture03 = ResourceLoader.loadTexture(TextureAssets.MusicVolume);
+		Texture texture01 = ResourceLoader.getTexture(TextureAssets.SliderImage);
+		Texture texture02 = ResourceLoader.getTexture(TextureAssets.Slider2Image);
+		Texture texture03 = ResourceLoader.getTexture(TextureAssets.MusicVolume);
 		TextureRegion textureRegion = new TextureRegion(texture02, 0, 0, texture02.getWidth(), texture02.getHeight());
 		NinePatch ninePatch = new NinePatch(texture01, 2 * texture01.getWidth() / 3, 2 * texture01.getWidth() / 3, texture01.getHeight(), texture01.getHeight());
 		SliderStyle style = new SliderStyle(ninePatch, textureRegion);
@@ -176,9 +176,9 @@ public class SettingStage extends BaseStage implements ActorLoader
 	private void initSoundVolumeSlider()
 	{
 		Configuration.soundVolume = 70;
-		Texture texture01 = ResourceLoader.loadTexture(TextureAssets.SliderImage);
-		Texture texture02 = ResourceLoader.loadTexture(TextureAssets.Slider2Image);
-		Texture texture03 = ResourceLoader.loadTexture(TextureAssets.SoundVolume);
+		Texture texture01 = ResourceLoader.getTexture(TextureAssets.SliderImage);
+		Texture texture02 = ResourceLoader.getTexture(TextureAssets.Slider2Image);
+		Texture texture03 = ResourceLoader.getTexture(TextureAssets.SoundVolume);
 		TextureRegion textureRegion = new TextureRegion(texture02, 0, 0, texture02.getWidth(), texture02.getHeight());
 		NinePatch ninePatch = new NinePatch(texture01, 2 * texture01.getWidth() / 3, 2 * texture01.getWidth() / 3, texture01.getHeight(), texture01.getHeight());
 		SliderStyle style = new SliderStyle(ninePatch, textureRegion);
@@ -206,7 +206,7 @@ public class SettingStage extends BaseStage implements ActorLoader
 
 	private void loadQuitImage()
 	{
-		Texture quitTexture = ResourceLoader.loadTexture("Level/quitbutton.png");
+		Texture quitTexture = ResourceLoader.getTexture("Level/quitbutton.png");
 		TextureRegion textureRegion = new TextureRegion(quitTexture);
 		this.quitImage = new NavigateImage("quit", textureRegion, 1.0f, 1.0f, this, MainMenuStage.class);
 		this.quitImage.x = centerX + 5 * centerX / 6;

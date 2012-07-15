@@ -30,7 +30,7 @@ public class GameCommandArg extends EventArg{
 		// TODO Auto-generated method stub
 		try {
 			EventAggregator.getInstance().getEvent(GameCommandEvent.class).EventArgRec(this);
-			DefaultLogger.getDefaultLogger().log(0, "Nav success sent" , "good ");
+			DefaultLogger.getDefaultLogger().log(0, "GameCommand success sent" , "good ");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

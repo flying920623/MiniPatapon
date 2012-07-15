@@ -14,6 +14,7 @@ import com.badlogic.gdx.graphics.g2d.tiled.TiledObjectGroup;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.List;
 
+import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.action.tween.ActorAccessor;
 import game.minipatapon.effectpresent.actor.FlatImage;
@@ -39,7 +40,7 @@ import game.minipatapon.stage.base.BaseStage;
 public class LevelOneStage extends GameStage implements ActorLoader {
 
 	private Image backImage = new Image("backgroud",
-			TextureAssets.GetTex(TextureAssets.BackgroundImg));
+			ResourceLoader.getTexture(TextureAssets.BackgroundImg));
 
 	SpriterObject axeObject;
 	SpriterObject birdObject;
@@ -49,11 +50,11 @@ public class LevelOneStage extends GameStage implements ActorLoader {
 	Image image ;
 	
 	Dialog dialog;
-//	private InputImage pataBtn = new InputImage(TextureAssets.getTextureRegion
+//	private InputImage pataBtn = new InputImage(ResourceLoader.getTexturetureRegion
 //			(TextureAssets.PataBtnImg), width/2+50, height/2, this, MatchMusicType.Pata);
-//    private InputImage ponBtn = new InputImage(TextureAssets.getTextureRegion
+//    private InputImage ponBtn = new InputImage(ResourceLoader.getTexturetureRegion
 //	(TextureAssets.PonBtnImg), width/2-50, height/2, this, MatchMusicType.Pon);
-//    private InputImage chakaBtn = new InputImage(TextureAssets.getTextureRegion
+//    private InputImage chakaBtn = new InputImage(ResourceLoader.getTexturetureRegion
 //	(TextureAssets.ChakaBtnImg), width/2, height/2+30, this, MatchMusicType.Chaka);
 
 	public LevelOneStage(float width, float height, boolean stretch) {
@@ -117,7 +118,7 @@ public class LevelOneStage extends GameStage implements ActorLoader {
 		}
 		
 		
-		image = new FlatImage(TextureAssets.GetTextureRegionFromPacker(TextureAssets.PonImg), 200, 200, this);
+		image = new FlatImage(ResourceLoader.getRegionFromPacker(TextureAssets.PonImg), 200, 200, this);
 		this.addActor(image);
 //		this.addActor(chakaBtn);
 //		this.addActor(pataBtn);

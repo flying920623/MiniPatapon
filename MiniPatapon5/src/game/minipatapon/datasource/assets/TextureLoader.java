@@ -2,10 +2,10 @@ package game.minipatapon.datasource.assets;
 
 //import java.util.HashMap;
 
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.sun.opengl.impl.StaticGLInfo;
 //import com.maple.eggsnake.logger.DefaultLogger;
 import game.minipatapon.logger.DefaultLogger;
 import game.minipatapon.logger.Loggable;
@@ -14,7 +14,7 @@ import game.minipatapon.util.PathHelper;
 
 class TextureLoader {
 	private String dirPath;
-	
+
 	Loggable logger;
 	String defaultTexture;
 
@@ -31,49 +31,45 @@ class TextureLoader {
 		// this.defaultTexture = new Texture(this.dirPath + defaultTexture);
 	}
 
+	public void loadTexture(String texturePath) {
 
-	public Texture loadTexture(String texturePath) {
-		// Texture texture = null;
-		// try {
-		// if (map.containsKey(texturePath)) {
-		// logger.logWithSignature(this, "命中资源%1$s", texturePath);
-		// texture = map.get(texturePath);
-		// } else {
-		// String absPath = this.dirPath + texturePath;
-		// texture = new Texture(absPath);
-		// logger.logWithSignature(this, "加载资源%1$s", texturePath);
-		// map.put(texturePath, texture);
-		// }
-		// } catch (Exception ex) {
-		// logger.log("TextureManager loadTexture:加载:%1$s失败", texturePath);
-		// texture = this.defaultTexture;
-		// }
-		//
-		// return texture;
+		String absPath = PathHelper.combine(this.dirPath, texturePath);
+		Assets.inst().load(absPath, Texture.class);
+
+//		DefaultLogger.getDefaultLogger().logWithSignature(this,
+//				"load texture:  %s", texturePath);
+	}
+
+	public void loadTextureAtlas(String atlasPath) {
+		String absPath = PathHelper.combine(this.dirPath, atlasPath);
+		Assets.inst().load(absPath, TextureAtlas.class);
+	}
+
+	public Texture getTexture(String texturePath) {
+
 		try {
 			String absPath = PathHelper.combine(this.dirPath, texturePath);
-			
-			return new Texture(absPath);
+
+			return Assets.inst().get(absPath, Texture.class);
+
 		} catch (Exception e) {
-			logger.logWithSignature(this, "加载资源%1$s失败:%2$s,使用默认图像", texturePath,
-					e.getMessage());
+			logger.logWithSignature(this, "加载资源%1$s失败:%2$s,使用默认图像",
+					texturePath, e.getMessage());
 			return new Texture(PathHelper.combine(this.dirPath,
 					this.defaultTexture));
 		}
 	}
-	
-	public TextureAtlas loadTextureAtlas(String atlasPath)
-	{
+
+	public TextureAtlas getTextureAtlas(String atlasPath) {
 		try {
 			String absPath = PathHelper.combine(this.dirPath, atlasPath);
-			
-			return new TextureAtlas(Gdx.files.internal(absPath));
+
+			return Assets.inst().get(absPath, TextureAtlas.class);
 		} catch (Exception e) {
 			logger.logWithSignature(this, "加载资源%1$s失败:%2$s", atlasPath,
 					e.getMessage());
 			return null;
 		}
-		
-	}
 
+	}
 }

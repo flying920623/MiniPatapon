@@ -1,0 +1,75 @@
+
+loading1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+boy8
+  rotate: false
+  xy: 2, 2
+  size: 46, 58
+  orig: 46, 58
+  offset: 0, 0
+  index: -1
+boy7
+  rotate: false
+  xy: 2, 62
+  size: 46, 58
+  orig: 46, 58
+  offset: 0, 0
+  index: -1
+boy6
+  rotate: false
+  xy: 50, 2
+  size: 46, 58
+  orig: 46, 58
+  offset: 0, 0
+  index: -1
+boy5
+  rotate: false
+  xy: 50, 62
+  size: 46, 58
+  orig: 46, 58
+  offset: 0, 0
+  index: -1
+boy4
+  rotate: false
+  xy: 98, 2
+  size: 46, 58
+  orig: 46, 58
+  offset: 0, 0
+  index: -1
+boy3
+  rotate: false
+  xy: 98, 62
+  size: 46, 58
+  orig: 46, 58
+  offset: 0, 0
+  index: -1
+boy2
+  rotate: false
+  xy: 146, 2
+  size: 46, 58
+  orig: 46, 58
+  offset: 0, 0
+  index: -1
+boy
+  rotate: false
+  xy: 146, 62
+  size: 46, 58
+  orig: 46, 58
+  offset: 0, 0
+  index: -1
+bar
+  rotate: false
+  xy: 194, 2
+  size: 307, 46
+  orig: 307, 46
+  offset: 0, 0
+  index: -1
+processBar
+  rotate: false
+  xy: 194, 50
+  size: 85, 16
+  orig: 85, 16
+  offset: 0, 0
+  index: -1

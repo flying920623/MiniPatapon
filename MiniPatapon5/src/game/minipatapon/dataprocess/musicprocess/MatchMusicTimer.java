@@ -14,12 +14,16 @@ public class MatchMusicTimer implements GameStateListener {
 	public MusicTime m_currentMusicTimer;
 
 	public MatchMusicTimer(){
-		m_timer =new Timer();
-		m_currentMusicTimer = new MusicTime(0);
+//		m_timer =new Timer();
+//		m_currentMusicTimer = new MusicTime(0);
 		
 		
 	}
 	public void start(){
+		
+		//放在这里 因为 GameEnd 以后 会 清除timer  重新start 以后 timer已经cancel了；
+		m_timer =new Timer();
+		m_currentMusicTimer = new MusicTime(0);
 		
 		m_timer.schedule(new TimerTask() {
 			
@@ -39,6 +43,7 @@ public class MatchMusicTimer implements GameStateListener {
 		m_timer.cancel();
 		m_currentMusicTimer.SetValue(0);
 	}
+	
 	@Override
 	public void OnGameStart() {
 		// TODO Auto-generated method stub

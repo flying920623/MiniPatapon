@@ -6,6 +6,8 @@
 
 package game.minipatapon.screen;
 
+import game.minipatapon.dataprocess.resourcemanage.LoadManage;
+import game.minipatapon.datasource.assets.Assets;
 import game.minipatapon.event.EventBase;
 import game.minipatapon.event.EventListener;
 import game.minipatapon.event.gamecmd.NavLayeredScreenStageArg;
@@ -15,6 +17,7 @@ import game.minipatapon.logical.GameRule.GameLogic;
 import game.minipatapon.logical.playControl.ControlManage;
 import game.minipatapon.stage.base.BaseStage;
 import game.minipatapon.stage.midground.GameStage;
+import game.minipatapon.stage.prestrain.PrestrainStage;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,45 +25,56 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
+
 //import game.minipatapon.application.ScreenManageable;
 
-public class LayeredScreen extends SimpleScreen implements ProcessableScreen, EventListener<NavLayeredScreenStageArg>{
+public class LayeredScreen extends SimpleScreen implements ProcessableScreen,
+		EventListener<NavLayeredScreenStageArg> {
 
-	//ScreenManageable manager;
+	// ScreenManageable manager;
 	public List<NavigateScreen> screens;
 	InputMultiplexer processPlexer;
-	
-	public ContentScreen getMidScreen(){
-		for (NavigateScreen screen : screens) {
-			if(screen.getLayer()==0)
-				return (ContentScreen)screen;
-		}
-		
-			return null;
-	}
-	public ForegroundScreen getForeScreen(){
-		for (NavigateScreen screen : screens) {
-			if(screen.getLayer()==1)
-				return (ForegroundScreen)screen;
-		}
-		
-			return null;
-	}
-	public BackgroundScreen getBackScreen(){
-		for (NavigateScreen screen : screens) {
-			if(screen.getLayer()==-1)
-				return (BackgroundScreen)screen;
-		}
-		
-			return null;
-	}
+
+	public PrestrainStage prestrainStage;
 
 	public LayeredScreen() {
-	//	this.manager = _manager;
+		// this.manager = _manager;
 		this.processPlexer = new InputMultiplexer();
 		screens = new ArrayList<NavigateScreen>();
-		loadScreens();
+
+		prestrainStage = new PrestrainStage(Gdx.graphics.getWidth(),
+				Gdx.graphics.getHeight(), true, "loadAll");
+		// LoadManage.loadAll();
+		// loadScreens();
+	}
+
+	public ContentScreen getMidScreen() {
+		for (NavigateScreen screen : screens) {
+			if (screen.getLayer() == 0)
+				return (ContentScreen) screen;
+		}
+
+		return null;
+	}
+
+	public ForegroundScreen getForeScreen() {
+		for (NavigateScreen screen : screens) {
+			if (screen.getLayer() == 1)
+				return (ForegroundScreen) screen;
+		}
+
+		return null;
+	}
+
+	public BackgroundScreen getBackScreen() {
+		for (NavigateScreen screen : screens) {
+			if (screen.getLayer() == -1)
+				return (BackgroundScreen) screen;
+		}
+
+		return null;
 	}
 
 	private void loadScreens() {
@@ -131,6 +145,8 @@ public class LayeredScreen extends SimpleScreen implements ProcessableScreen, Ev
 			NavigateScreen screen = it.next();
 			screen.dispose();
 		}
+		
+		prestrainStage.dispose();
 	}
 
 	@Override
@@ -152,13 +168,30 @@ public class LayeredScreen extends SimpleScreen implements ProcessableScreen, Ev
 		}
 	}
 
+	private boolean isInit = false;
+
 	@Override
 	public void render(float dt) {
-		Iterator<NavigateScreen> it = screens.iterator();
-		while (it.hasNext()) {
-			NavigateScreen screen = it.next();
-			screen.render(dt);
+
+		if (prestrainStage.isLoaded) {
+
+			if (!isInit) {
+				loadScreens();
+				show();
+				isInit = true;
+
+			} else {
+				Iterator<NavigateScreen> it = screens.iterator();
+				while (it.hasNext()) {
+					NavigateScreen screen = it.next();
+					screen.render(dt);
+				}
+			}
+
+		}else{
+			prestrainStage.draw();
 		}
+
 	}
 
 	@Override
@@ -187,39 +220,42 @@ public class LayeredScreen extends SimpleScreen implements ProcessableScreen, Ev
 			screen.show();
 		}
 	}
+
 	@Override
-	public  void onEventReceived(
-			 NavLayeredScreenStageArg arg) {
+	public void onEventReceived(NavLayeredScreenStageArg arg) {
 		// TODO Auto-generated method stub
 		for (NavigateScreen layerScreen : this.screens) {
-			if(layerScreen.getLayer()==arg.m_screenLayer)
-			{
-			try{
-				if(layerScreen.getLayer()==0)
-				{
-					if(this.getMidScreen().isGameScreen==true)
-					{
-					GameStage desStage = (GameStage)arg.m_class.getConstructor(float.class,float.class,boolean.class,int.class).newInstance(getWidth(),getHeight(),true,this.getMidScreen().level);
-					 ControlManage.Getinstance().playCmdCommand=desStage;
-					 GameLogic.Getinstance().listener=desStage;
-					layerScreen.navigate(desStage);
-					 
+			if (layerScreen.getLayer() == arg.m_screenLayer) {
+				try {
+					if (layerScreen.getLayer() == 0) {
+						if (this.getMidScreen().isGameScreen == true) {
+							GameStage desStage = (GameStage) arg.m_class
+									.getConstructor(float.class, float.class,
+											boolean.class, int.class)
+									.newInstance(getWidth(), getHeight(), true,
+											this.getMidScreen().level);
+							ControlManage.Getinstance().playCmdCommand = desStage;
+							GameLogic.Getinstance().listener = desStage;
+							layerScreen.navigate(desStage);
+
+						}
+
+						else {
+
+							BaseStage desStage = (BaseStage) arg.m_class
+									.getConstructor(float.class, float.class,
+											boolean.class).newInstance(
+											getWidth(), getHeight(), true);
+							layerScreen.navigate(desStage);
+						}
 					}
-				
-				    else {
-					
-					BaseStage desStage =(BaseStage)arg.m_class.getConstructor(float.class,float.class,boolean.class).newInstance(getWidth(),getHeight(),true);
-					layerScreen.navigate(desStage);
-			 	      } 
-				}
-			    }
-				catch (Exception e) {
-				//	logger.log(0, " destination stage", e.toString());
+				} catch (Exception e) {
+					// logger.log(0, " destination stage", e.toString());
 					// TODO: handle exception
 				}
-				
+
 			}
 		}
-		
+
 	}
 }

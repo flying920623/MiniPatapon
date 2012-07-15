@@ -28,7 +28,7 @@ public class ChooseHeroStage extends BaseStage implements ActorLoader{
 	
 	private Image blackImage;
 	
-	Music music = MusicAssets.GetMusic(MusicAssets.chooseHeroMusicStr);
+	Music music = ResourceLoader.getMusic(MusicAssets.chooseHeroMusicStr);
 	public ChooseHeroStage(float width, float height, boolean stretch) {
 		super(width, height, stretch);
 		// TODO Auto-generated constructor stub
@@ -55,7 +55,7 @@ public class ChooseHeroStage extends BaseStage implements ActorLoader{
 		float width = this.width;
 		float height = this.height;
 		
-		blackImage = new Image("black", ResourceLoader.loadTextureRegionFromPacker(TextureAssets.BlackBgImg).get(0));
+		blackImage = new Image("black", ResourceLoader.getRegionFromPacker(TextureAssets.BlackBgImg));
 		blackImage.x=0;
 		blackImage.y=0;
 		blackImage.width =Gdx.graphics.getWidth();
@@ -72,15 +72,15 @@ public class ChooseHeroStage extends BaseStage implements ActorLoader{
 //		NavigateImage level3Image = new NavigateImage("level3", ResourceLoader.loadTextureRegionFromPacker(TextureAssets.CakaButton).get(0), 200f, height/2 - 100/2,this, ChooseLevelStage.class);
 //		
  //       AnimateImage animateImage = new AnimateImage(ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroPoint), width/2, height/2, this, 3f);
-		HeroAnimateImage hero1 = new HeroAnimateImage(ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroPoint), 
-				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.Hero1),
-				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroCircle1),0f, 0, this, 3f,ChooseLevelStage.class);
-		HeroAnimateImage hero2 = new HeroAnimateImage(ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroPoint), 
-				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.Hero2),
-				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroCircle2),0f, 0, this, 3f,ChooseLevelStage.class);
-		HeroAnimateImage hero3 = new HeroAnimateImage(ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroPoint), 
-				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.Hero3),
-				ResourceLoader.loadTextureRegionFromPacker(TextureAssets.HeroCircle3),0f, 0, this, 3f,ChooseLevelStage.class);
+		HeroAnimateImage hero1 = new HeroAnimateImage(ResourceLoader.getRegionsFromPacker(TextureAssets.HeroPoint), 
+				ResourceLoader.getRegionsFromPacker(TextureAssets.Hero1),
+				ResourceLoader.getRegionsFromPacker(TextureAssets.HeroCircle1),0f, 0, this, 3f,ChooseLevelStage.class);
+		HeroAnimateImage hero2 = new HeroAnimateImage(ResourceLoader.getRegionsFromPacker(TextureAssets.HeroPoint), 
+				ResourceLoader.getRegionsFromPacker(TextureAssets.Hero2),
+				ResourceLoader.getRegionsFromPacker(TextureAssets.HeroCircle2),0f, 0, this, 3f,ChooseLevelStage.class);
+		HeroAnimateImage hero3 = new HeroAnimateImage(ResourceLoader.getRegionsFromPacker(TextureAssets.HeroPoint), 
+				ResourceLoader.getRegionsFromPacker(TextureAssets.Hero3),
+				ResourceLoader.getRegionsFromPacker(TextureAssets.HeroCircle3),0f, 0, this, 3f,ChooseLevelStage.class);
 		
 		RotateGroup group = new RotateGroup("",this, hero1, hero2, hero3);
 

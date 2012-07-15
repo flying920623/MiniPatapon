@@ -14,10 +14,10 @@ public class SoundManage
 		
 		if (SoundStr != null)
 		{
-			ResourceLoader.loadSound(SoundStr).play(1);
+			ResourceLoader.getSound(SoundStr).play(1);
 		} else
 		{
-			ResourceLoader.loadSound(SoundAssets.errorSoundStr).play(1);
+			ResourceLoader.getSound(SoundAssets.errorSoundStr).play(1);
 		}
 
 	}
@@ -29,7 +29,7 @@ public class SoundManage
 			sound.play(1);
 		} else
 		{
-			ResourceLoader.loadSound(SoundAssets.errorSoundStr).play(1);
+			ResourceLoader.getSound(SoundAssets.errorSoundStr).play(1);
 		}
 
 	}
@@ -38,10 +38,10 @@ public class SoundManage
 	{
 		if (SoundStr != null)
 		{
-			ResourceLoader.loadSound(SoundStr).play(volume);
+			ResourceLoader.getSound(SoundStr).play(volume);
 		} else
 		{
-			ResourceLoader.loadSound(SoundAssets.errorSoundStr).play(volume);
+			ResourceLoader.getSound(SoundAssets.errorSoundStr).play(volume);
 		}
 	}
 
@@ -52,13 +52,13 @@ public class SoundManage
 			sound.play(volume);
 		} else
 		{
-			ResourceLoader.loadSound(SoundAssets.errorSoundStr).play(volume);
+			ResourceLoader.getSound(SoundAssets.errorSoundStr).play(volume);
 		}
 	}
 
 	public static void stopSound(String SoundStr)
 	{
-		ResourceLoader.loadSound(SoundStr).stop();
+		ResourceLoader.getSound(SoundStr).stop();
 	}
 
 	public static void stopSound(Sound sound)
@@ -68,7 +68,7 @@ public class SoundManage
 
 	public static void disposeSound(String SoundStr)
 	{
-		ResourceLoader.loadSound(SoundStr).dispose();
+		ResourceLoader.getSound(SoundStr).dispose();
 	}
 
 	public static void disposeSound(Sound sound)

@@ -16,6 +16,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
+import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.action.tween.ActorAccessor;
 import game.minipatapon.event.music.MatchMusicLevel;
@@ -56,23 +57,20 @@ public class NoteImage extends Actor {
 //				.GetTextureRegionFromPacker(TextureAssets.GameName1Img);
 		if( commandType==MatchMusicType.Pata )
 		{
-			region = TextureAssets
-					.GetTextureRegionFromPacker(TextureAssets.PataNote);
+			region = ResourceLoader.getRegionFromPacker(TextureAssets.PataNote);
 			this.x=Gdx.graphics.getWidth()/10;
 			this.y=MathUtils.random(Gdx.graphics.getHeight() / 3,
 					Gdx.graphics.getHeight() / 1.3f);
 		}
 		else if( commandType==MatchMusicType.Pon )
 		{
-			region = TextureAssets
-					.GetTextureRegionFromPacker(TextureAssets.PonNote);
+			region = ResourceLoader.getRegionFromPacker(TextureAssets.PonNote);
 			this.x=9*Gdx.graphics.getWidth()/10;
 			this.y=MathUtils.random(Gdx.graphics.getHeight() / 3,
 					Gdx.graphics.getHeight() / 1.3f);
 		}
 		else if (commandType==MatchMusicType.Chaka) {
-			region = TextureAssets
-					.GetTextureRegionFromPacker(TextureAssets.ChakeNote);
+			region = ResourceLoader.getRegionFromPacker(TextureAssets.ChakeNote);
 			this.x=MathUtils.random(Gdx.graphics.getWidth() / 3,
 					Gdx.graphics.getWidth() / 1.3f);;
 			this.y=9*Gdx.graphics.getHeight()/10;

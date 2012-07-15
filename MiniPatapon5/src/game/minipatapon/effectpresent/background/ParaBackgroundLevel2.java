@@ -1,5 +1,6 @@
 package game.minipatapon.effectpresent.background;
 
+import game.minipatapon.datasource.assets.ResourceLoader;
 import game.minipatapon.datasource.assets.TextureAssets;
 
 import com.badlogic.gdx.Gdx;
@@ -17,9 +18,9 @@ public class ParaBackgroundLevel2 extends ParaBackground{
 	
 	public PLParallaxBackground rbg;
 
-	public TextureRegion bg1 = TextureAssets.GetTextureRegionFromPacker(TextureAssets.Level2Layer1Img);
-	public TextureRegion bg2 = TextureAssets.GetTextureRegionFromPacker(TextureAssets.Level2Layer2Img);
-	public TextureRegion bg3 = TextureAssets.GetTextureRegionFromPacker(TextureAssets.Level2Layer3Img);
+	public TextureRegion bg1 = ResourceLoader.getRegionFromPacker(TextureAssets.Level2Layer1Img);
+	public TextureRegion bg2 = ResourceLoader.getRegionFromPacker(TextureAssets.Level2Layer2Img);
+	public TextureRegion bg3 = ResourceLoader.getRegionFromPacker(TextureAssets.Level2Layer3Img);
 //	TextureRegion bg1;
 //	TextureRegion bg2;
 //	TextureRegion bg3;

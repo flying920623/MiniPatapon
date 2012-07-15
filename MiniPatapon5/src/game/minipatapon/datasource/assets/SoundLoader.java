@@ -11,7 +11,7 @@ import game.minipatapon.logger.Loggable;
 class SoundLoader {
 
 	private String dirPath;
-	//Map<String, Sound> map;
+	// Map<String, Sound> map;
 	Loggable logger;
 	Sound defaultSound;
 
@@ -25,36 +25,18 @@ class SoundLoader {
 		// this.map = new HashMap<String, Sound>();
 		// logger = DefaultLogger.getDefaultLogger();
 		//
-		// this.defaultSound =
-		// Gdx.audio.newSound(Gdx.files.internal(this.dirPath
-		//
-		// + defaultSound));
+		this.defaultSound = Gdx.audio.newSound(Gdx.files.internal(this.dirPath
+				+ defaultSound));
 	}
 
-	public Sound loadSound(String soundPath) {
-		// Sound sound = null;
-		// try {
-		// if (map.containsKey(soundPath)) {
-		// sound = map.get(soundPath);
-		// } else {
-		// String absPath = this.dirPath + soundPath;
-		// FileHandle file = Gdx.files.internal(absPath);
-		// sound = Gdx.audio.newSound(file);
-		// map.put(soundPath, sound);
-		// }
-		// } catch (Exception ex) {
-		//
-		// logger.log("SoundManager loadSound:加载:%1$s失败(%2$s)", soundPath,
-		// ex.getMessage());
-		//
-		// sound = this.defaultSound;
-		// }
-		// return sound;
-		//
-		 String absPath = this.dirPath + soundPath;
-		 FileHandle file = Gdx.files.internal(absPath);
-		 Sound sound = Gdx.audio.newSound(file);
-		 return sound;
+	public Sound getSound(String soundPath) {
+		String absPath = this.dirPath + soundPath;
+		return Assets.inst().get(absPath, Sound.class);
+	}
+	
+	public void loadSound(String soundPath) {
+		String absPath = this.dirPath + soundPath;
+		Assets.inst().load(absPath, Sound.class);
 	}
 
 }

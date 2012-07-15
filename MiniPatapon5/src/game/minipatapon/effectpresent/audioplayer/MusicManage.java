@@ -17,10 +17,10 @@ public class MusicManage
 	{
 		if (musicStr != null || !isPlayMusic(musicStr))
 		{
-			ResourceLoader.loadMusic(musicStr).play();
+			ResourceLoader.getMusic(musicStr).play();
 		} else
 		{
-			ResourceLoader.loadMusic(MusicAssets.errorMusicStr).play();
+			ResourceLoader.getMusic(MusicAssets.errorMusicStr).play();
 		}
 	}
 
@@ -31,14 +31,14 @@ public class MusicManage
 			music.play();
 		} else
 		{
-			ResourceLoader.loadMusic(MusicAssets.errorMusicStr).play();
+			ResourceLoader.getMusic(MusicAssets.errorMusicStr).play();
 		}
 	}
 
 	public static void pauseMusic(String musicStr)
 	{
 		if (musicStr != null && isPlayMusic(musicStr))
-			ResourceLoader.loadMusic(musicStr).pause();
+			ResourceLoader.getMusic(musicStr).pause();
 	}
 
 	public static void pauseMusic(Music music)
@@ -50,7 +50,7 @@ public class MusicManage
 	public static void stopMusic(String musicStr)
 	{
 		if (musicStr != null && isPlayMusic(musicStr))
-			ResourceLoader.loadMusic(musicStr).stop();
+			ResourceLoader.getMusic(musicStr).stop();
 	}
 
 	public static void stopMusic(Music music)
@@ -61,7 +61,7 @@ public class MusicManage
 
 	public static boolean isLoopingMusic(String musicStr)
 	{
-		return ResourceLoader.loadMusic(musicStr).isLooping();
+		return ResourceLoader.getMusic(musicStr).isLooping();
 	}
 	
 	public static boolean isLoopingMusic(Music music)
@@ -71,7 +71,7 @@ public class MusicManage
 
 	public static void setLoopingMusic(String musicStr, boolean isLooping)
 	{
-		ResourceLoader.loadMusic(musicStr).setLooping(isLooping);
+		ResourceLoader.getMusic(musicStr).setLooping(isLooping);
 	}
 	
 	public static void setLoopingMusic(Music music, boolean isLooping)
@@ -81,7 +81,7 @@ public class MusicManage
 
 	public static void setVolume(String musicStr, float volume)
 	{
-		ResourceLoader.loadMusic(musicStr).setVolume(volume);
+		ResourceLoader.getMusic(musicStr).setVolume(volume);
 	}
 	
 	public static void setVolume(Music music, float volume)
@@ -91,7 +91,7 @@ public class MusicManage
 
 	public static boolean isPlayMusic(String musicStr)
 	{
-		return ResourceLoader.loadMusic(musicStr).isPlaying();
+		return ResourceLoader.getMusic(musicStr).isPlaying();
 	}
 
 	public static boolean isPlayMusic(Music music)
@@ -101,7 +101,7 @@ public class MusicManage
 
 	public static float getPositionMusic(String musicStr)
 	{
-		return ResourceLoader.loadMusic(musicStr).getPosition();
+		return ResourceLoader.getMusic(musicStr).getPosition();
 	}
 	
 	public static float getPositionMusic(Music music)
@@ -111,7 +111,7 @@ public class MusicManage
 
 	public static void disposeMusic(String musicStr)
 	{
-		ResourceLoader.loadMusic(musicStr).dispose();
+		ResourceLoader.getMusic(musicStr).dispose();
 	}
 	
 	public static void disposeMusic(Music music)
