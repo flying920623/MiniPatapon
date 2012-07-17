@@ -17,7 +17,7 @@ import game.minipatapon.logical.GameRule.GameLogic;
 import game.minipatapon.logical.playControl.ControlManage;
 import game.minipatapon.stage.base.BaseStage;
 import game.minipatapon.stage.midground.GameStage;
-import game.minipatapon.stage.prestrain.PrestrainStage;
+import game.minipatapon.stage.midground.PrestrainStage;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,18 +36,16 @@ public class LayeredScreen extends SimpleScreen implements ProcessableScreen,
 	// ScreenManageable manager;
 	public List<NavigateScreen> screens;
 	InputMultiplexer processPlexer;
-
-	public PrestrainStage prestrainStage;
+	
+	public static boolean isInitedLoading = false;
 
 	public LayeredScreen() {
 		// this.manager = _manager;
 		this.processPlexer = new InputMultiplexer();
 		screens = new ArrayList<NavigateScreen>();
 
-		prestrainStage = new PrestrainStage(Gdx.graphics.getWidth(),
-				Gdx.graphics.getHeight(), true, "loadAll");
 		// LoadManage.loadAll();
-		// loadScreens();
+		loadScreens();
 	}
 
 	public ContentScreen getMidScreen() {
@@ -146,7 +144,6 @@ public class LayeredScreen extends SimpleScreen implements ProcessableScreen,
 			screen.dispose();
 		}
 		
-		prestrainStage.dispose();
 	}
 
 	@Override
@@ -168,28 +165,15 @@ public class LayeredScreen extends SimpleScreen implements ProcessableScreen,
 		}
 	}
 
-	private boolean isInit = false;
+	
 
 	@Override
 	public void render(float dt) {
 
-		if (prestrainStage.isLoaded) {
-
-			if (!isInit) {
-				loadScreens();
-				show();
-				isInit = true;
-
-			} else {
-				Iterator<NavigateScreen> it = screens.iterator();
-				while (it.hasNext()) {
-					NavigateScreen screen = it.next();
-					screen.render(dt);
-				}
-			}
-
-		}else{
-			prestrainStage.draw();
+		Iterator<NavigateScreen> it = screens.iterator();
+		while (it.hasNext()) {
+			NavigateScreen screen = it.next();
+			screen.render(dt);
 		}
 
 	}

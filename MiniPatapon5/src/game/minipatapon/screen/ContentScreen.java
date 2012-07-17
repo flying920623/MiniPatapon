@@ -17,6 +17,7 @@ import game.minipatapon.stage.midground.Level1Stage;
 import game.minipatapon.stage.midground.Level3Stage;
 import game.minipatapon.stage.midground.LevelOneStage;
 import game.minipatapon.stage.midground.MainMenuStage;
+import game.minipatapon.stage.midground.PrestrainStage;
 import game.minipatapon.stage.midground.SettingStage;
 import game.minipatapon.stage.midground.StartAnimationStage;
 import game.minipatapon.stage.midground.TestSpriterImport;
@@ -44,7 +45,8 @@ public class ContentScreen extends NavigateScreen {
 		// truer));
 //		 this.navigate(new MainMenuStage( getWidth(), getHeight(), true));
 //		 this.navigate(new ChooseLevelStage( getWidth(), getHeight(), true));
- 		this.navigate(new StartAnimationStage(getWidth(), getHeight(), true));
+// 		this.navigate(new StartAnimationStage(getWidth(), getHeight(), true));
+ 		this.navigate(new PrestrainStage(getWidth(), getHeight(), true, "loadAll", StartAnimationStage.class) );
 //		this.navigate(new TestSpriterImport(getWidth(), getHeight(), true));
 //		this.navigate(new Level3Stage(getWidth(), getHeight(), true, 3));
 //		 this.navigate(new ChooseHeroStage(getWidth(), getHeight(), true));

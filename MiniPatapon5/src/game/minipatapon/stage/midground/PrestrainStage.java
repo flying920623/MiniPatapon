@@ -1,4 +1,4 @@
-package game.minipatapon.stage.prestrain;
+package game.minipatapon.stage.midground;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -6,13 +6,16 @@ import java.lang.reflect.Method;
 import game.minipatapon.datasource.assets.Assets;
 import game.minipatapon.datasource.assets.TextureAssets;
 import game.minipatapon.effectpresent.actor.FlatImage;
+import game.minipatapon.event.gamecmd.NavLayeredScreenStageArg;
 import game.minipatapon.logger.DefaultLogger;
+import game.minipatapon.screen.LayeredScreen;
+import game.minipatapon.stage.base.BaseStage;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
-public class PrestrainStage extends Stage {
+public class PrestrainStage extends BaseStage {
 
 	public boolean isLoaded = false;
 
@@ -23,13 +26,15 @@ public class PrestrainStage extends Stage {
 	FlatImage bar;
 	FlatImage processBar;
 
+	Class<? extends BaseStage> stageCls;
+
 	public PrestrainStage(float width, float height, boolean stretch,
-			String loadMethod) {
+			String loadMethod, Class<? extends BaseStage> stageCls) {
 		super(width, height, stretch);
 		// TODO Auto-generated constructor stub
 
 		this.loadMethod = loadMethod;
-
+		this.stageCls = stageCls;
 		init();
 	}
 
@@ -111,8 +116,43 @@ public class PrestrainStage extends Stage {
 				DefaultLogger.getDefaultLogger().logWithSignature(this,
 						"%s finished!", loadMethod);
 				isLoaded = true;
+				LayeredScreen.isInitedLoading = true;
+
+				NavLayeredScreenStageArg arg = new NavLayeredScreenStageArg(0,
+						stageCls);
+				arg.EventArgSent();
 			}
 		}
+
+	}
+
+	@Override
+	public void hide() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void resize(int width, int height) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
 
 	}
 }

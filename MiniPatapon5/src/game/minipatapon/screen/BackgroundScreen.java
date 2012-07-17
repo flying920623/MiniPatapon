@@ -1,5 +1,6 @@
 package game.minipatapon.screen;
 
+import game.minipatapon.effectpresent.background.ParaBackgroundLevel3;
 import game.minipatapon.logger.DefaultLogger;
 import game.minipatapon.stage.background.BackgroundStage;
 
@@ -14,7 +15,7 @@ public class BackgroundScreen extends NavigateScreen {
 	@Override
 	public void show() {
 		super.show();
-		this.navigate(new BackgroundStage(getWidth(), getHeight(), false));
+		this.navigate(new BackgroundStage(this, getWidth(), getHeight(), false, ParaBackgroundLevel3.class));
 	}
 
 }

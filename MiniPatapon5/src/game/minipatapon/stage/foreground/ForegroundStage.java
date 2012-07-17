@@ -32,6 +32,7 @@ import game.minipatapon.logger.DefaultLogger;
 import game.minipatapon.logger.Loggable;
 import game.minipatapon.logical.GameRule.GameStateListener;
 //import game.minipatapon.service.ResourceLoader;
+import game.minipatapon.screen.LayeredScreen;
 import game.minipatapon.stage.base.BaseStage;
 import game.minipatapon.stage.midground.ChooseLevelStage;
 import game.minipatapon.stage.midground.GameStage;
@@ -40,6 +41,8 @@ import game.minipatapon.stage.midground.TestSpriterImport;
 
 public class ForegroundStage extends BaseStage {
 
+	protected boolean isInited = false;
+	
 	InputImage pataButton;
 	InputImage ponButton;
 	InputImage cakaButton;
@@ -74,7 +77,7 @@ public class ForegroundStage extends BaseStage {
 		this.h = height;
 		this.soundDelta = 0;
 
-		initialize();
+//		initialize();
 	}
 
 //	private void playTestSound() {
@@ -266,14 +269,28 @@ public class ForegroundStage extends BaseStage {
 
 	@Override
 	public void draw() {
-		float dt = Gdx.graphics.getDeltaTime();
-		spriteBatch.begin();
-		// this.spriteBatch.draw(texCourse, this.coursePos.x-2,
-		// this.coursePos.y - 36);
-		particle.draw(spriteBatch, dt);
-		spriteBatch.end();
-		this.soundDelta += dt;
-		super.draw();
+		
+		if (!isInited) {
+			if (LayeredScreen.isInitedLoading) {
+				initialize();
+				isInited = true;
+			}else {
+				
+			}
+		} else {
+			float dt = Gdx.graphics.getDeltaTime();
+			spriteBatch.begin();
+			// this.spriteBatch.draw(texCourse, this.coursePos.x-2,
+			// this.coursePos.y - 36);
+			particle.draw(spriteBatch, dt);
+			spriteBatch.end();
+			this.soundDelta += dt;
+			super.draw();
+		}
+		
+		
+		
+		
 	}
 
 	@Override
